@@ -15,11 +15,16 @@
 <header class="topbar">
   <span class="topbar__id">MQ-2000</span>
   <nav class="topbar__nav">
-    <a href="#perfil">01 Perfil</a>
-    <a href="#competencias">02 Competencias</a>
-    <a href="#proyectos">03 Proyectos</a>
-    <a href="#contacto">04 Contacto</a>
+    <a href="#perfil" data-i18n="nav1">01 Perfil</a>
+    <a href="#competencias" data-i18n="nav2">02 Competencias</a>
+    <a href="#proyectos" data-i18n="nav3">03 Proyectos</a>
+    <a href="#contacto" data-i18n="nav4">04 Contacto</a>
   </nav>
+  <div class="lang-switch" role="group" aria-label="Selector de idioma">
+    <button type="button" class="lang-switch__btn" data-lang="es">ES</button>
+    <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+    <button type="button" class="lang-switch__btn" data-lang="fr">FR</button>
+  </div>
 </header>
 
 <div class="spine" aria-hidden="true"></div>
@@ -30,36 +35,36 @@
   <section class="hero">
     <div class="hero__status">
       <span class="dot dot--pulse"></span>
-      EN LÍNEA — abierto a prácticas y colaboraciones
+      <span data-i18n="heroStatus">EN LÍNEA — abierto a prácticas y colaboraciones</span>
     </div>
     <h1 class="hero__title">
       Mauricio Rolando<br>Quezada Torres
     </h1>
-    <p class="hero__role">Ingeniería en Automatización &amp; Control Industrial</p>
-    <p class="hero__sub">
+    <p class="hero__role" data-i18n="heroRole">Ingeniería en Automatización &amp; Control Industrial</p>
+    <p class="hero__sub" data-i18n="heroSub">
       Estudiante del Máster ARMAC en la Université Marie et Louis Pasteur.
       Diseño, programo y pongo en marcha sistemas de control — del esquema CAD
       al PLC en planta.
     </p>
     <div class="hero__actions">
-      <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
-      <a href="#contacto" class="btn btn--ghost">Contactar</a>
+      <a href="#proyectos" class="btn btn--primary" data-i18n="btnProjects">Ver proyectos</a>
+      <a href="#contacto" class="btn btn--ghost" data-i18n="btnContact">Contactar</a>
     </div>
   </section>
 
   <!-- PERFIL -->
   <section id="perfil" class="module">
     <div class="node"></div>
-    <span class="module__tag">MOD-01 // PERFIL</span>
-    <h2 class="module__title">Sobre mí</h2>
-    <p class="module__text">
+    <span class="module__tag" data-i18n="mod1Tag">MOD-01 // PERFIL</span>
+    <h2 class="module__title" data-i18n="mod1Title">Sobre mí</h2>
+    <p class="module__text" data-i18n="mod1Text1">
       Curso el Máster ARMAC (Automatique, Robotique et Applications à la Mécatronique)
       en la Université Marie et Louis Pasteur, con formación previa en automatización
       industrial y sistemas de control. Trabajo tanto en la capa de diseño — CAD mecánico
       y esquemas eléctricos — como en la capa de programación, con PLC bajo el estándar
       IEC 61131-3 y buses de campo EtherCAT.
     </p>
-    <p class="module__text">
+    <p class="module__text" data-i18n="mod1Text2">
       Me interesa la parte donde el software se encuentra con la máquina real: migrar
       arquitecturas de control antiguas a plataformas modernas, verificar que la lógica
       responde como debe en campo, y documentar el proceso para que otros puedan
@@ -70,40 +75,40 @@
   <!-- COMPETENCIAS -->
   <section id="competencias" class="module">
     <div class="node"></div>
-    <span class="module__tag">MOD-02 // COMPETENCIAS</span>
-    <h2 class="module__title">Stack técnico</h2>
+    <span class="module__tag" data-i18n="mod2Tag">MOD-02 // COMPETENCIAS</span>
+    <h2 class="module__title" data-i18n="mod2Title">Stack técnico</h2>
 
     <div class="reg-table" role="table" aria-label="Tabla de competencias técnicas">
       <div class="reg-row reg-row--head" role="row">
-        <span role="columnheader">REG</span>
-        <span role="columnheader">COMPETENCIA</span>
-        <span role="columnheader">ÁREA</span>
+        <span role="columnheader" data-i18n="regHeadReg">REG</span>
+        <span role="columnheader" data-i18n="regHeadSkill">COMPETENCIA</span>
+        <span role="columnheader" data-i18n="regHeadArea">ÁREA</span>
       </div>
 
       <div class="reg-row" role="row">
         <span class="reg-addr" role="cell">0x01</span>
-        <span role="cell">Programación PLC — IEC 61131-3 (Structured Text)</span>
-        <span class="reg-tag" role="cell">Control</span>
+        <span role="cell" data-i18n="skill1">Programación PLC — IEC 61131-3 (Structured Text)</span>
+        <span class="reg-tag" role="cell" data-i18n="area1">Control</span>
       </div>
       <div class="reg-row" role="row">
         <span class="reg-addr" role="cell">0x02</span>
-        <span role="cell">TwinCAT 3 · islas de control EtherCAT (Beckhoff)</span>
-        <span class="reg-tag" role="cell">Buses de campo</span>
+        <span role="cell" data-i18n="skill2">TwinCAT 3 · islas de control EtherCAT (Beckhoff)</span>
+        <span class="reg-tag" role="cell" data-i18n="area2">Buses de campo</span>
       </div>
       <div class="reg-row" role="row">
         <span class="reg-addr" role="cell">0x03</span>
-        <span role="cell">Diseño CAD — AutoCAD, Autodesk Inventor</span>
-        <span class="reg-tag" role="cell">Mecánico</span>
+        <span role="cell" data-i18n="skill3">Diseño CAD — AutoCAD, Autodesk Inventor</span>
+        <span class="reg-tag" role="cell" data-i18n="area3">Mecánico</span>
       </div>
       <div class="reg-row" role="row">
         <span class="reg-addr" role="cell">0x04</span>
-        <span role="cell">EPLAN — esquemas eléctricos</span>
-        <span class="reg-tag" role="cell">Eléctrico</span>
+        <span role="cell" data-i18n="skill4">EPLAN — esquemas eléctricos</span>
+        <span class="reg-tag" role="cell" data-i18n="area4">Eléctrico</span>
       </div>
       <div class="reg-row" role="row">
         <span class="reg-addr" role="cell">0x05</span>
-        <span role="cell">Cura — preparación e impresión 3D</span>
-        <span class="reg-tag" role="cell">Prototipado</span>
+        <span role="cell" data-i18n="skill5">Cura — preparación e impresión 3D</span>
+        <span class="reg-tag" role="cell" data-i18n="area5">Prototipado</span>
       </div>
     </div>
   </section>
@@ -111,16 +116,16 @@
   <!-- PROYECTOS -->
   <section id="proyectos" class="module">
     <div class="node"></div>
-    <span class="module__tag">MOD-03 // PROYECTOS</span>
-    <h2 class="module__title">Trabajo en curso</h2>
+    <span class="module__tag" data-i18n="mod3Tag">MOD-03 // PROYECTOS</span>
+    <h2 class="module__title" data-i18n="mod3Title">Trabajo en curso</h2>
 
     <div class="card">
       <div class="card__head">
         <span class="card__id">PRJ-01</span>
-        <span class="card__status">en curso</span>
+        <span class="card__status" data-i18n="prj1Status">en curso</span>
       </div>
-      <h3 class="card__title">Migración de control — Plataforma S.mart</h3>
-      <p class="card__text">
+      <h3 class="card__title" data-i18n="prj1Title">Migración de control — Plataforma S.mart</h3>
+      <p class="card__text" data-i18n="prj1Text">
         Proyecto de prácticas orientado a la migración y modernización de sistemas de
         control industrial en la plataforma S.mart. Incluye islas de control basadas en
         EtherCAT (Beckhoff) programadas en TwinCAT 3, con lógica en Structured Text
@@ -137,10 +142,10 @@
     <div class="card card--empty">
       <div class="card__head">
         <span class="card__id">PRJ-02</span>
-        <span class="card__status card__status--todo">próximamente</span>
+        <span class="card__status card__status--todo" data-i18n="prj2Status">próximamente</span>
       </div>
-      <h3 class="card__title">Espacio reservado</h3>
-      <p class="card__text">
+      <h3 class="card__title" data-i18n="prj2Title">Espacio reservado</h3>
+      <p class="card__text" data-i18n="prj2Text">
         Aquí puedes añadir tu próximo proyecto: un repositorio, un TP destacado o un
         trabajo de investigación.
       </p>
@@ -150,23 +155,23 @@
   <!-- CONTACTO -->
   <section id="contacto" class="module module--last">
     <div class="node"></div>
-    <span class="module__tag">MOD-04 // CONTACTO</span>
-    <h2 class="module__title">Hablemos</h2>
-    <p class="module__text">
+    <span class="module__tag" data-i18n="mod4Tag">MOD-04 // CONTACTO</span>
+    <h2 class="module__title" data-i18n="mod4Title">Hablemos</h2>
+    <p class="module__text" data-i18n="mod4Text">
       Abierto a oportunidades de prácticas, proyectos de automatización y contacto
       profesional.
     </p>
     <div class="contact-grid">
-      <a href="mailto:mauricioquezada2000@gmail.com" class="contact-link">
-        <span class="contact-link__label">Correo</span>
-        <span class="contact-link__value">mauricioquezada2000@gmail.com</span>
+      <a href="mailto:tu-correo@ejemplo.com" class="contact-link">
+        <span class="contact-link__label" data-i18n="labelEmail">Correo</span>
+        <span class="contact-link__value">tu-correo@ejemplo.com</span>
       </a>
       <a href="https://github.com/MauricioQuezada20000" target="_blank" rel="noopener" class="contact-link">
-        <span class="contact-link__label">GitHub</span>
+        <span class="contact-link__label" data-i18n="labelGithub">GitHub</span>
         <span class="contact-link__value">@MauricioQuezada20000</span>
       </a>
       <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" rel="noopener" class="contact-link">
-        <span class="contact-link__label">LinkedIn</span>
+        <span class="contact-link__label" data-i18n="labelLinkedin">LinkedIn</span>
         <span class="contact-link__value">/in/tu-usuario</span>
       </a>
     </div>
@@ -177,7 +182,7 @@
 <footer class="footer">
   <span>© 2026 Mauricio Quezada Torres</span>
   <span class="dot dot--small"></span>
-  <span>Construido con HTML &amp; CSS</span>
+  <span data-i18n="footerBuilt">Construido con HTML &amp; CSS</span>
 </footer>
 
 <script src="js/script.js"></script>
