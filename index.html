@@ -1,190 +1,133 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mauricio Quezada — Ingeniería en Automatización</title>
-<meta name="description" content="Portafolio de Mauricio Rolando Quezada Torres, ingeniero en automatización y control industrial.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mauricio Quezada | Ingeniería en Automatización & Control</title>
+  
+  <!-- Aquí hemos corregido la ruta del CSS para que apunte a la carpeta css/ -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="topbar">
-  <span class="topbar__id">MQ-2000</span>
-  <nav class="topbar__nav">
-    <a href="#perfil" data-i18n="nav1">01 Perfil</a>
-    <a href="#competencias" data-i18n="nav2">02 Competencias</a>
-    <a href="#proyectos" data-i18n="nav3">03 Proyectos</a>
-    <a href="#contacto" data-i18n="nav4">04 Contacto</a>
-  </nav>
-  <div class="lang-switch" role="group" aria-label="Selector de idioma">
-    <button type="button" class="lang-switch__btn" data-lang="es">ES</button>
-    <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
-    <button type="button" class="lang-switch__btn" data-lang="fr">FR</button>
-  </div>
-</header>
+  <!-- Selector de idiomas (puedes crear un fr.html y un en.html más adelante) -->
+  <header>
+    <div class="logo">MQ-2000</div>
+    <nav>
+      <a href="index.html" class="active">ES</a> |
+      <a href="fr.html">FR</a> |
+      <a href="en.html">EN</a>
+    </nav>
+  </header>
 
-<div class="spine" aria-hidden="true"></div>
-
-<main>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero__status">
-      <span class="dot dot--pulse"></span>
-      <span data-i18n="heroStatus">EN LÍNEA — abierto a prácticas y colaboraciones</span>
-    </div>
-    <h1 class="hero__title">
-      Mauricio Rolando<br>Quezada Torres
-    </h1>
-    <p class="hero__role" data-i18n="heroRole">Ingeniería en Automatización &amp; Control Industrial</p>
-    <p class="hero__sub" data-i18n="heroSub">
-      Estudiante del Máster ARMAC en la Université Marie et Louis Pasteur.
-      Diseño, programo y pongo en marcha sistemas de control — del esquema CAD
-      al PLC en planta.
-    </p>
-    <div class="hero__actions">
-      <a href="#proyectos" class="btn btn--primary" data-i18n="btnProjects">Ver proyectos</a>
-      <a href="#contacto" class="btn btn--ghost" data-i18n="btnContact">Contactar</a>
-    </div>
-  </section>
-
-  <!-- PERFIL -->
-  <section id="perfil" class="module">
-    <div class="node"></div>
-    <span class="module__tag" data-i18n="mod1Tag">MOD-01 // PERFIL</span>
-    <h2 class="module__title" data-i18n="mod1Title">Sobre mí</h2>
-    <p class="module__text" data-i18n="mod1Text1">
-      Curso el Máster ARMAC (Automatique, Robotique et Applications à la Mécatronique)
-      en la Université Marie et Louis Pasteur, con formación previa en automatización
-      industrial y sistemas de control. Trabajo tanto en la capa de diseño — CAD mecánico
-      y esquemas eléctricos — como en la capa de programación, con PLC bajo el estándar
-      IEC 61131-3 y buses de campo EtherCAT.
-    </p>
-    <p class="module__text" data-i18n="mod1Text2">
-      Me interesa la parte donde el software se encuentra con la máquina real: migrar
-      arquitecturas de control antiguas a plataformas modernas, verificar que la lógica
-      responde como debe en campo, y documentar el proceso para que otros puedan
-      mantenerlo después.
-    </p>
-  </section>
-
-  <!-- COMPETENCIAS -->
-  <section id="competencias" class="module">
-    <div class="node"></div>
-    <span class="module__tag" data-i18n="mod2Tag">MOD-02 // COMPETENCIAS</span>
-    <h2 class="module__title" data-i18n="mod2Title">Stack técnico</h2>
-
-    <div class="reg-table" role="table" aria-label="Tabla de competencias técnicas">
-      <div class="reg-row reg-row--head" role="row">
-        <span role="columnheader" data-i18n="regHeadReg">REG</span>
-        <span role="columnheader" data-i18n="regHeadSkill">COMPETENCIA</span>
-        <span role="columnheader" data-i18n="regHeadArea">ÁREA</span>
-      </div>
-
-      <div class="reg-row" role="row">
-        <span class="reg-addr" role="cell">0x01</span>
-        <span role="cell" data-i18n="skill1">Programación PLC — IEC 61131-3 (Structured Text)</span>
-        <span class="reg-tag" role="cell" data-i18n="area1">Control</span>
-      </div>
-      <div class="reg-row" role="row">
-        <span class="reg-addr" role="cell">0x02</span>
-        <span role="cell" data-i18n="skill2">TwinCAT 3 · islas de control EtherCAT (Beckhoff)</span>
-        <span class="reg-tag" role="cell" data-i18n="area2">Buses de campo</span>
-      </div>
-      <div class="reg-row" role="row">
-        <span class="reg-addr" role="cell">0x03</span>
-        <span role="cell" data-i18n="skill3">Diseño CAD — AutoCAD, Autodesk Inventor</span>
-        <span class="reg-tag" role="cell" data-i18n="area3">Mecánico</span>
-      </div>
-      <div class="reg-row" role="row">
-        <span class="reg-addr" role="cell">0x04</span>
-        <span role="cell" data-i18n="skill4">EPLAN — esquemas eléctricos</span>
-        <span class="reg-tag" role="cell" data-i18n="area4">Eléctrico</span>
-      </div>
-      <div class="reg-row" role="row">
-        <span class="reg-addr" role="cell">0x05</span>
-        <span role="cell" data-i18n="skill5">Cura — preparación e impresión 3D</span>
-        <span class="reg-tag" role="cell" data-i18n="area5">Prototipado</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROYECTOS -->
-  <section id="proyectos" class="module">
-    <div class="node"></div>
-    <span class="module__tag" data-i18n="mod3Tag">MOD-03 // PROYECTOS</span>
-    <h2 class="module__title" data-i18n="mod3Title">Trabajo en curso</h2>
-
-    <div class="card">
-      <div class="card__head">
-        <span class="card__id">PRJ-01</span>
-        <span class="card__status" data-i18n="prj1Status">en curso</span>
-      </div>
-      <h3 class="card__title" data-i18n="prj1Title">Migración de control — Plataforma S.mart</h3>
-      <p class="card__text" data-i18n="prj1Text">
-        Proyecto de prácticas orientado a la migración y modernización de sistemas de
-        control industrial en la plataforma S.mart. Incluye islas de control basadas en
-        EtherCAT (Beckhoff) programadas en TwinCAT 3, con lógica en Structured Text
-        conforme a IEC 61131-3.
+  <main>
+    <!-- SECCIÓN 1: Perfil -->
+    <section id="perfil" class="hero">
+      <div class="status">EN LÍNEA — Buscando prácticas industriales (Enero 2027)</div>
+      <h1>Mauricio Rolando<br>Quezada Torres</h1>
+      <p class="subtitle">Ingeniería Electromecánica | Máster ARMAC</p>
+      <p>
+        Estudiante del Máster ARMAC (Automatique, Robotique et Applications à la Mécatronique) en la Université Marie et Louis Pasteur, Francia. Diseño, programo y pongo en marcha sistemas de control industrial — desde el esquema CAD hasta la programación de PLC en planta.
       </p>
-      <ul class="card__tags">
-        <li>TwinCAT 3</li>
-        <li>EtherCAT</li>
-        <li>Structured Text</li>
-        <li>EPLAN</li>
-      </ul>
-    </div>
-
-    <div class="card card--empty">
-      <div class="card__head">
-        <span class="card__id">PRJ-02</span>
-        <span class="card__status card__status--todo" data-i18n="prj2Status">próximamente</span>
+      <div class="actions">
+        <a href="#proyectos" class="btn">Ver proyectos</a>
+        <a href="#contacto" class="btn btn-outline">Contactar</a>
       </div>
-      <h3 class="card__title" data-i18n="prj2Title">Espacio reservado</h3>
-      <p class="card__text" data-i18n="prj2Text">
-        Aquí puedes añadir tu próximo proyecto: un repositorio, un TP destacado o un
-        trabajo de investigación.
+    </section>
+
+    <!-- SECCIÓN 2: Competencias (Stack Técnico) -->
+    <section id="competencias">
+      <span class="module-tag">MOD-02 // COMPETENCIAS</span>
+      <h2>Stack técnico</h2>
+      
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>REG</th>
+              <th>COMPETENCIA</th>
+              <th>ÁREA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0x01</td>
+              <td>Programación PLC — IEC 61131-3 (Structured Text)</td>
+              <td>Control</td>
+            </tr>
+            <tr>
+              <td>0x02</td>
+              <td>TwinCAT 3 · islas de control EtherCAT (Beckhoff)</td>
+              <td>Buses de campo</td>
+            </tr>
+            <tr>
+              <td>0x03</td>
+              <td>Diseño CAD — AutoCAD, Autodesk Inventor</td>
+              <td>Mecánico</td>
+            </tr>
+            <tr>
+              <td>0x04</td>
+              <td>EPLAN — esquemas eléctricos</td>
+              <td>Eléctrico</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: Proyectos -->
+    <section id="proyectos">
+      <span class="module-tag">MOD-03 // PROYECTOS</span>
+      <h2>Trabajo en curso</h2>
+
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-id">PRJ-01</span>
+          <span class="project-status">Finalización: Julio 2026</span>
+        </div>
+        <h3>Migración de control — Plataforma S.mart</h3>
+        <p>
+          Proyecto orientado a la migración y modernización de sistemas de control industrial en la plataforma educativa S.mart. Incluye el ensamblaje físico, cableado y despliegue de islas de control basadas en EtherCAT (Beckhoff) programadas en TwinCAT 3, con lógica en Structured Text.
+        </p>
+        <ul class="tech-tags">
+          <li>TwinCAT 3</li>
+          <li>EtherCAT</li>
+          <li>Structured Text</li>
+          <li>EPLAN</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: Contacto -->
+    <section id="contacto">
+      <span class="module-tag">MOD-04 // CONTACTO</span>
+      <h2>Hablemos</h2>
+      <p>
+        Actualmente radicando en Besançon, Francia. Abierto a oportunidades de prácticas en ingeniería industrial y robótica a partir de enero de 2027.
       </p>
-    </div>
-  </section>
+      <div class="contact-links">
+        <a href="mailto:mauricioquezada2000@gmail.com" class="contact-box">
+          <span class="contact-label">Correo</span>
+          <span class="contact-value">mauricioquezada2000@gmail.com</span>
+        </a>
+        <a href="https://github.com/MauricioQuezada20000" target="_blank" rel="noopener" class="contact-box">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">@MauricioQuezada20000</span>
+        </a>
+      </div>
+    </section>
+  </main>
 
-  <!-- CONTACTO -->
-  <section id="contacto" class="module module--last">
-    <div class="node"></div>
-    <span class="module__tag" data-i18n="mod4Tag">MOD-04 // CONTACTO</span>
-    <h2 class="module__title" data-i18n="mod4Title">Hablemos</h2>
-    <p class="module__text" data-i18n="mod4Text">
-      Abierto a oportunidades de prácticas, proyectos de automatización y contacto
-      profesional.
-    </p>
-    <div class="contact-grid">
-      <a href="mailto:tu-correo@ejemplo.com" class="contact-link">
-        <span class="contact-link__label" data-i18n="labelEmail">Correo</span>
-        <span class="contact-link__value">tu-correo@ejemplo.com</span>
-      </a>
-      <a href="https://github.com/MauricioQuezada20000" target="_blank" rel="noopener" class="contact-link">
-        <span class="contact-link__label" data-i18n="labelGithub">GitHub</span>
-        <span class="contact-link__value">@MauricioQuezada20000</span>
-      </a>
-      <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" rel="noopener" class="contact-link">
-        <span class="contact-link__label" data-i18n="labelLinkedin">LinkedIn</span>
-        <span class="contact-link__value">/in/tu-usuario</span>
-      </a>
-    </div>
-  </section>
+  <footer>
+    <p>© 2026 Mauricio Quezada Torres | Construido con HTML & CSS</p>
+  </footer>
 
-</main>
+  <!-- Aquí hemos corregido la ruta del JavaScript para que apunte a la carpeta js/ -->
+  <script src="js/script.js"></script>
 
-<footer class="footer">
-  <span>© 2026 Mauricio Quezada Torres</span>
-  <span class="dot dot--small"></span>
-  <span data-i18n="footerBuilt">Construido con HTML &amp; CSS</span>
-</footer>
-
-<script src="js/script.js"></script>
 </body>
 </html>
