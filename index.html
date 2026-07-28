@@ -1,1 +1,185 @@
-<h1>Hello, this is my new website!</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mauricio Quezada — Ingeniería en Automatización</title>
+<meta name="description" content="Portafolio de Mauricio Rolando Quezada Torres, ingeniero en automatización y control industrial.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <span class="topbar__id">MQ-2000</span>
+  <nav class="topbar__nav">
+    <a href="#perfil">01 Perfil</a>
+    <a href="#competencias">02 Competencias</a>
+    <a href="#proyectos">03 Proyectos</a>
+    <a href="#contacto">04 Contacto</a>
+  </nav>
+</header>
+
+<div class="spine" aria-hidden="true"></div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__status">
+      <span class="dot dot--pulse"></span>
+      EN LÍNEA — abierto a prácticas y colaboraciones
+    </div>
+    <h1 class="hero__title">
+      Mauricio Rolando<br>Quezada Torres
+    </h1>
+    <p class="hero__role">Ingeniería en Automatización &amp; Control Industrial</p>
+    <p class="hero__sub">
+      Estudiante del Máster ARMAC en la Université Marie et Louis Pasteur.
+      Diseño, programo y pongo en marcha sistemas de control — del esquema CAD
+      al PLC en planta.
+    </p>
+    <div class="hero__actions">
+      <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
+      <a href="#contacto" class="btn btn--ghost">Contactar</a>
+    </div>
+  </section>
+
+  <!-- PERFIL -->
+  <section id="perfil" class="module">
+    <div class="node"></div>
+    <span class="module__tag">MOD-01 // PERFIL</span>
+    <h2 class="module__title">Sobre mí</h2>
+    <p class="module__text">
+      Curso el Máster ARMAC (Automatique, Robotique et Applications à la Mécatronique)
+      en la Université Marie et Louis Pasteur, con formación previa en automatización
+      industrial y sistemas de control. Trabajo tanto en la capa de diseño — CAD mecánico
+      y esquemas eléctricos — como en la capa de programación, con PLC bajo el estándar
+      IEC 61131-3 y buses de campo EtherCAT.
+    </p>
+    <p class="module__text">
+      Me interesa la parte donde el software se encuentra con la máquina real: migrar
+      arquitecturas de control antiguas a plataformas modernas, verificar que la lógica
+      responde como debe en campo, y documentar el proceso para que otros puedan
+      mantenerlo después.
+    </p>
+  </section>
+
+  <!-- COMPETENCIAS -->
+  <section id="competencias" class="module">
+    <div class="node"></div>
+    <span class="module__tag">MOD-02 // COMPETENCIAS</span>
+    <h2 class="module__title">Stack técnico</h2>
+
+    <div class="reg-table" role="table" aria-label="Tabla de competencias técnicas">
+      <div class="reg-row reg-row--head" role="row">
+        <span role="columnheader">REG</span>
+        <span role="columnheader">COMPETENCIA</span>
+        <span role="columnheader">ÁREA</span>
+      </div>
+
+      <div class="reg-row" role="row">
+        <span class="reg-addr" role="cell">0x01</span>
+        <span role="cell">Programación PLC — IEC 61131-3 (Structured Text)</span>
+        <span class="reg-tag" role="cell">Control</span>
+      </div>
+      <div class="reg-row" role="row">
+        <span class="reg-addr" role="cell">0x02</span>
+        <span role="cell">TwinCAT 3 · islas de control EtherCAT (Beckhoff)</span>
+        <span class="reg-tag" role="cell">Buses de campo</span>
+      </div>
+      <div class="reg-row" role="row">
+        <span class="reg-addr" role="cell">0x03</span>
+        <span role="cell">Diseño CAD — AutoCAD, Autodesk Inventor</span>
+        <span class="reg-tag" role="cell">Mecánico</span>
+      </div>
+      <div class="reg-row" role="row">
+        <span class="reg-addr" role="cell">0x04</span>
+        <span role="cell">EPLAN — esquemas eléctricos</span>
+        <span class="reg-tag" role="cell">Eléctrico</span>
+      </div>
+      <div class="reg-row" role="row">
+        <span class="reg-addr" role="cell">0x05</span>
+        <span role="cell">Cura — preparación e impresión 3D</span>
+        <span class="reg-tag" role="cell">Prototipado</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="module">
+    <div class="node"></div>
+    <span class="module__tag">MOD-03 // PROYECTOS</span>
+    <h2 class="module__title">Trabajo en curso</h2>
+
+    <div class="card">
+      <div class="card__head">
+        <span class="card__id">PRJ-01</span>
+        <span class="card__status">en curso</span>
+      </div>
+      <h3 class="card__title">Migración de control — Plataforma S.mart</h3>
+      <p class="card__text">
+        Proyecto de prácticas orientado a la migración y modernización de sistemas de
+        control industrial en la plataforma S.mart. Incluye islas de control basadas en
+        EtherCAT (Beckhoff) programadas en TwinCAT 3, con lógica en Structured Text
+        conforme a IEC 61131-3.
+      </p>
+      <ul class="card__tags">
+        <li>TwinCAT 3</li>
+        <li>EtherCAT</li>
+        <li>Structured Text</li>
+        <li>EPLAN</li>
+      </ul>
+    </div>
+
+    <div class="card card--empty">
+      <div class="card__head">
+        <span class="card__id">PRJ-02</span>
+        <span class="card__status card__status--todo">próximamente</span>
+      </div>
+      <h3 class="card__title">Espacio reservado</h3>
+      <p class="card__text">
+        Aquí puedes añadir tu próximo proyecto: un repositorio, un TP destacado o un
+        trabajo de investigación.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="module module--last">
+    <div class="node"></div>
+    <span class="module__tag">MOD-04 // CONTACTO</span>
+    <h2 class="module__title">Hablemos</h2>
+    <p class="module__text">
+      Abierto a oportunidades de prácticas, proyectos de automatización y contacto
+      profesional.
+    </p>
+    <div class="contact-grid">
+      <a href="mailto:tu-correo@ejemplo.com" class="contact-link">
+        <span class="contact-link__label">Correo</span>
+        <span class="contact-link__value">tu-correo@ejemplo.com</span>
+      </a>
+      <a href="https://github.com/MauricioQuezada20000" target="_blank" rel="noopener" class="contact-link">
+        <span class="contact-link__label">GitHub</span>
+        <span class="contact-link__value">@MauricioQuezada20000</span>
+      </a>
+      <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" rel="noopener" class="contact-link">
+        <span class="contact-link__label">LinkedIn</span>
+        <span class="contact-link__value">/in/tu-usuario</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>© 2026 Mauricio Quezada Torres</span>
+  <span class="dot dot--small"></span>
+  <span>Construido con HTML &amp; CSS</span>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
