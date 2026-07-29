@@ -293,11 +293,12 @@ ul { list-style: none; }
   position: absolute;
   top: -10px;
   right: -14px;
-  width: 92px;
-  height: 92px;
+  width: 92px !important;
+  height: 92px !important;
   color: var(--accent, var(--cyan));
   opacity: 0.14;
   pointer-events: none;
+  display: block;
 }
 
 .bento-card__label {
