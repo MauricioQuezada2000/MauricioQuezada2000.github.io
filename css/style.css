@@ -2,18 +2,18 @@
    TOKENS
    ============================================================ */
 :root {
-  --bg-void: #0b0f14;
-  --bg-panel: #12181f;
-  --bg-panel-raised: #161d25;
-  --line: #223040;
-  --line-bright: #2f4356;
+  --bg-void: #0a1414;
+  --bg-panel: #0f1c1c;
+  --bg-panel-raised: #132322;
+  --line: #1e3433;
+  --line-bright: #2c4a48;
 
-  --amber: #f5a623;
-  --cyan: #29c4d9;
+  --amber: #00b3a4;
+  --cyan: #4fd1c5;
 
-  --text-primary: #e8edf2;
-  --text-muted: #7c8b99;
-  --text-faint: #4a5866;
+  --text-primary: #e8f3f1;
+  --text-muted: #7fa3a0;
+  --text-faint: #4a6b68;
 
   --font-display: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -250,6 +250,124 @@ ul { list-style: none; }
   color: var(--text-primary);
 }
 .btn--ghost:hover { border-color: var(--cyan); color: var(--cyan); }
+
+/* ============================================================
+   BENTO GRID — resumen en cifras (portada)
+   ============================================================ */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+  max-width: 900px;
+}
+
+@media (max-width: 900px) {
+  .bento { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .bento { grid-template-columns: 1fr; }
+}
+
+.bento-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.5rem 1.25rem;
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.2rem;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.bento-card:hover {
+  border-color: var(--accent, var(--cyan));
+  transform: translateY(-2px);
+}
+
+.bento-card__icon {
+  position: absolute;
+  top: -10px;
+  right: -14px;
+  width: 92px;
+  height: 92px;
+  color: var(--accent, var(--cyan));
+  opacity: 0.14;
+  pointer-events: none;
+}
+
+.bento-card__label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.bento-card__number {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1;
+  color: var(--accent, var(--text-primary));
+  margin: 0.2rem 0 0.1rem;
+}
+
+.bento-card__unit {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.bento-card__breakdown {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-faint);
+  margin-top: 0.4rem;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   TAG ROW — sectores de trabajo (dentro de Perfil)
+   ============================================================ */
+.tag-row {
+  margin-top: 1.5rem;
+}
+
+.tag-row__label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+  margin-bottom: 0.6rem;
+}
+
+.tag-row__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-row__list li {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--cyan);
+  border: 1px solid var(--line-bright);
+  padding: 0.3rem 0.7rem;
+  border-radius: 2px;
+}
+
+.module__text--note {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  border-left: 2px solid var(--line-bright);
+  padding-left: 1rem;
+  margin-top: 1.5rem;
+}
 
 /* ============================================================
    MODULES
