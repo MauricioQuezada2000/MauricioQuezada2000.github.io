@@ -37,7 +37,6 @@ const translations = {
     regHeadReg: 'GRUPO', regHeadSkill: 'HERRAMIENTAS', regHeadArea: 'CANT.',
     soft1Group: 'Automatización & SCADA', soft2Group: 'CAD & Eléctrico', soft3Group: 'Impresión 3D',
     softNote: 'Además: lenguajes Ladder, FBD, CFC, Structured Text y Grafcet (IEC 61131-3), C++, Python y Visual Basic Macros. Protocolos Profinet, Profibus, Modbus TCP/RTU, EtherNet/IP, OPC UA e IEC-61850.',
-    mediaPlaceholder: 'Captura próximamente',
 
     mod4Tag: 'MOD-04 // GALERÍA TÉCNICA', mod4Title: 'Por área de trabajo',
     mod4Sub: '',
@@ -47,11 +46,6 @@ const translations = {
     filterAll: 'Todas', filterPlc: 'Programación PLC', filterHmi: 'HMI', filterScada: 'SCADA',
     filterVfd: 'Variadores de frecuencia', filterElec: 'Instalaciones eléctricas',
     filterCad: 'Planos CAD', filterPanel: 'Diseño de tableros', filter3d: 'Impresión 3D',
-    gallery1Caption: 'HMI encoladora — vista general',
-    gallery2Caption: 'HMI encoladora — programación',
-    gallery3Caption: 'HMI encoladora — válvulas',
-    gallery4Caption: 'HMI encoladora — motores',
-    gallery5Caption: 'Red de dispositivos — proyecto Beni',
 
     mod5Tag: 'MOD-05 // CONTACTO', mod5Title: 'Hablemos',
     mod5Text: 'Abierto a oportunidades de prácticas, alternancia y contacto profesional.',
@@ -92,7 +86,6 @@ const translations = {
     regHeadReg: 'GROUP', regHeadSkill: 'TOOLS', regHeadArea: 'QTY.',
     soft1Group: 'Automation & SCADA', soft2Group: 'CAD & Electrical', soft3Group: '3D printing',
     softNote: 'Also: Ladder, FBD, CFC, Structured Text and Grafcet (IEC 61131-3) languages, C++, Python and Visual Basic Macros. Profinet, Profibus, Modbus TCP/RTU, EtherNet/IP, OPC UA and IEC-61850 protocols.',
-    mediaPlaceholder: 'Screenshot coming soon',
 
     mod4Tag: 'MOD-04 // TECHNICAL GALLERY', mod4Title: 'By work area',
     mod4Sub: '',
@@ -102,11 +95,6 @@ const translations = {
     filterAll: 'All', filterPlc: 'PLC programming', filterHmi: 'HMI', filterScada: 'SCADA',
     filterVfd: 'Variable frequency drives', filterElec: 'Electrical installations',
     filterCad: 'CAD drawings', filterPanel: 'Panel design', filter3d: '3D printing',
-    gallery1Caption: 'HMI — gluing machine, overview',
-    gallery2Caption: 'HMI — gluing machine, programming',
-    gallery3Caption: 'HMI — gluing machine, valves',
-    gallery4Caption: 'HMI — gluing machine, motors',
-    gallery5Caption: 'Device network — Beni project',
 
     mod5Tag: 'MOD-05 // CONTACT', mod5Title: 'Let\u2019s talk',
     mod5Text: 'Open to internship, apprenticeship and professional contact opportunities.',
@@ -147,7 +135,6 @@ const translations = {
     regHeadReg: 'GROUPE', regHeadSkill: 'OUTILS', regHeadArea: 'QTÉ.',
     soft1Group: 'Automatisation & SCADA', soft2Group: 'CAO & Électrique', soft3Group: 'Impression 3D',
     softNote: 'Également : langages Ladder, FBD, CFC, Structured Text et Grafcet (IEC 61131-3), C++, Python et Visual Basic Macros. Protocoles Profinet, Profibus, Modbus TCP/RTU, EtherNet/IP, OPC UA et IEC-61850.',
-    mediaPlaceholder: 'Capture à venir',
 
     mod4Tag: 'MOD-04 // GALERIE TECHNIQUE', mod4Title: 'Par domaine de travail',
     mod4Sub: '',
@@ -157,11 +144,6 @@ const translations = {
     filterAll: 'Toutes', filterPlc: 'Programmation API', filterHmi: 'IHM', filterScada: 'SCADA',
     filterVfd: 'Variateurs de fréquence', filterElec: 'Installations électriques',
     filterCad: 'Plans CAO', filterPanel: 'Conception de tableaux', filter3d: 'Impression 3D',
-    gallery1Caption: 'IHM — encolleuse, vue générale',
-    gallery2Caption: 'IHM — encolleuse, programmation',
-    gallery3Caption: 'IHM — encolleuse, vannes',
-    gallery4Caption: 'IHM — encolleuse, moteurs',
-    gallery5Caption: 'Réseau de dispositifs — projet Beni',
 
     mod5Tag: 'MOD-05 // CONTACT', mod5Title: 'Discutons',
     mod5Text: 'Ouvert aux opportunités de stage, d\u2019alternance et aux contacts professionnels.',
@@ -172,6 +154,41 @@ const translations = {
 };
 
 const LANG_KEY = 'site-lang';
+
+// ============================================================
+// GALERÍA — genera las tarjetas de foto desde js/gallery-data.js
+// ============================================================
+let currentGalleryFilter = 'all';
+
+function renderGallery(lang) {
+  const grid = document.getElementById('galleryGrid');
+  if (!grid || typeof galleryData === 'undefined') return;
+
+  grid.innerHTML = '';
+
+  galleryData.forEach((item) => {
+    const figure = document.createElement('figure');
+    figure.className = 'gallery-item';
+    figure.dataset.category = item.category;
+    if (currentGalleryFilter !== 'all' && item.category !== currentGalleryFilter) {
+      figure.hidden = true;
+    }
+
+    const media = document.createElement('div');
+    media.className = 'gallery-item__media';
+    const img = document.createElement('img');
+    img.src = item.src;
+    img.alt = (item.caption && item.caption[lang]) || '';
+    media.appendChild(img);
+
+    const caption = document.createElement('figcaption');
+    caption.textContent = (item.caption && (item.caption[lang] || item.caption.es)) || '';
+
+    figure.appendChild(media);
+    figure.appendChild(caption);
+    grid.appendChild(figure);
+  });
+}
 
 function applyLanguage(lang) {
   const dict = translations[lang] || translations.es;
@@ -189,6 +206,8 @@ function applyLanguage(lang) {
 
   document.documentElement.setAttribute('lang', lang);
   try { localStorage.setItem(LANG_KEY, lang); } catch (e) { /* ignore */ }
+
+  renderGallery(lang);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -207,16 +226,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Filtro de galería por categoría ---
   const filterChips = document.querySelectorAll('.filter-chip');
-  const galleryItems = document.querySelectorAll('.gallery-item');
 
   filterChips.forEach((chip) => {
     chip.addEventListener('click', () => {
       filterChips.forEach((c) => c.classList.remove('is-active'));
       chip.classList.add('is-active');
-      const filter = chip.dataset.filter;
+      currentGalleryFilter = chip.dataset.filter;
 
-      galleryItems.forEach((item) => {
-        const show = filter === 'all' || item.dataset.category === filter;
+      document.querySelectorAll('.gallery-item').forEach((item) => {
+        const show = currentGalleryFilter === 'all' || item.dataset.category === currentGalleryFilter;
         item.hidden = !show;
       });
     });
