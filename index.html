@@ -19,7 +19,8 @@
     <a href="#certificaciones" data-i18n="nav2">02 Certificaciones</a>
     <a href="#competencias" data-i18n="nav3">03 Competencias</a>
     <a href="#proyectos" data-i18n="nav4">04 Proyectos</a>
-    <a href="#contacto" data-i18n="nav5">05 Contacto</a>
+    <a href="#galeria" data-i18n="nav5">05 Galería</a>
+    <a href="#contacto" data-i18n="nav6">06 Contacto</a>
   </nav>
   <div class="lang-switch" role="group" aria-label="Selector de idioma">
     <button type="button" class="lang-switch__btn" data-lang="es">ES</button>
@@ -39,7 +40,7 @@
       <span data-i18n="heroStatus">EN LÍNEA — abierto a prácticas y colaboraciones</span>
     </div>
     <h1 class="hero__title">
-      Mauricio<br>Quezada
+      Mauricio Quezada
     </h1>
     <p class="hero__role" data-i18n="heroRole">Ingeniería en Automatización &amp; Control Industrial</p>
     <p class="hero__sub" data-i18n="heroSub">
@@ -244,12 +245,56 @@
     <!-- EJEMPLO: duplica este bloque .card (incluido el .card__media) para cada proyecto adicional -->
   </section>
 
+  <!-- GALERÍA TÉCNICA -->
+  <section id="galeria" class="module">
+    <div class="node"></div>
+    <span class="module__tag" data-i18n="mod5Tag">MOD-05 // GALERÍA TÉCNICA</span>
+    <h2 class="module__title" data-i18n="mod5Title">Por área de trabajo</h2>
+
+    <div class="tag-row">
+      <span class="tag-row__label" data-i18n="workAreasLabel">Áreas de trabajo:</span>
+      <ul class="tag-row__list">
+        <li data-i18n="wa1">Programación PLC</li>
+        <li data-i18n="wa2">Comisionado de plantas</li>
+        <li data-i18n="wa3">Puesta en marcha de proyectos</li>
+        <li data-i18n="wa4">Pruebas FAT/SAT</li>
+        <li data-i18n="wa5">Parametrización de equipos</li>
+      </ul>
+    </div>
+
+    <div class="filter-row" role="group" aria-label="Filtros de categoría">
+      <button type="button" class="filter-chip is-active" data-filter="all" data-i18n="filterAll">Todas</button>
+      <button type="button" class="filter-chip" data-filter="plc" data-i18n="filterPlc">Programación PLC</button>
+      <button type="button" class="filter-chip" data-filter="hmi" data-i18n="filterHmi">HMI</button>
+      <button type="button" class="filter-chip" data-filter="scada" data-i18n="filterScada">SCADA</button>
+      <button type="button" class="filter-chip" data-filter="vfd" data-i18n="filterVfd">Variadores de frecuencia</button>
+      <button type="button" class="filter-chip" data-filter="elec" data-i18n="filterElec">Instalaciones eléctricas</button>
+      <button type="button" class="filter-chip" data-filter="cad" data-i18n="filterCad">Planos CAD</button>
+      <button type="button" class="filter-chip" data-filter="panel" data-i18n="filterPanel">Diseño de tableros</button>
+    </div>
+
+    <div class="gallery-grid">
+      <!-- EJEMPLO: duplica este bloque .gallery-item para cada foto. data-category debe coincidir con un data-filter de arriba -->
+      <figure class="gallery-item" data-category="plc">
+        <div class="gallery-item__media">
+          <svg class="gallery-item__icon" viewBox="0 0 100 100" aria-hidden="true">
+            <rect x="15" y="15" width="70" height="70" rx="4" fill="none" stroke="currentColor" stroke-width="4"/>
+            <path d="M35 40 L45 50 L35 60 M55 60 H65" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <span class="gallery-item__placeholder-text" data-i18n="mediaPlaceholder">Captura próximamente</span>
+        </div>
+        <figcaption data-i18n="gallery1Caption">Programación PLC — Structured Text, TIA Portal</figcaption>
+      </figure>
+      <!-- Copia el bloque .gallery-item de arriba, cambia data-category a: hmi, scada, vfd, elec, cad o panel -->
+    </div>
+  </section>
+
   <!-- CONTACTO -->
   <section id="contacto" class="module module--last">
     <div class="node"></div>
-    <span class="module__tag" data-i18n="mod5Tag">MOD-05 // CONTACTO</span>
-    <h2 class="module__title" data-i18n="mod5Title">Hablemos</h2>
-    <p class="module__text" data-i18n="mod5Text">
+    <span class="module__tag" data-i18n="mod6Tag">MOD-06 // CONTACTO</span>
+    <h2 class="module__title" data-i18n="mod6Title">Hablemos</h2>
+    <p class="module__text" data-i18n="mod6Text">
       Abierto a oportunidades de prácticas, alternancia y contacto profesional.
     </p>
     <div class="contact-grid">
