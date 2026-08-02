@@ -218,6 +218,16 @@
     <p class="module__text" data-i18n="mod4Sub">Cuatro casos destacados:</p>
 
     <div class="card">
+      <!-- MEDIA : remplace ce bloock par <img src="assets/projects/prj-01.jpg" alt="..." class="card__media-img"> quand tu as la vraie capture -->
+      <div class="card__media">
+        <svg class="card__media-icon" viewBox="0 0 100 100" aria-hidden="true">
+          <rect x="10" y="18" width="80" height="54" rx="3" fill="none" stroke="currentColor" stroke-width="4"/>
+          <path d="M10 60 L32 40 L48 54 L66 32 L90 58" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+          <circle cx="28" cy="32" r="5" fill="currentColor"/>
+          <path d="M38 82 H62 M50 72 V82" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <span class="card__media-label" data-i18n="mediaPlaceholder">Captura próximamente</span>
+      </div>
       <div class="card__head">
         <span class="card__id">PRJ-01</span>
         <span class="card__status" data-i18n="prj1Status">en curso · Francia</span>
@@ -231,7 +241,7 @@
       <ul class="card__tags"><li>TwinCAT 3</li><li>Beckhoff</li><li>PID</li><li>Computer Vision</li></ul>
     </div>
 
-    <!-- EJEMPLO: duplica este bloque .card para cada proyecto adicional -->
+    <!-- EJEMPLO: duplica este bloque .card (incluido el .card__media) para cada proyecto adicional -->
   </section>
 
   <!-- CONTACTO -->
