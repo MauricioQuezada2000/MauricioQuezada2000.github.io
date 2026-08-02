@@ -1,722 +1,363 @@
-/* ============================================================
-   TOKENS
-   ============================================================ */
-:root {
-  --bg-void: #0a1414;
-  --bg-panel: #0f1c1c;
-  --bg-panel-raised: #132322;
-  --line: #1e3433;
-  --line-bright: #2c4a48;
-
-  --amber: #00b3a4;
-  --cyan: #4fd1c5;
-
-  --text-primary: #e8f3f1;
-  --text-muted: #7fa3a0;
-  --text-faint: #4a6b68;
-
-  --font-display: 'Space Grotesk', sans-serif;
-  --font-body: 'Inter', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
-
-  --gutter: clamp(1.25rem, 5vw, 4rem);
-  --spine-x: clamp(1.25rem, 5vw, 4rem);
-}
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  background: var(--bg-void);
-  color: var(--text-primary);
-  font-family: var(--font-body);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-a { color: inherit; text-decoration: none; }
-ul { list-style: none; }
-
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
-}
-
-/* ============================================================
-   TOPBAR
-   ============================================================ */
-.topbar {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem var(--gutter);
-  background: rgba(11, 15, 20, 0.85);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--line);
-}
-
-.topbar__id {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  color: var(--text-muted);
-}
-
-.topbar__nav {
-  display: flex;
-  gap: clamp(0.75rem, 2vw, 2rem);
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.05em;
-}
-
-@media (max-width: 640px) {
-  .topbar { gap: 0.75rem; padding: 0.85rem 1rem; }
-  .topbar__id { display: none; }
-  .topbar__nav { gap: 0.6rem; overflow-x: auto; }
-}
-
-.topbar__nav a {
-  color: var(--text-muted);
-  transition: color 0.2s ease;
-}
-
-.topbar__nav a:hover,
-.topbar__nav a:focus-visible {
-  color: var(--amber);
-}
-
-.lang-switch {
-  display: flex;
-  gap: 2px;
-  background: var(--bg-panel);
-  border: 1px solid var(--line);
-  border-radius: 3px;
-  padding: 2px;
-}
-
-.lang-switch__btn {
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.05em;
-  padding: 0.35rem 0.55rem;
-  border-radius: 2px;
-  color: var(--text-muted);
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.lang-switch__btn:hover {
-  color: var(--text-primary);
-}
-
-.lang-switch__btn.is-active {
-  background: var(--amber);
-  color: var(--bg-void);
-}
-
-/* ============================================================
-   SPINE — the signature element: an EtherCAT-style data line
-   running the length of the page, pulsing like signal flow.
-   ============================================================ */
-.spine {
-  position: absolute;
-  top: 220px;
-  bottom: 140px;
-  left: var(--spine-x);
-  width: 1px;
-  background: var(--line);
-  z-index: 0;
-}
-
-.spine::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -1px;
-  width: 3px;
-  height: 90px;
-  background: linear-gradient(var(--cyan), transparent);
-  filter: blur(1px);
-  animation: pulse-down 4.5s linear infinite;
-}
-
-@keyframes pulse-down {
-  0%   { top: -90px; opacity: 0; }
-  10%  { opacity: 1; }
-  90%  { opacity: 1; }
-  100% { top: 100%; opacity: 0; }
-}
-
-@media (max-width: 720px) {
-  .spine { display: none; }
-}
-
-/* ============================================================
-   HERO
-   ============================================================ */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 6rem var(--gutter) 4rem calc(var(--gutter) + 2.5rem);
-  position: relative;
-}
-
-.hero__status {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
-  color: var(--text-muted);
-  margin-bottom: 1.75rem;
-  width: fit-content;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--amber);
-  box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.15);
-  flex-shrink: 0;
-}
-
-.dot--pulse { animation: blink 2.4s ease-in-out infinite; }
-.dot--small { width: 4px; height: 4px; background: var(--text-faint); box-shadow: none; }
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.35; }
-}
-
-.hero__title {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(2.4rem, 6vw, 4.5rem);
-  line-height: 1.05;
-  letter-spacing: -0.01em;
-  margin-bottom: 1.25rem;
-}
-
-.hero__role {
-  font-family: var(--font-mono);
-  font-size: clamp(0.85rem, 1.6vw, 1rem);
-  color: var(--cyan);
-  letter-spacing: 0.03em;
-  margin-bottom: 1.5rem;
-}
-
-.hero__sub {
-  max-width: 42ch;
-  color: var(--text-muted);
-  font-size: 1.05rem;
-  margin-bottom: 2.5rem;
-}
-
-.hero__actions {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.btn {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  letter-spacing: 0.03em;
-  padding: 0.85rem 1.5rem;
-  border-radius: 2px;
-  transition: all 0.2s ease;
-}
-
-.btn--primary {
-  background: var(--amber);
-  color: var(--bg-void);
-  font-weight: 500;
-}
-.btn--primary:hover { background: #ffb84d; }
-
-.btn--ghost {
-  border: 1px solid var(--line-bright);
-  color: var(--text-primary);
-}
-.btn--ghost:hover { border-color: var(--cyan); color: var(--cyan); }
-
-/* ============================================================
-   BENTO GRID — resumen en cifras (portada)
-   ============================================================ */
-.bento {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin-top: 1rem;
-  max-width: 900px;
-}
-
-@media (max-width: 900px) {
-  .bento { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 560px) {
-  .bento { grid-template-columns: 1fr; }
-}
-
-.bento-card {
-  position: relative;
-  overflow: hidden;
-  background: var(--bg-panel);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 1.5rem 1.25rem;
-  min-height: 190px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 0.2rem;
-  transition: border-color 0.2s ease, transform 0.2s ease;
-}
-
-.bento-card:hover {
-  border-color: var(--accent, var(--cyan));
-  transform: translateY(-2px);
-}
-
-.bento-card__icon {
-  position: absolute;
-  top: -10px;
-  right: -14px;
-  width: 92px !important;
-  height: 92px !important;
-  color: var(--accent, var(--cyan));
-  opacity: 0.14;
-  pointer-events: none;
-  display: block;
-}
-
-.bento-card__label {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.06em;
-  color: var(--text-muted);
-  text-transform: uppercase;
-}
-
-.bento-card__number {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 2.4rem;
-  line-height: 1;
-  color: var(--accent, var(--text-primary));
-  margin: 0.2rem 0 0.1rem;
-}
-
-.bento-card__unit {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-}
-
-.bento-card__breakdown {
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  color: var(--text-faint);
-  margin-top: 0.4rem;
-  line-height: 1.5;
-}
-
-/* ============================================================
-   TAG ROW — sectores de trabajo (dentro de Perfil)
-   ============================================================ */
-.tag-row {
-  margin-top: 1.5rem;
-}
-
-.tag-row__label {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
-  color: var(--text-faint);
-  margin-bottom: 0.6rem;
-}
-
-.tag-row__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.tag-row__list li {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--cyan);
-  border: 1px solid var(--line-bright);
-  padding: 0.3rem 0.7rem;
-  border-radius: 2px;
-}
-
-.module__text--note {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  border-left: 2px solid var(--line-bright);
-  padding-left: 1rem;
-  margin-top: 1.5rem;
-}
-
-/* ============================================================
-   GALERÍA TÉCNICA — filtros y grid de fotos por categoría
-   ============================================================ */
-.filter-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1.5rem 0;
-}
-
-.filter-chip {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.03em;
-  padding: 0.5rem 0.9rem;
-  border-radius: 3px;
-  border: 1px solid var(--line-bright);
-  background: transparent;
-  color: var(--text-muted);
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.filter-chip:hover {
-  border-color: var(--cyan);
-  color: var(--text-primary);
-}
-
-.filter-chip.is-active {
-  background: var(--amber);
-  border-color: var(--amber);
-  color: var(--bg-void);
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
-}
-
-.gallery-item {
-  margin: 0;
-  background: var(--bg-panel);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-.gallery-item[hidden] { display: none; }
-
-.gallery-item__media {
-  aspect-ratio: 4 / 3;
-  border-bottom: 1px dashed var(--line-bright);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  color: var(--text-faint);
-}
-
-.gallery-item__icon {
-  width: 36px;
-  height: 36px;
-  opacity: 0.5;
-}
-
-.gallery-item__placeholder-text {
-  font-family: var(--font-mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.04em;
-}
-
-/* Cuando reemplaces el placeholder por una foto real, pon la <img>
-   directamente dentro de .gallery-item__media (mismo aspect-ratio) */
-.gallery-item__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.gallery-item figcaption {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--text-muted);
-  padding: 0.75rem 0.9rem;
-  line-height: 1.4;
-}
-.module {
-  position: relative;
-  max-width: 720px;
-  padding: 4rem var(--gutter) 4rem calc(var(--gutter) + 2.5rem);
-  border-bottom: 1px solid var(--line);
-}
-
-.module--last { border-bottom: none; }
-
-.node {
-  position: absolute;
-  left: var(--spine-x);
-  top: 4.4rem;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--bg-void);
-  border: 2px solid var(--cyan);
-  transform: translateX(-50%);
-}
-
-@media (max-width: 720px) {
-  .node { display: none; }
-  .module { padding-left: var(--gutter); }
-  .hero { padding-left: var(--gutter); }
-}
-
-.module__tag {
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  color: var(--cyan);
-  margin-bottom: 0.9rem;
-}
-
-.module__title {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  margin-bottom: 1.25rem;
-}
-
-.module__text {
-  color: var(--text-muted);
-  max-width: 60ch;
-  margin-bottom: 1rem;
-}
-
-/* ============================================================
-   REGISTER TABLE (competencias)
-   ============================================================ */
-.reg-table {
-  margin-top: 1.5rem;
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.reg-row {
-  display: grid;
-  grid-template-columns: 70px 1fr 140px;
-  gap: 1rem;
-  padding: 0.9rem 1.1rem;
-  border-bottom: 1px solid var(--line);
-  font-size: 0.9rem;
-  align-items: center;
-}
-
-.reg-row:last-child { border-bottom: none; }
-
-.reg-row--head {
-  background: var(--bg-panel-raised);
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
-  color: var(--text-faint);
-}
-
-.reg-addr {
-  font-family: var(--font-mono);
-  color: var(--amber);
-  font-size: 0.85rem;
-}
-
-.reg-tag {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  text-align: right;
-}
-
-@media (max-width: 560px) {
-  .reg-row { grid-template-columns: 55px 1fr; }
-  .reg-tag { display: none; }
-}
-
-/* ============================================================
-   PROJECT CARDS
-   ============================================================ */
-.card {
-  background: var(--bg-panel);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  padding: 1.75rem;
-  margin-top: 1.5rem;
-}
-
-.card__media {
-  aspect-ratio: 16 / 9;
-  border: 1px dashed var(--line-bright);
-  border-radius: 4px;
-  margin: -0.25rem -0.25rem 1.25rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  color: var(--text-faint);
-  overflow: hidden;
-}
-
-.card__media-icon {
-  width: 44px;
-  height: 44px;
-  opacity: 0.5;
-}
-
-.card__media-label {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.05em;
-}
-
-/* Cuando reemplaces el placeholder por una <img class="card__media-img">,
-   colócala directamente dentro de .card__media (sin el div contenedor) */
-.card__media-img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-radius: 4px;
-  margin: -0.25rem -0.25rem 1.25rem;
-  display: block;
-  border: 1px solid var(--line);
-}
-
-.card--empty {
-  border-style: dashed;
-  opacity: 0.7;
-}
-
-.card__head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.9rem;
-}
-
-.card__id {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--text-faint);
-  letter-spacing: 0.08em;
-}
-
-.card__status {
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.06em;
-  padding: 0.25rem 0.6rem;
-  border-radius: 2px;
-  background: rgba(41, 196, 217, 0.12);
-  color: var(--cyan);
-}
-
-.card__status--todo {
-  background: rgba(124, 139, 153, 0.12);
-  color: var(--text-muted);
-}
-
-.card__title {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin-bottom: 0.6rem;
-}
-
-.card__text {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
-}
-
-.card__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.card__tags li {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.03em;
-  color: var(--amber);
-  border: 1px solid var(--line-bright);
-  padding: 0.3rem 0.6rem;
-  border-radius: 2px;
-}
-
-/* ============================================================
-   CONTACT
-   ============================================================ */
-.contact-grid {
-  display: grid;
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  overflow: hidden;
-  margin-top: 1.5rem;
-}
-
-.contact-link {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--bg-panel);
-  padding: 1.1rem 1.4rem;
-  transition: background 0.2s ease;
-}
-
-.contact-link:hover { background: var(--bg-panel-raised); }
-
-.contact-link__label {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: var(--text-faint);
-  letter-spacing: 0.08em;
-}
-
-.contact-link__value {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  color: var(--cyan);
-}
-
-/* ============================================================
-   FOOTER
-   ============================================================ */
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  padding: 2.5rem var(--gutter) 3rem;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: var(--text-faint);
-  position: relative;
-  z-index: 1;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mauricio Quezada — Ingeniería en Automatización</title>
+<meta name="description" content="Portafolio de Mauricio Quezada, ingeniero en automatización y control industrial.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <span class="topbar__id">MQ-2000</span>
+  <nav class="topbar__nav">
+    <a href="#perfil" data-i18n="nav1">01 Perfil</a>
+    <a href="#certificaciones" data-i18n="nav2">02 Certificaciones</a>
+    <a href="#competencias" data-i18n="nav3">03 Competencias</a>
+    <a href="#proyectos" data-i18n="nav4">04 Proyectos</a>
+    <a href="#galeria" data-i18n="nav5">05 Galería</a>
+    <a href="#contacto" data-i18n="nav6">06 Contacto</a>
+  </nav>
+  <div class="lang-switch" role="group" aria-label="Selector de idioma">
+    <button type="button" class="lang-switch__btn" data-lang="es">ES</button>
+    <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+    <button type="button" class="lang-switch__btn" data-lang="fr">FR</button>
+  </div>
+</header>
+
+<div class="spine" aria-hidden="true"></div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__status">
+      <span class="dot dot--pulse"></span>
+      <span data-i18n="heroStatus">EN LÍNEA — abierto a prácticas y colaboraciones</span>
+    </div>
+    <h1 class="hero__title">
+      Mauricio Quezada
+    </h1>
+    <p class="hero__role" data-i18n="heroRole">Ingeniería en Automatización &amp; Control Industrial</p>
+    <p class="hero__sub" data-i18n="heroSub">
+      Ingeniero en automatización con experiencia profesional en Bolivia y Francia.
+      Actualmente curso el Máster ARMAC en la Université Marie et Louis Pasteur.
+    </p>
+
+    <!-- BENTO GRID — resumen en cifras -->
+    <div class="bento" role="list">
+
+      <a href="#certificaciones" class="bento-card" role="listitem" style="--accent: var(--amber)">
+        <svg class="bento-card__icon" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="38" r="22" fill="none" stroke="currentColor" stroke-width="4"/>
+          <path d="M38 58 L30 88 L50 76 L70 88 L62 58" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M40 38 L47 45 L61 30" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="bento-card__label" data-i18n="card1Label">Cursos y Certificaciones</span>
+        <span class="bento-card__number">15</span>
+        <span class="bento-card__unit" data-i18n="card1Unit">certificaciones oficiales</span>
+        <span class="bento-card__breakdown" data-i18n="card1Breakdown">4 Automatización/PLC · 4 CAD/Eléctrico · 3 Redes &amp; SCADA · 4 especializadas</span>
+      </a>
+
+      <a href="#perfil" class="bento-card" role="listitem" style="--accent: var(--cyan)">
+        <svg class="bento-card__icon" viewBox="0 0 100 100" aria-hidden="true">
+          <rect x="18" y="42" width="20" height="46" fill="none" stroke="currentColor" stroke-width="4"/>
+          <rect x="42" y="26" width="20" height="62" fill="none" stroke="currentColor" stroke-width="4"/>
+          <rect x="66" y="54" width="20" height="34" fill="none" stroke="currentColor" stroke-width="4"/>
+        </svg>
+        <span class="bento-card__label" data-i18n="card2Label">Sectores de trabajo</span>
+        <span class="bento-card__number">7</span>
+        <span class="bento-card__unit" data-i18n="card2Unit">sectores industriales</span>
+        <span class="bento-card__breakdown" data-i18n="card2Breakdown">Agroalimentario · Agua · Energía · Bebidas · Plásticos · Oil &amp; Gas · Inmótica</span>
+      </a>
+
+      <a href="#competencias" class="bento-card" role="listitem" style="--accent: var(--amber)">
+        <svg class="bento-card__icon" viewBox="0 0 100 100" aria-hidden="true">
+          <path d="M32 30 L12 50 L32 70" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M68 30 L88 50 L68 70" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M58 20 L42 80" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <span class="bento-card__label" data-i18n="card3Label">Softwares</span>
+        <span class="bento-card__number">19</span>
+        <span class="bento-card__unit" data-i18n="card3Unit">herramientas dominadas</span>
+        <span class="bento-card__breakdown" data-i18n="card3Breakdown">9 Automatización/SCADA · 8 CAD/Eléctrico · 2 Impresión 3D</span>
+      </a>
+
+      <a href="assets/CV_Mauricio_Quezada.pdf" class="bento-card" role="listitem" download style="--accent: var(--cyan)">
+        <svg class="bento-card__icon" viewBox="0 0 100 100" aria-hidden="true">
+          <path d="M28 12 H60 L76 28 V88 H28 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M60 12 V28 H76" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M38 48 H66 M38 60 H66 M38 72 H56" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <span class="bento-card__label" data-i18n="card4Label">Curriculum Vitae</span>
+        <span class="bento-card__number">PDF</span>
+        <span class="bento-card__unit" data-i18n="card4Unit">descargar CV completo</span>
+        <span class="bento-card__breakdown" data-i18n="card4Breakdown">Actualizado 2026 · FR / EN / ES</span>
+      </a>
+
+      <a href="#contacto" class="bento-card" role="listitem" style="--accent: var(--amber)">
+        <svg class="bento-card__icon" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="22" cy="50" r="10" fill="none" stroke="currentColor" stroke-width="4"/>
+          <circle cx="76" cy="24" r="10" fill="none" stroke="currentColor" stroke-width="4"/>
+          <circle cx="76" cy="76" r="10" fill="none" stroke="currentColor" stroke-width="4"/>
+          <path d="M31 45 L67 28 M31 55 L67 72" stroke="currentColor" stroke-width="4"/>
+        </svg>
+        <span class="bento-card__label" data-i18n="card5Label">Redes</span>
+        <span class="bento-card__number">2</span>
+        <span class="bento-card__unit" data-i18n="card5Unit">perfiles profesionales</span>
+        <span class="bento-card__breakdown">GitHub · LinkedIn</span>
+      </a>
+
+      <a href="#proyectos" class="bento-card" role="listitem" style="--accent: var(--cyan)">
+        <svg class="bento-card__icon" viewBox="0 0 100 100" aria-hidden="true">
+          <path d="M14 30 L14 82 H86 V38 H50 L42 30 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+        </svg>
+        <span class="bento-card__label" data-i18n="card6Label">Proyectos resaltantes</span>
+        <span class="bento-card__number">28</span>
+        <span class="bento-card__unit" data-i18n="card6Unit">proyectos documentados</span>
+        <span class="bento-card__breakdown" data-i18n="card6Breakdown">16 Siemens Solution Partner · 8 Rofer/Electrocapital · 2 Esdesur · 2 en Francia</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- PERFIL -->
+  <section id="perfil" class="module">
+    <div class="node"></div>
+    <span class="module__tag" data-i18n="mod1Tag">MOD-01 // PERFIL</span>
+    <h2 class="module__title" data-i18n="mod1Title">Sobre mí</h2>
+    <p class="module__text" data-i18n="mod1Text1">
+      Ingeniero en automatización con experiencia profesional en Bolivia y Francia. Actualmente curso el
+      Máster ARMAC (Automatique, Robotique et Applications à la Mécatronique) en la Université Marie et
+      Louis Pasteur, Besançon. Trabajé como Ingeniero de Proyectos de Automatización en Siemens Solution
+      Partner / AF-Control, pilotando decenas de proyectos de control-comando de principio a fin: desde el
+      diagnóstico en planta hasta la programación PLC y la puesta en marcha.
+    </p>
+    <p class="module__text" data-i18n="mod1Text2">
+      Combino la capa de diseño — CAD mecánico, esquemas eléctricos EPLAN/AutoCAD — con la de
+      programación, trabajando multi-marca (Siemens, Schneider, Allen-Bradley, Beckhoff) bajo el estándar
+      IEC 61131-3 y buses de campo como EtherCAT, Profinet y Modbus.
+    </p>
+    <div class="tag-row">
+      <span class="tag-row__label" data-i18n="sectorsLabel">Sectores de trabajo:</span>
+      <ul class="tag-row__list">
+        <li data-i18n="sector1">Agroalimentario</li>
+        <li data-i18n="sector2">Tratamiento de agua</li>
+        <li data-i18n="sector3">Energía (hidroeléctrica)</li>
+        <li data-i18n="sector4">Bebidas</li>
+        <li data-i18n="sector5">Plásticos</li>
+        <li data-i18n="sector6">Oil &amp; Gas</li>
+        <li data-i18n="sector7">Inmótica / Terciario</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CERTIFICACIONES -->
+  <section id="certificaciones" class="module">
+    <div class="node"></div>
+    <span class="module__tag" data-i18n="mod2Tag">MOD-02 // CERTIFICACIONES</span>
+    <h2 class="module__title" data-i18n="mod2Title">15 certificaciones oficiales</h2>
+    <p class="module__text" data-i18n="mod2Sub">Selección de las más relevantes:</p>
+
+    <div class="reg-table" role="table" aria-label="Certificaciones destacadas">
+      <div class="reg-row reg-row--head" role="row">
+        <span role="columnheader" data-i18n="certHeadYear">AÑO</span>
+        <span role="columnheader" data-i18n="certHeadName">CERTIFICACIÓN</span>
+      </div>
+      <div class="reg-row" role="row">
+        <span class="reg-addr" role="cell">2024–25</span>
+        <span role="cell" data-i18n="cert1">SITRAIN Siemens Partner Academy — TIA Portal, WinCC, PCS 7, SIMOTION, Safety</span>
+      </div>
+      <!-- EJEMPLO: duplica este bloque .reg-row para cada certificación adicional -->
+    </div>
+  </section>
+
+  <!-- COMPETENCIAS -->
+  <section id="competencias" class="module">
+    <div class="node"></div>
+    <span class="module__tag" data-i18n="mod3Tag">MOD-03 // COMPETENCIAS</span>
+    <h2 class="module__title" data-i18n="mod3Title">Stack técnico — 19 herramientas</h2>
+
+    <div class="reg-table" role="table" aria-label="Tabla de competencias técnicas">
+      <div class="reg-row reg-row--head" role="row">
+        <span role="columnheader" data-i18n="regHeadReg">GRUPO</span>
+        <span role="columnheader" data-i18n="regHeadSkill">HERRAMIENTAS</span>
+        <span role="columnheader" data-i18n="regHeadArea">CANT.</span>
+      </div>
+      <div class="reg-row" role="row">
+        <span class="reg-addr" role="cell" data-i18n="soft1Group">Automatización &amp; SCADA</span>
+        <span role="cell">TIA Portal / STEP 7, WinCC (Classic &amp; Unified), EcoStruxure, SCADA Citect, Vijeo Designer, TwinCAT 3, C-more, Productivity Suite, Kinco</span>
+        <span class="reg-tag" role="cell">9</span>
+      </div>
+      <div class="reg-row" role="row">
+        <span class="reg-addr" role="cell" data-i18n="soft2Group">CAD &amp; Eléctrico</span>
+        <span role="cell">AutoCAD, AutoCAD Electrical, EPLAN, Inventor, Dialux Evo, SIMARIS, e-Design (ABB), Ecodial (Schneider)</span>
+        <span class="reg-tag" role="cell">8</span>
+      </div>
+      <div class="reg-row" role="row">
+        <span class="reg-addr" role="cell" data-i18n="soft3Group">Impresión 3D</span>
+        <span role="cell">PrusaSlicer, Ultimaker Cura</span>
+        <span class="reg-tag" role="cell">2</span>
+      </div>
+    </div>
+
+    <p class="module__text module__text--note" data-i18n="softNote">
+      Además: lenguajes Ladder, FBD, CFC, Structured Text y Grafcet (IEC 61131-3), C++, Python y Visual
+      Basic Macros. Protocolos Profinet, Profibus, Modbus TCP/RTU, EtherNet/IP, OPC UA e IEC-61850.
+    </p>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="module">
+    <div class="node"></div>
+    <span class="module__tag" data-i18n="mod4Tag">MOD-04 // PROYECTOS</span>
+    <h2 class="module__title" data-i18n="mod4Title">28 proyectos documentados</h2>
+    <p class="module__text" data-i18n="mod4Sub">Cuatro casos destacados:</p>
+
+    <div class="card">
+      <!-- MEDIA : remplace ce bloock par <img src="assets/projects/prj-01.jpg" alt="..." class="card__media-img"> quand tu as la vraie capture -->
+      <div class="card__media">
+        <svg class="card__media-icon" viewBox="0 0 100 100" aria-hidden="true">
+          <rect x="10" y="18" width="80" height="54" rx="3" fill="none" stroke="currentColor" stroke-width="4"/>
+          <path d="M10 60 L32 40 L48 54 L66 32 L90 58" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+          <circle cx="28" cy="32" r="5" fill="currentColor"/>
+          <path d="M38 82 H62 M50 72 V82" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <span class="card__media-label" data-i18n="mediaPlaceholder">Captura próximamente</span>
+      </div>
+      <div class="card__head">
+        <span class="card__id">PRJ-01</span>
+        <span class="card__status" data-i18n="prj1Status">en curso · Francia</span>
+      </div>
+      <h3 class="card__title" data-i18n="prj1Title">FEMTO-ST — Plataforma S.mart</h3>
+      <p class="card__text" data-i18n="prj1Text">
+        Concepción e integración de bancos didácticos de automatización avanzada: 6 bancos de ensayo y 3
+        armarios de mando completos, con PLC Beckhoff bajo TwinCAT 3, lazos PID, ejes motorizados e
+        integración de cámaras.
+      </p>
+      <ul class="card__tags"><li>TwinCAT 3</li><li>Beckhoff</li><li>PID</li><li>Computer Vision</li></ul>
+    </div>
+
+    <!-- EJEMPLO: duplica este bloque .card (incluido el .card__media) para cada proyecto adicional -->
+  </section>
+
+  <!-- GALERÍA TÉCNICA -->
+  <section id="galeria" class="module">
+    <div class="node"></div>
+    <span class="module__tag" data-i18n="mod5Tag">MOD-05 // GALERÍA TÉCNICA</span>
+    <h2 class="module__title" data-i18n="mod5Title">Por área de trabajo</h2>
+
+    <div class="tag-row">
+      <span class="tag-row__label" data-i18n="workAreasLabel">Áreas de trabajo:</span>
+      <ul class="tag-row__list">
+        <li data-i18n="wa1">Programación PLC</li>
+        <li data-i18n="wa2">Comisionado de plantas</li>
+        <li data-i18n="wa3">Puesta en marcha de proyectos</li>
+        <li data-i18n="wa4">Pruebas FAT/SAT</li>
+        <li data-i18n="wa5">Parametrización de equipos</li>
+      </ul>
+    </div>
+
+    <div class="filter-row" role="group" aria-label="Filtros de categoría">
+      <button type="button" class="filter-chip is-active" data-filter="all" data-i18n="filterAll">Todas</button>
+      <button type="button" class="filter-chip" data-filter="plc" data-i18n="filterPlc">Programación PLC</button>
+      <button type="button" class="filter-chip" data-filter="hmi" data-i18n="filterHmi">HMI</button>
+      <button type="button" class="filter-chip" data-filter="scada" data-i18n="filterScada">SCADA</button>
+      <button type="button" class="filter-chip" data-filter="vfd" data-i18n="filterVfd">Variadores de frecuencia</button>
+      <button type="button" class="filter-chip" data-filter="elec" data-i18n="filterElec">Instalaciones eléctricas</button>
+      <button type="button" class="filter-chip" data-filter="cad" data-i18n="filterCad">Planos CAD</button>
+      <button type="button" class="filter-chip" data-filter="panel" data-i18n="filterPanel">Diseño de tableros</button>
+      <button type="button" class="filter-chip" data-filter="3d" data-i18n="filter3d">Impresión 3D</button>
+    </div>
+
+    <div class="gallery-grid">
+      <figure class="gallery-item" data-category="hmi">
+        <div class="gallery-item__media">
+          <img src="assets/gallery/hmi/1.png" alt="HMI encoladora — vista general">
+        </div>
+        <figcaption data-i18n="gallery1Caption">HMI encoladora — vista general</figcaption>
+      </figure>
+
+      <figure class="gallery-item" data-category="hmi">
+        <div class="gallery-item__media">
+          <img src="assets/gallery/hmi/2.png" alt="HMI encoladora — programación">
+        </div>
+        <figcaption data-i18n="gallery2Caption">HMI encoladora — programación</figcaption>
+      </figure>
+
+      <figure class="gallery-item" data-category="hmi">
+        <div class="gallery-item__media">
+          <img src="assets/gallery/hmi/3.png" alt="HMI encoladora — válvulas">
+        </div>
+        <figcaption data-i18n="gallery3Caption">HMI encoladora — válvulas</figcaption>
+      </figure>
+
+      <figure class="gallery-item" data-category="hmi">
+        <div class="gallery-item__media">
+          <img src="assets/gallery/hmi/4.png" alt="HMI encoladora — motores">
+        </div>
+        <figcaption data-i18n="gallery4Caption">HMI encoladora — motores</figcaption>
+      </figure>
+
+      <figure class="gallery-item" data-category="scada">
+        <div class="gallery-item__media">
+          <img src="assets/gallery/scada/1.png" alt="Red de dispositivos — proyecto Beni">
+        </div>
+        <figcaption data-i18n="gallery5Caption">Red de dispositivos — proyecto Beni</figcaption>
+      </figure>
+
+      <!-- EJEMPLO: duplica este bloque .gallery-item para cada foto nueva. data-category debe coincidir con un data-filter de arriba
+           Ruta: assets/gallery/<categoria>/<numero>.png -- ej: assets/gallery/cad/2.png -->
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="module module--last">
+    <div class="node"></div>
+    <span class="module__tag" data-i18n="mod6Tag">MOD-06 // CONTACTO</span>
+    <h2 class="module__title" data-i18n="mod6Title">Hablemos</h2>
+    <p class="module__text" data-i18n="mod6Text">
+      Abierto a oportunidades de prácticas, alternancia y contacto profesional.
+    </p>
+    <div class="contact-grid">
+      <a href="mailto:mauricioquezada2000@gmail.com" class="contact-link">
+        <span class="contact-link__label" data-i18n="labelEmail">Correo</span>
+        <span class="contact-link__value">mauricioquezada2000@gmail.com</span>
+      </a>
+      <a href="tel:+33768894224" class="contact-link">
+        <span class="contact-link__label" data-i18n="labelPhone">Teléfono</span>
+        <span class="contact-link__value">+33 7 68 89 42 24</span>
+      </a>
+      <a href="https://github.com/MauricioQuezada20000" target="_blank" rel="noopener" class="contact-link">
+        <span class="contact-link__label" data-i18n="labelGithub">GitHub</span>
+        <span class="contact-link__value">@MauricioQuezada20000</span>
+      </a>
+      <a href="https://www.linkedin.com/in/mauricioquezada2000" target="_blank" rel="noopener" class="contact-link">
+        <span class="contact-link__label" data-i18n="labelLinkedin">LinkedIn</span>
+        <span class="contact-link__value">/in/mauricioquezada2000</span>
+      </a>
+      <a href="assets/CV_Mauricio_Quezada.pdf" download class="contact-link">
+        <span class="contact-link__label" data-i18n="labelCV">Curriculum</span>
+        <span class="contact-link__value" data-i18n="labelCVValue">Descargar PDF</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>© 2026 Mauricio Quezada</span>
+  <span class="dot dot--small"></span>
+  <span data-i18n="footerBuilt">Construido con HTML &amp; CSS</span>
+</footer>
+
+<!-- Siemens ix-icons (open source, MIT) — permite usar <ix-icon name="..."></ix-icon> -->
+<script type="module" src="https://cdn.jsdelivr.net/npm/@siemens/ix-icons@^3.0.0/dist/ix-icons/ix-icons.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@siemens/ix-icons@^3.0.0/dist/ix-icons/ix-icons.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
