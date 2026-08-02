@@ -5,7 +5,7 @@
 // ============================================================
 const translations = {
   es: {
-    nav1: '01 Perfil', nav2: '02 Certificaciones', nav3: '03 Competencias', nav4: '04 Proyectos', nav5: '05 Contacto',
+    nav1: '01 Perfil', nav2: '02 Certificaciones', nav3: '03 Competencias', nav4: '04 Proyectos', nav5: '05 Galería', nav6: '06 Contacto',
     heroStatus: 'EN LÍNEA — abierto a prácticas y colaboraciones',
     heroRole: 'Ingeniería en Automatización & Control Industrial',
     heroSub: 'Ingeniero en automatización con experiencia profesional en Bolivia y Francia. Actualmente curso el Máster ARMAC en la Université Marie et Louis Pasteur.',
@@ -44,14 +44,24 @@ const translations = {
     prj1Status: 'en curso · Francia', prj1Title: 'FEMTO-ST — Plataforma S.mart',
     prj1Text: 'Concepción e integración de bancos didácticos de automatización avanzada: 6 bancos de ensayo y 3 armarios de mando completos, con PLC Beckhoff bajo TwinCAT 3, lazos PID, ejes motorizados e integración de cámaras.',
 
-    mod5Tag: 'MOD-05 // CONTACTO', mod5Title: 'Hablemos',
-    mod5Text: 'Abierto a oportunidades de prácticas, alternancia y contacto profesional.',
+    mod5Tag: 'MOD-05 // GALERÍA TÉCNICA', mod5Title: 'Por área de trabajo',
+    mod5Sub: '',
+    workAreasLabel: 'Áreas de trabajo:',
+    wa1: 'Programación PLC', wa2: 'Comisionado de plantas', wa3: 'Puesta en marcha de proyectos',
+    wa4: 'Pruebas FAT/SAT', wa5: 'Parametrización de equipos',
+    filterAll: 'Todas', filterPlc: 'Programación PLC', filterHmi: 'HMI', filterScada: 'SCADA',
+    filterVfd: 'Variadores de frecuencia', filterElec: 'Instalaciones eléctricas',
+    filterCad: 'Planos CAD', filterPanel: 'Diseño de tableros',
+    gallery1Caption: 'Programación PLC — Structured Text, TIA Portal',
+
+    mod6Tag: 'MOD-06 // CONTACTO', mod6Title: 'Hablemos',
+    mod6Text: 'Abierto a oportunidades de prácticas, alternancia y contacto profesional.',
     labelEmail: 'Correo', labelPhone: 'Teléfono', labelGithub: 'GitHub', labelLinkedin: 'LinkedIn',
     labelCV: 'Curriculum', labelCVValue: 'Descargar PDF',
     footerBuilt: 'Construido con HTML & CSS',
   },
   en: {
-    nav1: '01 Profile', nav2: '02 Certifications', nav3: '03 Skills', nav4: '04 Projects', nav5: '05 Contact',
+    nav1: '01 Profile', nav2: '02 Certifications', nav3: '03 Skills', nav4: '04 Projects', nav5: '05 Gallery', nav6: '06 Contact',
     heroStatus: 'ONLINE — open to internships and collaborations',
     heroRole: 'Automation & Industrial Control Engineering',
     heroSub: 'Automation engineer with professional experience in Bolivia and France. Currently pursuing the ARMAC Master\u2019s at Université Marie et Louis Pasteur.',
@@ -90,14 +100,24 @@ const translations = {
     prj1Status: 'ongoing · France', prj1Title: 'FEMTO-ST — S.mart platform',
     prj1Text: 'Design and integration of advanced automation teaching benches: 6 test benches and 3 full control cabinets, with Beckhoff PLCs under TwinCAT 3, PID loops, motorized axes and camera integration.',
 
-    mod5Tag: 'MOD-05 // CONTACT', mod5Title: 'Let\u2019s talk',
-    mod5Text: 'Open to internship, apprenticeship and professional contact opportunities.',
+    mod5Tag: 'MOD-05 // TECHNICAL GALLERY', mod5Title: 'By work area',
+    mod5Sub: '',
+    workAreasLabel: 'Work areas:',
+    wa1: 'PLC programming', wa2: 'Plant commissioning', wa3: 'Project start-up',
+    wa4: 'FAT/SAT testing', wa5: 'Equipment parametrization',
+    filterAll: 'All', filterPlc: 'PLC programming', filterHmi: 'HMI', filterScada: 'SCADA',
+    filterVfd: 'Variable frequency drives', filterElec: 'Electrical installations',
+    filterCad: 'CAD drawings', filterPanel: 'Panel design',
+    gallery1Caption: 'PLC programming — Structured Text, TIA Portal',
+
+    mod6Tag: 'MOD-06 // CONTACT', mod6Title: 'Let\u2019s talk',
+    mod6Text: 'Open to internship, apprenticeship and professional contact opportunities.',
     labelEmail: 'Email', labelPhone: 'Phone', labelGithub: 'GitHub', labelLinkedin: 'LinkedIn',
     labelCV: 'Resume', labelCVValue: 'Download PDF',
     footerBuilt: 'Built with HTML & CSS',
   },
   fr: {
-    nav1: '01 Profil', nav2: '02 Certifications', nav3: '03 Compétences', nav4: '04 Projets', nav5: '05 Contact',
+    nav1: '01 Profil', nav2: '02 Certifications', nav3: '03 Compétences', nav4: '04 Projets', nav5: '05 Galerie', nav6: '06 Contact',
     heroStatus: 'EN LIGNE — ouvert aux stages et collaborations',
     heroRole: 'Ingénierie en Automatisation & Contrôle Industriel',
     heroSub: 'Ingénieur automaticien avec expérience professionnelle en Bolivie et en France. Actuellement en Master ARMAC à l\u2019Université Marie et Louis Pasteur.',
@@ -136,8 +156,18 @@ const translations = {
     prj1Status: 'en cours · France', prj1Title: 'FEMTO-ST — Plateforme S.mart',
     prj1Text: 'Conception et intégration de bancs didactiques d\u2019automatisme avancé : 6 bancs d\u2019essai et 3 coffrets de commande complets, avec automates Beckhoff sous TwinCAT 3, boucles PID, axes motorisés et intégration de caméras.',
 
-    mod5Tag: 'MOD-05 // CONTACT', mod5Title: 'Discutons',
-    mod5Text: 'Ouvert aux opportunités de stage, d\u2019alternance et aux contacts professionnels.',
+    mod5Tag: 'MOD-05 // GALERIE TECHNIQUE', mod5Title: 'Par domaine de travail',
+    mod5Sub: '',
+    workAreasLabel: 'Domaines de travail :',
+    wa1: 'Programmation API', wa2: 'Mise en service d\u2019installations', wa3: 'Démarrage de projets',
+    wa4: 'Essais FAT/SAT', wa5: 'Paramétrage d\u2019équipements',
+    filterAll: 'Toutes', filterPlc: 'Programmation API', filterHmi: 'IHM', filterScada: 'SCADA',
+    filterVfd: 'Variateurs de fréquence', filterElec: 'Installations électriques',
+    filterCad: 'Plans CAO', filterPanel: 'Conception de tableaux',
+    gallery1Caption: 'Programmation API — Structured Text, TIA Portal',
+
+    mod6Tag: 'MOD-06 // CONTACT', mod6Title: 'Discutons',
+    mod6Text: 'Ouvert aux opportunités de stage, d\u2019alternance et aux contacts professionnels.',
     labelEmail: 'Courriel', labelPhone: 'Téléphone', labelGithub: 'GitHub', labelLinkedin: 'LinkedIn',
     labelCV: 'Curriculum', labelCVValue: 'Télécharger le PDF',
     footerBuilt: 'Construit avec HTML & CSS',
@@ -176,6 +206,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.lang-switch__btn').forEach((btn) => {
     btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
+  });
+
+  // --- Filtro de galería por categoría ---
+  const filterChips = document.querySelectorAll('.filter-chip');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  filterChips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      filterChips.forEach((c) => c.classList.remove('is-active'));
+      chip.classList.add('is-active');
+      const filter = chip.dataset.filter;
+
+      galleryItems.forEach((item) => {
+        const show = filter === 'all' || item.dataset.category === filter;
+        item.hidden = !show;
+      });
+    });
   });
 
   // --- Scrollspy: resalta el módulo activo en la línea/spine ---
