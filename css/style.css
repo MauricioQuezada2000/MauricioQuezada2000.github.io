@@ -481,6 +481,44 @@ ul { list-style: none; }
   margin-top: 1.5rem;
 }
 
+.card__media {
+  aspect-ratio: 16 / 9;
+  border: 1px dashed var(--line-bright);
+  border-radius: 4px;
+  margin: -0.25rem -0.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  color: var(--text-faint);
+  overflow: hidden;
+}
+
+.card__media-icon {
+  width: 44px;
+  height: 44px;
+  opacity: 0.5;
+}
+
+.card__media-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+}
+
+/* Cuando reemplaces el placeholder por una <img class="card__media-img">,
+   colócala directamente dentro de .card__media (sin el div contenedor) */
+.card__media-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 4px;
+  margin: -0.25rem -0.25rem 1.25rem;
+  display: block;
+  border: 1px solid var(--line);
+}
+
 .card--empty {
   border-style: dashed;
   opacity: 0.7;
