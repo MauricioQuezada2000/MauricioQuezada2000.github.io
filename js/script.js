@@ -40,6 +40,7 @@ const translations = {
 
     mod4Tag: 'MOD-04 // PROYECTOS', mod4Title: '28 proyectos documentados',
     mod4Sub: 'Cuatro casos destacados:',
+    mediaPlaceholder: 'Captura próximamente',
     prj1Status: 'en curso · Francia', prj1Title: 'FEMTO-ST — Plataforma S.mart',
     prj1Text: 'Concepción e integración de bancos didácticos de automatización avanzada: 6 bancos de ensayo y 3 armarios de mando completos, con PLC Beckhoff bajo TwinCAT 3, lazos PID, ejes motorizados e integración de cámaras.',
 
@@ -85,6 +86,7 @@ const translations = {
 
     mod4Tag: 'MOD-04 // PROJECTS', mod4Title: '28 documented projects',
     mod4Sub: 'Four featured cases:',
+    mediaPlaceholder: 'Screenshot coming soon',
     prj1Status: 'ongoing · France', prj1Title: 'FEMTO-ST — S.mart platform',
     prj1Text: 'Design and integration of advanced automation teaching benches: 6 test benches and 3 full control cabinets, with Beckhoff PLCs under TwinCAT 3, PID loops, motorized axes and camera integration.',
 
@@ -130,6 +132,7 @@ const translations = {
 
     mod4Tag: 'MOD-04 // PROJETS', mod4Title: '28 projets documentés',
     mod4Sub: 'Quatre cas marquants :',
+    mediaPlaceholder: 'Capture à venir',
     prj1Status: 'en cours · France', prj1Title: 'FEMTO-ST — Plateforme S.mart',
     prj1Text: 'Conception et intégration de bancs didactiques d\u2019automatisme avancé : 6 bancs d\u2019essai et 3 coffrets de commande complets, avec automates Beckhoff sous TwinCAT 3, boucles PID, axes motorisés et intégration de caméras.',
 
