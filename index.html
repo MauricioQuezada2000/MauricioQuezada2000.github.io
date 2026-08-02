@@ -239,45 +239,8 @@
       <button type="button" class="filter-chip" data-filter="3d" data-i18n="filter3d">Impresión 3D</button>
     </div>
 
-    <div class="gallery-grid">
-      <figure class="gallery-item" data-category="hmi">
-        <div class="gallery-item__media">
-          <img src="assets/gallery/hmi/1.png" alt="HMI encoladora — vista general">
-        </div>
-        <figcaption data-i18n="gallery1Caption">HMI encoladora — vista general</figcaption>
-      </figure>
-
-      <figure class="gallery-item" data-category="hmi">
-        <div class="gallery-item__media">
-          <img src="assets/gallery/hmi/2.png" alt="HMI encoladora — programación">
-        </div>
-        <figcaption data-i18n="gallery2Caption">HMI encoladora — programación</figcaption>
-      </figure>
-
-      <figure class="gallery-item" data-category="hmi">
-        <div class="gallery-item__media">
-          <img src="assets/gallery/hmi/3.png" alt="HMI encoladora — válvulas">
-        </div>
-        <figcaption data-i18n="gallery3Caption">HMI encoladora — válvulas</figcaption>
-      </figure>
-
-      <figure class="gallery-item" data-category="hmi">
-        <div class="gallery-item__media">
-          <img src="assets/gallery/hmi/4.png" alt="HMI encoladora — motores">
-        </div>
-        <figcaption data-i18n="gallery4Caption">HMI encoladora — motores</figcaption>
-      </figure>
-
-      <figure class="gallery-item" data-category="scada">
-        <div class="gallery-item__media">
-          <img src="assets/gallery/scada/1.png" alt="Red de dispositivos — proyecto Beni">
-        </div>
-        <figcaption data-i18n="gallery5Caption">Red de dispositivos — proyecto Beni</figcaption>
-      </figure>
-
-      <!-- EJEMPLO: duplica este bloque .gallery-item para cada foto nueva. data-category debe coincidir con un data-filter de arriba
-           Ruta: assets/gallery/<categoria>/<numero>.png -- ej: assets/gallery/cad/2.png -->
-    </div>
+    <!-- Le contenu de cette grille est généré automatiquement depuis js/gallery-data.js -->
+    <div class="gallery-grid" id="galleryGrid"></div>
   </section>
 
   <!-- CONTACTO -->
@@ -323,6 +286,7 @@
 <!-- Siemens ix-icons (open source, MIT) — permite usar <ix-icon name="..."></ix-icon> -->
 <script type="module" src="https://cdn.jsdelivr.net/npm/@siemens/ix-icons@^3.0.0/dist/ix-icons/ix-icons.esm.js"></script>
 <script nomodule src="https://cdn.jsdelivr.net/npm/@siemens/ix-icons@^3.0.0/dist/ix-icons/ix-icons.js"></script>
+<script src="js/gallery-data.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
