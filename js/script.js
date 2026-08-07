@@ -8,7 +8,7 @@ const translations = {
     nav1: '01 Perfil', nav2: '02 Certificaciones', nav3: '03 Competencias', nav4: '04 Galería Técnica', nav5: '05 Contacto',
     heroStatus: 'EN LÍNEA — abierto a prácticas y colaboraciones',
     heroRole: 'Ingeniería en Automatización & Control Industrial',
-    heroSub: 'Ingeniero en automatización con experiencia profesional en Bolivia y Francia. Actualmente curso el Máster ARMAC en la Université Marie et Louis Pasteur.',
+    heroSub: 'Ingeniero en automatización con experiencia profesional en entornos industriales. Actualmente curso el Máster ARMAC en la Université Marie et Louis Pasteur.',
 
     card1Label: 'Cursos y Certificaciones', card1Unit: 'certificaciones oficiales',
     card1Breakdown: '4 Automatización/PLC · 4 CAD/Eléctrico · 3 Redes & SCADA · 4 especializadas',
@@ -22,7 +22,7 @@ const translations = {
     card6Breakdown: '16 Siemens Solution Partner · 8 Rofer/Electrocapital · 2 Esdesur · 2 en Francia',
 
     mod1Tag: 'MOD-01 // PERFIL', mod1Title: 'Sobre mí',
-    mod1Text1: 'Ingeniero en automatización con experiencia profesional en Bolivia y Francia. Actualmente curso el Máster ARMAC (Automatique, Robotique et Applications à la Mécatronique) en la Université Marie et Louis Pasteur, Besançon. Trabajé como Ingeniero de Proyectos de Automatización en Siemens Solution Partner / AF-Control, pilotando decenas de proyectos de control-comando de principio a fin: desde el diagnóstico en planta hasta la programación PLC y la puesta en marcha.',
+    mod1Text1: 'Ingeniero en automatización con experiencia profesional en entornos industriales. Actualmente curso el Máster ARMAC (Automatique, Robotique et Applications à la Mécatronique) en la Université Marie et Louis Pasteur, Besançon. Trabajé como Ingeniero de Proyectos de Automatización en Siemens Solution Partner / AF-Control, pilotando decenas de proyectos de control-comando de principio a fin: desde el diagnóstico en planta hasta la programación PLC y la puesta en marcha.',
     mod1Text2: 'Combino la capa de diseño — CAD mecánico, esquemas eléctricos EPLAN/AutoCAD — con la de programación, trabajando multi-marca (Siemens, Schneider, Allen-Bradley, Beckhoff) bajo el estándar IEC 61131-3 y buses de campo como EtherCAT, Profinet y Modbus.',
     sectorsLabel: 'Sectores de trabajo:',
     sector1: 'Agroalimentario', sector2: 'Tratamiento de agua', sector3: 'Energía (hidroeléctrica)',
@@ -57,7 +57,7 @@ const translations = {
     nav1: '01 Profile', nav2: '02 Certifications', nav3: '03 Skills', nav4: '04 Technical Gallery', nav5: '05 Contact',
     heroStatus: 'ONLINE — open to internships and collaborations',
     heroRole: 'Automation & Industrial Control Engineering',
-    heroSub: 'Automation engineer with professional experience in Bolivia and France. Currently pursuing the ARMAC Master\u2019s at Université Marie et Louis Pasteur.',
+    heroSub: 'Automation engineer with professional experience in industrial environments. Currently pursuing the ARMAC Master\u2019s at Université Marie et Louis Pasteur.',
 
     card1Label: 'Courses & Certifications', card1Unit: 'official certifications',
     card1Breakdown: '4 Automation/PLC · 4 CAD/Electrical · 3 Networks & SCADA · 4 specialized',
@@ -71,7 +71,7 @@ const translations = {
     card6Breakdown: '16 Siemens Solution Partner · 8 Rofer/Electrocapital · 2 Esdesur · 2 in France',
 
     mod1Tag: 'MOD-01 // PROFILE', mod1Title: 'About me',
-    mod1Text1: 'Automation engineer with professional experience in Bolivia and France. Currently pursuing the ARMAC Master\u2019s (Automatique, Robotique et Applications à la Mécatronique) at Université Marie et Louis Pasteur, Besançon. I worked as an Automation Project Engineer at Siemens Solution Partner / AF-Control, leading dozens of control system projects end to end: from on-site diagnostics to PLC programming and commissioning.',
+    mod1Text1: 'Automation engineer with professional experience in industrial environments. Currently pursuing the ARMAC Master\u2019s (Automatique, Robotique et Applications à la Mécatronique) at Université Marie et Louis Pasteur, Besançon. I worked as an Automation Project Engineer at Siemens Solution Partner / AF-Control, leading dozens of control system projects end to end: from on-site diagnostics to PLC programming and commissioning.',
     mod1Text2: 'I combine the design layer — mechanical CAD, EPLAN/AutoCAD electrical schematics — with the programming layer, working across brands (Siemens, Schneider, Allen-Bradley, Beckhoff) under the IEC 61131-3 standard and fieldbuses such as EtherCAT, Profinet and Modbus.',
     sectorsLabel: 'Industry sectors:',
     sector1: 'Food & beverage', sector2: 'Water treatment', sector3: 'Energy (hydroelectric)',
@@ -106,7 +106,7 @@ const translations = {
     nav1: '01 Profil', nav2: '02 Certifications', nav3: '03 Compétences', nav4: '04 Galerie Technique', nav5: '05 Contact',
     heroStatus: 'EN LIGNE — ouvert aux stages et collaborations',
     heroRole: 'Ingénierie en Automatisation & Contrôle Industriel',
-    heroSub: 'Ingénieur automaticien avec expérience professionnelle en Bolivie et en France. Actuellement en Master ARMAC à l\u2019Université Marie et Louis Pasteur.',
+    heroSub: 'Ingénieur automaticien avec expérience professionnelle en environnements industriels. Actuellement en Master ARMAC à l\u2019Université Marie et Louis Pasteur.',
 
     card1Label: 'Cours et Certifications', card1Unit: 'certifications officielles',
     card1Breakdown: '4 Automatisation/API · 4 CAO/Électrique · 3 Réseaux & SCADA · 4 spécialisées',
@@ -120,7 +120,7 @@ const translations = {
     card6Breakdown: '16 Siemens Solution Partner · 8 Rofer/Electrocapital · 2 Esdesur · 2 en France',
 
     mod1Tag: 'MOD-01 // PROFIL', mod1Title: 'À propos de moi',
-    mod1Text1: 'Ingénieur automaticien avec expérience professionnelle en Bolivie et en France. Actuellement en Master ARMAC (Automatique, Robotique et Applications à la Mécatronique) à l\u2019Université Marie et Louis Pasteur, Besançon. J\u2019ai travaillé comme Ingénieur Projets d\u2019Automatisation chez Siemens Solution Partner / AF-Control, en pilotant des dizaines de projets de contrôle-commande de bout en bout : du diagnostic terrain à la programmation automate et la mise en service.',
+    mod1Text1: 'Ingénieur automaticien avec expérience professionnelle en environnements industriels. Actuellement en Master ARMAC (Automatique, Robotique et Applications à la Mécatronique) à l\u2019Université Marie et Louis Pasteur, Besançon. J\u2019ai travaillé comme Ingénieur Projets d\u2019Automatisation chez Siemens Solution Partner / AF-Control, en pilotant des dizaines de projets de contrôle-commande de bout en bout : du diagnostic terrain à la programmation automate et la mise en service.',
     mod1Text2: 'Je combine la couche conception — CAO mécanique, schémas électriques EPLAN/AutoCAD — avec la couche programmation, en travaillant multi-marques (Siemens, Schneider, Allen-Bradley, Beckhoff) selon la norme IEC 61131-3 et des bus de terrain comme EtherCAT, Profinet et Modbus.',
     sectorsLabel: 'Secteurs d\u2019activité :',
     sector1: 'Agroalimentaire', sector2: 'Traitement de l\u2019eau', sector3: 'Énergie (hydroélectrique)',
