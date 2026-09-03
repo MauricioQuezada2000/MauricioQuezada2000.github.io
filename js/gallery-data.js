@@ -14,11 +14,11 @@ const galleryData = [
 
   // ---------- PLANOS CAD (cad) ----------
   { category: 'cad', src: 'assets/gallery/cad/1.png', caption: { es: '', en: '', fr: '' } },
+  { category: 'cad', src: 'assets/gallery/cad/2.png', caption: { es: '', en: '', fr: '' } },
   { category: 'cad', src: 'assets/gallery/cad/3.png', caption: { es: '', en: '', fr: '' } },
   { category: 'cad', src: 'assets/gallery/cad/4.png', caption: { es: '', en: '', fr: '' } },
   { category: 'cad', src: 'assets/gallery/cad/5.png', caption: { es: '', en: '', fr: '' } },
   //{ category: 'cad', src: 'assets/gallery/cad/6.png', caption: { es: '', en: '', fr: '' } },
-  //{ category: 'cad', src: 'assets/gallery/cad/7.png', caption: { es: '', en: '', fr: '' } },
 
     // ---------- DISEÑO (design) ----------
   { category: 'design', src: 'assets/gallery/design/1.png', caption: { es: '', en: '', fr: '' } },
