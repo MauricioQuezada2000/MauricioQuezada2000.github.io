@@ -1,7 +1,5 @@
 // ============================================================
-// TRADUCCIONES — cada clave corresponde a un atributo data-i18n
-// en index.html. Al duplicar tarjetas/filas de ejemplo (cert,
-// proyecto, etc.) recuerda añadir su clave aquí en los 3 idiomas.
+// TRADUCCIONES 
 // ============================================================
 const translations = {
   es: {
