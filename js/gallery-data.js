@@ -31,7 +31,6 @@ const galleryData = [
   { category: 'hmi', src: 'assets/gallery/hmi/6.png', caption: { es: '', en: '', fr: '' } },
   { category: 'hmi', src: 'assets/gallery/hmi/7.png', caption: { es: '', en: '', fr: '' } },
 
-
     // ---------- DISEÑO DE TABLEROS (panel) ----------
   { category: 'panel', src: 'assets/gallery/panel/1.png', caption: { es: '', en: '', fr: '' } },
   { category: 'panel', src: 'assets/gallery/panel/2.png', caption: { es: '', en: '', fr: '' } },
@@ -56,9 +55,6 @@ const galleryData = [
   { category: 'scada', src: 'assets/gallery/scada/5.png', caption: { es: '', en: '', fr: '' } },
   { category: 'scada', src: 'assets/gallery/scada/6.png', caption: { es: '', en: '', fr: '' } },
   { category: 'scada', src: 'assets/gallery/scada/7.png', caption: { es: '', en: '', fr: '' } },
-
-
-
 
   // ---------- VARIADORES DE FRECUENCIA (vfd) ----------
   // { category: 'vfd', src: 'assets/gallery/vfd/1.png', caption: { es: '', en: '', fr: '' } },
