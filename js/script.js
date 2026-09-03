@@ -181,11 +181,15 @@ function renderGallery(lang) {
     img.alt = (item.caption && item.caption[lang]) || '';
     media.appendChild(img);
 
-    const caption = document.createElement('figcaption');
-    caption.textContent = (item.caption && (item.caption[lang] || item.caption.es)) || '';
-
     figure.appendChild(media);
-    figure.appendChild(caption);
+
+    const captionText = (item.caption && (item.caption[lang] || item.caption.es)) || '';
+    if (captionText.trim() !== '') {
+      const caption = document.createElement('figcaption');
+      caption.textContent = captionText;
+      figure.appendChild(caption);
+    }
+
     grid.appendChild(figure);
   });
 }
