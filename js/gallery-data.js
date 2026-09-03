@@ -1,12 +1,6 @@
 // ============================================================
 // DONNÉES DE LA GALERIE TECHNIQUE
 // ============================================================
-// Chaque catégorie est prévue pour ~6 photos (assets/gallery/<cat>/1.png à 6.png).
-// Les entrées ACTIVES ci-dessous correspondent aux photos déjà uploadées.
-// Les entrées EN COMMENTAIRE sont des emplacements réservés : dès que tu
-// uploades la photo correspondante (ex: assets/gallery/vfd/1.png), retire
-// les "//" au début de la ligne.
-//
 // category : plc, hmi, scada, vfd, elec, cad, panel, design, 3d
 // ============================================================
 
