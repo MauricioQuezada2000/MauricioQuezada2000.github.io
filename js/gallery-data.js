@@ -51,8 +51,8 @@ const galleryData = [
   { category: 'plc', src: 'assets/gallery/plc/2.png', caption: { es: '', en: '', fr: '' } },
   { category: 'plc', src: 'assets/gallery/plc/3.png', caption: { es: '', en: '', fr: '' } },
   { category: 'plc', src: 'assets/gallery/plc/4.png', caption: { es: '', en: '', fr: '' } },
-//{ category: 'plc', src: 'assets/gallery/plc/5.png', caption: { es: '', en: '', fr: '' } },
-//{ category: 'plc', src: 'assets/gallery/plc/6.png', caption: { es: '', en: '', fr: '' } },
+  { category: 'plc', src: 'assets/gallery/plc/5.png', caption: { es: '', en: '', fr: '' } },
+  { category: 'plc', src: 'assets/gallery/plc/6.png', caption: { es: '', en: '', fr: '' } },
 
   // ---------- SCADA ----------
   { category: 'scada', src: 'assets/gallery/scada/1.png', caption: { es: '', en: '', fr: '' } },
