@@ -250,9 +250,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const savedLang = (() => {
     try { return localStorage.getItem(LANG_KEY); } catch (e) { return null; }
   })();
-  const browserLang = (navigator.language || 'es').slice(0, 2);
-  const initialLang = savedLang || (translations[browserLang] ? browserLang : 'es');
-
+  const browserLang = (navigator.language || 'fr').slice(0, 2);
+  const initialLang = savedLang || 'fr';
+  
   applyLanguage(initialLang);
 
   document.querySelectorAll('.lang-switch__btn').forEach((btn) => {
