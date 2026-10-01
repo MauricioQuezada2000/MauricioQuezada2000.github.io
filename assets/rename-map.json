@@ -1,0 +1,250 @@
+[
+  {
+    "from": "assets/gallery/cad/1_Esquemas unifilar princiapl proyecto inti.png",
+    "to": "assets/gallery/cad/01-esquema-unifilar-principal-del-proyecto-inti.png"
+  },
+  {
+    "from": "assets/gallery/cad/2_Ejemplo de diagrmas unifialres por tableros de distribucion.png",
+    "to": "assets/gallery/cad/02-diagramas-unifilares-de-tableros-de-distribucion.png"
+  },
+  {
+    "from": "assets/gallery/cad/3 planos electricos geenrales.png",
+    "to": "assets/gallery/cad/03-planos-electricos-generales.png"
+  },
+  {
+    "from": "assets/gallery/cad/4_ejepmplo process diagram.png",
+    "to": "assets/gallery/cad/04-diagrama-de-proceso.png"
+  },
+  {
+    "from": "assets/gallery/cad/5_ejemplo process and instrumentation P&ID.png",
+    "to": "assets/gallery/cad/05-diagrama-de-tuberias-e-instrumentacion-p-id.png"
+  },
+  {
+    "from": "assets/gallery/design/1_diseno de tableros de centro de control de motores.png",
+    "to": "assets/gallery/design/01-diseno-de-centro-de-control-de-motores.png"
+  },
+  {
+    "from": "assets/gallery/design/2diseno de tableros de y comunicaciones multiprotocolos para motores.png",
+    "to": "assets/gallery/design/02-tableros-y-comunicaciones-multiprotocolo-para-motores.png"
+  },
+  {
+    "from": "assets/gallery/design/3 esquemas de tablero de distribucion.png",
+    "to": "assets/gallery/design/03-esquemas-de-tablero-de-distribucion.png"
+  },
+  {
+    "from": "assets/gallery/design/4 tableros de control.png",
+    "to": "assets/gallery/design/04-diseno-de-tableros-de-control.png"
+  },
+  {
+    "from": "assets/gallery/design/5 esquemas electricos de control y fuerza.png",
+    "to": "assets/gallery/design/05-esquemas-electricos-de-control-y-fuerza.png"
+  },
+  {
+    "from": "assets/gallery/design/6 tablero de control de potencia y motores.png",
+    "to": "assets/gallery/design/06-tablero-de-control-de-potencia-y-motores.png"
+  },
+  {
+    "from": "assets/gallery/hmi/1 ejemplo 2 de lineas de procesos de aglomerado de madera.png",
+    "to": "assets/gallery/hmi/01-lineas-de-proceso-de-aglomerado-de-madera.png"
+  },
+  {
+    "from": "assets/gallery/hmi/2 ejemplo pantalla de control de motores hmi basico.png",
+    "to": "assets/gallery/hmi/02-pantalla-hmi-de-control-de-motores.png"
+  },
+  {
+    "from": "assets/gallery/hmi/3 ejemplo de centro de control de valvulas basico.png",
+    "to": "assets/gallery/hmi/03-centro-de-control-de-valvulas.png"
+  },
+  {
+    "from": "assets/gallery/hmi/4 ejemplo de proceso de linea de inyecion de aceite para alimento de anuamles.png",
+    "to": "assets/gallery/hmi/04-linea-de-inyeccion-de-aceite-para-alimento-animal.png"
+  },
+  {
+    "from": "assets/gallery/hmi/5 ejemplo de control de pesa de alimento.png",
+    "to": "assets/gallery/hmi/05-control-de-pesaje-de-alimento.png"
+  },
+  {
+    "from": "assets/gallery/hmi/6 ejemplo de limpieza CIP pepsi .png",
+    "to": "assets/gallery/hmi/06-limpieza-cip-en-planta-de-bebidas.png"
+  },
+  {
+    "from": "assets/gallery/hmi/7 ejemplo de pesaje y dosaje de alimento.png",
+    "to": "assets/gallery/hmi/07-pesaje-y-dosificacion-de-alimento.png"
+  },
+  {
+    "from": "assets/gallery/panel/1 ejemplo multiples tableros de control mediante periferia et200sp para control y medida de tanques y posos para caudal y nivel de agua .png",
+    "to": "assets/gallery/panel/01-tableros-et-200sp-para-caudal-y-nivel-en-tanques-y-pozos.png"
+  },
+  {
+    "from": "assets/gallery/panel/2 tablero de banco de capacitores.png",
+    "to": "assets/gallery/panel/02-tablero-de-banco-de-capacitores.png"
+  },
+  {
+    "from": "assets/gallery/panel/3 tablero de cotrol  y potencia para medida de caudal control periferia et200sp siemens g120x y mag6000.png",
+    "to": "assets/gallery/panel/03-tablero-de-caudal-con-et-200sp-g120x-y-mag-6000.png"
+  },
+  {
+    "from": "assets/gallery/panel/4 tablero dde control para planta de agua potable PTAP.png",
+    "to": "assets/gallery/panel/04-tablero-de-control-de-planta-de-agua-potable.png"
+  },
+  {
+    "from": "assets/gallery/panel/5 TABLERO DE CONTOL DE ENVASADO S7 300.png",
+    "to": "assets/gallery/panel/05-tablero-de-control-de-envasado-con-s7-300.png"
+  },
+  {
+    "from": "assets/gallery/panel/6 MIGRACION DE TABLERO DE CONTROL Y POTENCIA A SIEMENS DE OMROM.png",
+    "to": "assets/gallery/panel/06-migracion-de-tablero-de-control-y-potencia-de-omron-a-siemens.png"
+  },
+  {
+    "from": "assets/gallery/plc/1 PROGRAMACION ENTORNO TIA PORTAL.png",
+    "to": "assets/gallery/plc/01-programacion-plc-en-tia-portal.png"
+  },
+  {
+    "from": "assets/gallery/plc/2 PROGRAMACION ENTORNO STEP 7 CONTROL DE MOTORES.png",
+    "to": "assets/gallery/plc/02-control-de-motores-en-step-7.png"
+  },
+  {
+    "from": "assets/gallery/plc/3 PROGRAMACION ENTORNO TIA PORTAL CONECIONES DE MODBUS TCP.jpeg",
+    "to": "assets/gallery/plc/03-comunicaciones-modbus-tcp-en-tia-portal.jpeg"
+  },
+  {
+    "from": "assets/gallery/plc/4 PROGRAMCION ENTORNO TIA PORTAL CON HMI.png",
+    "to": "assets/gallery/plc/04-programacion-de-plc-y-hmi-en-tia-portal.png"
+  },
+  {
+    "from": "assets/gallery/plc/5 PROGRAMACION STEP 7 CON SISTEMAS DE PESAJE.png",
+    "to": "assets/gallery/plc/05-sistemas-de-pesaje-en-step-7.png"
+  },
+  {
+    "from": "assets/gallery/plc/6 PROGRAMACION DE S7 200.png",
+    "to": "assets/gallery/plc/06-programacion-de-plc-s7-200.png"
+  },
+  {
+    "from": "assets/gallery/scada/1 VISTA DE REDES SISTEMAS SCADA PLANTA DE ENERGIA.png",
+    "to": "assets/gallery/scada/01-redes-scada-de-planta-de-energia.png"
+  },
+  {
+    "from": "assets/gallery/scada/2 PLANTA DE ENERGIA ENDE ANDINA.png",
+    "to": "assets/gallery/scada/02-supervision-de-planta-de-energia-ende-andina.png"
+  },
+  {
+    "from": "assets/gallery/scada/3 VISTA GENERAL DE PLANTA.png",
+    "to": "assets/gallery/scada/03-vista-general-de-planta.png"
+  },
+  {
+    "from": "assets/gallery/scada/EJEMPLO DE PANTLALS EN SISTEMAS SCADAS.png",
+    "to": "assets/gallery/scada/04-pantallas-de-sistemas-scada.png"
+  },
+  {
+    "from": "assets/gallery/scada/5 PANTALLA DE UBIACION DE CONTROL DISTRUBIODO EN PLANTAS.png",
+    "to": "assets/gallery/scada/05-ubicacion-del-control-distribuido-en-planta.png"
+  },
+  {
+    "from": "assets/gallery/scada/6 RECAPD E VISTAS EN PLANTAS DE AGUA .png",
+    "to": "assets/gallery/scada/06-vistas-de-supervision-de-plantas-de-agua.png"
+  },
+  {
+    "from": "assets/gallery/scada/7 VISTA TOPOLOGICA DE DISPOTISVOS EN SISTEMAS SCADA.png",
+    "to": "assets/gallery/scada/07-topologia-de-dispositivos-en-sistemas-scada.png"
+  },
+  {
+    "from": "assets/certificates/2020 -12-04 AutoCAD Especialización - N3 .pdf",
+    "to": "assets/certificates/2020-12-04-autocad-especializacion-n3.duplicate.pdf"
+  },
+  {
+    "from": "assets/certificates/2022-11-10 Schneider.pdf",
+    "to": "assets/certificates/2022-11-schneider-automatizacion-industrial.pdf"
+  },
+  {
+    "from": "assets/certificates/2022-11-16 S7-1200 Avanzado.pdf",
+    "to": "assets/certificates/2022-11-16-siemens-s7-1200-hmi-avanzado.pdf"
+  },
+  {
+    "from": "assets/certificates/2022-11-23 Logo V8 Avanzado.pdf",
+    "to": "assets/certificates/2022-11-23-siemens-logo-nivel-3.pdf"
+  },
+  {
+    "from": "assets/certificates/2023-03-10 Schneider PAC y Redes.pdf",
+    "to": "assets/certificates/2023-03-schneider-plc-pac-redes-industriales.pdf"
+  },
+  {
+    "from": "assets/certificates/2023-04 ABB BAJA TENSION.pdf",
+    "to": "assets/certificates/2023-04-02-abb-electrification-baja-tension.pdf"
+  },
+  {
+    "from": "assets/certificates/2023-04-12 Instrumentacion.pdf",
+    "to": "assets/certificates/2023-04-12-instrumentacion-plantas-proceso.pdf"
+  },
+  {
+    "from": "assets/certificates/2023-09-02 Ignition Avanzado.pdf",
+    "to": "assets/certificates/2023-10-22-ignition-scada-avanzado.pdf"
+  },
+  {
+    "from": "assets/certificates/2023-12_NORELUX-381.pdf",
+    "to": "assets/certificates/2023-12-18-selectividad-coordinacion-protecciones.pdf"
+  },
+  {
+    "from": "assets/certificates/2024-01-24 Redes Industriales Avanzado.pdf",
+    "to": "assets/certificates/2024-01-24-redes-industriales-nivel-2.pdf"
+  },
+  {
+    "from": "assets/certificates/2024-11-20 SIMARIS.pdf",
+    "to": "assets/certificates/2024-11-siemens-simaris-certified-program.pdf"
+  },
+  {
+    "from": "assets/certificates/2024-11-28 - EF SET Certificate.pdf",
+    "to": "assets/certificates/2024-11-28-ef-set-ingles-c1.pdf"
+  },
+  {
+    "from": "assets/certificates/2025-02-09 TIA Ssafety.pdf",
+    "to": "assets/certificates/2025-02-09-siemens-tia-safety-integrated.pdf"
+  },
+  {
+    "from": "assets/certificates/2025-02-24 S7-1500 R-H SITRAIN .pdf",
+    "to": "assets/certificates/2025-03-24-siemens-s7-1500-r-h.pdf"
+  },
+  {
+    "from": "assets/certificates/2025-03-24 WINCC Unified .pdf",
+    "to": "assets/certificates/2025-03-24-siemens-wincc-unified-v19.pdf"
+  },
+  {
+    "from": "assets/certificates/AUTODESK/2020 -11-03 AutoCAD Especialización - N1.pdf",
+    "to": "assets/certificates/autodesk/2020-11-03-autocad-especializacion-n1.pdf"
+  },
+  {
+    "from": "assets/certificates/AUTODESK/2020 -11-24 AutoCAD Especialización - N2 .pdf",
+    "to": "assets/certificates/autodesk/2020-11-24-autocad-especializacion-n2.pdf"
+  },
+  {
+    "from": "assets/certificates/AUTODESK/2020 -12-04 AutoCAD Especialización - N3 .pdf",
+    "to": "assets/certificates/autodesk/2020-12-04-autocad-especializacion-n3.pdf"
+  },
+  {
+    "from": "assets/certificates/AUTODESK/2020 -12-28 Autodesk Certified Professional_ AutoCAD .pdf",
+    "to": "assets/certificates/autodesk/2020-12-28-autodesk-certified-professional-autocad.pdf"
+  },
+  {
+    "from": "assets/certificates/AUTODESK/2021-03-01 INVENTOR Especialización L1 .pdf",
+    "to": "assets/certificates/autodesk/2021-04-01-inventor-especializacion-n1.pdf"
+  },
+  {
+    "from": "assets/certificates/AUTODESK/2021-04-29 INVENTOR Especialización L3 .pdf",
+    "to": "assets/certificates/autodesk/2021-04-29-inventor-especializacion-n3.pdf"
+  },
+  {
+    "from": "assets/certificates/AUTODESK/2021-05-04 INVENTOR Especialización L2 .pdf",
+    "to": "assets/certificates/autodesk/2021-05-04-inventor-especializacion-n2.pdf"
+  },
+  {
+    "from": "assets/certificates/AUTODESK/2021-21-08 Workflow entre Electrical e Inventor.pdf",
+    "to": "assets/certificates/autodesk/2021-08-21-workflow-electrical-inventor.pdf"
+  },
+  {
+    "from": "assets/certificates/AUTODESK/2023 09-25 REVIT .pdf",
+    "to": "assets/certificates/2023-09-25-electricidad-basica-avanzada-home-smart.pdf"
+  },
+  {
+    "from": "assets/certificates/FINAL Mauricio Rolando Quezada Torres.pdf",
+    "to": "assets/certificates/2025-04-24-automatizacion-sistemas-electricos-potencia.pdf"
+  }
+]

@@ -308,13 +308,12 @@ function applyLanguage(lang) {
   $('mainNav').setAttribute('aria-label', dict.navLabel);
   document.querySelector('.lang-switch').setAttribute('aria-label', dict.langLabel);
   document.querySelector('.filter-row').setAttribute('aria-label', dict.filterLabel);
-  document.querySelector('#certificaciones .reg-table').setAttribute('aria-label', dict.mod2Title);
-  document.querySelector('#competencias .reg-table').setAttribute('aria-label', dict.mod3Title);
   document.documentElement.lang = currentLang;
   document.title = dict.title;
   document.querySelector('meta[name="description"]').content = dict.description;
   try { localStorage.setItem(LANG_KEY, currentLang); } catch { /* Preference is optional. */ }
   translateGallery();
+  translatePortfolio();
 }
 function updateZoomControls() {
   $('zoomValue').textContent = `${Math.round(zoom * 100)}%`;
@@ -396,6 +395,7 @@ function navigateImage(delta) {
 
 document.addEventListener('DOMContentLoaded', () => {
   buildGallery();
+  initPortfolio();
   let savedLang;
   try { savedLang = localStorage.getItem(LANG_KEY); } catch { /* Optional preference. */ }
   applyLanguage(savedLang || 'fr');

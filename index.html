@@ -13,6 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/enhancements.css">
+<link rel="stylesheet" href="css/portfolio.css">
 </head>
 <body id="inicio">
 <!-- Siemens iX Icons 3.4.0 — MIT; license in assets/icons/ -->
@@ -49,6 +50,10 @@
     <h1 class="hero__title">
       Mauricio Quezada
     </h1>
+    <a class="credential-badge" id="autodeskBadge" href="assets/certificates/autodesk/2020-12-28-autodesk-certified-professional-autocad.pdf" target="_blank" rel="noopener">
+      <span><strong>Autodesk Certified Professional · AutoCAD</strong><small><span data-i18n="obtained">Obtenida en 2020</span> · <span data-i18n="certificateLink">Ver certificado</span></small></span>
+      <svg class="icon" aria-hidden="true"><use href="#ix-open-external"></use></svg>
+    </a>
     <p class="hero__role" data-i18n="heroRole">Ingeniería en Automatización &amp; Control Industrial</p>
     <p class="hero__sub" data-i18n="heroSub">
       Ingeniero en automatización con experiencia profesional en entornos industriales.
@@ -68,7 +73,7 @@
         <svg class="icon bento-card__icon" aria-hidden="true" focusable="false"><use href="#ix-certificate"></use></svg><svg class="icon bento-card__arrow" aria-hidden="true" focusable="false"><use href="#ix-chevron-right"></use></svg>
         <span class="bento-card__label" data-i18n="card1Label">Cursos y Certificaciones</span>
         <span class="bento-card__number">+20</span>
-        <span class="bento-card__unit" data-i18n="card1Unit">certificaciones oficiales</span>
+        <span class="bento-card__unit" data-i18n="card1Unit">certificados disponibles</span>
         <span class="bento-card__breakdown" data-i18n="card1Breakdown">Automatización PLC · Sistemas de potencia · IEC 61131-3 · Subestaciones · Instalaciones eléctricas · Instrumentación de procesos</span>
       </a>
 
@@ -149,112 +154,34 @@
 <!-- CERTIFICACIONES -->
 <section id="certificaciones" class="module">
   <div class="node"></div>
-
-  <span class="module__tag" data-i18n="mod2Tag">
-    MOD-02 // CERTIFICACIONES
-  </span>
-
-  <h2 class="module__title" data-i18n="mod2Title">
-    +20 certificaciones oficiales
-  </h2>
-
-  <p class="module__text" data-i18n="mod2Sub">
-    Selección de las más relevantes:
-  </p>
-
-  <div class="reg-table" role="table" aria-label="Certificaciones destacadas">
-
-    <div class="reg-row reg-row--head" role="row">
-      <span role="columnheader" data-i18n="certHeadArea">
-        ÁREA
-      </span>
-
-      <span role="columnheader" data-i18n="certHeadName">
-        CERTIFICACIÓN
-      </span>
+  <span class="module__tag" data-i18n="mod2Tag">MOD-02 // CERTIFICACIONES</span>
+  <h2 class="module__title" data-i18n="mod2Title">Certificaciones y formación</h2>
+  <p class="module__text" data-i18n="mod2Sub">Un recorrido por mi formación técnica, con acceso a los documentos originales.</p>
+  <div id="certificateCarousel" role="region" data-i18n-aria="certRegion" aria-label="Certificados y formación">
+    <div class="certificate-toolbar">
+      <div class="certificate-controls">
+        <button id="certificatePrev" type="button" data-i18n-aria="certPrevious" aria-label="Certificado anterior"><svg class="icon" aria-hidden="true"><use href="#ix-chevron-left"></use></svg></button>
+        <button id="certificatePause" type="button" aria-pressed="false">Pausar</button>
+        <button id="certificateNext" type="button" data-i18n-aria="certNext" aria-label="Certificado siguiente"><svg class="icon" aria-hidden="true"><use href="#ix-chevron-right"></use></svg></button>
+        <span class="certificate-position" id="certificatePosition"></span>
+      </div>
+      <button class="certificate-all" id="certificateAll" type="button" aria-expanded="false" aria-controls="certificateTrack">Ver todos</button>
     </div>
-
-    <div class="reg-row" role="row">
-      <span class="reg-addr" role="cell" data-i18n="certArea1">
-        General
-      </span>
-
-      <span role="cell" data-i18n="cert1">
-        SITRAIN Siemens Partner Academy — TIA Portal, WinCC, PCS 7, SIMOTION, Safety
-      </span>
-    </div>
-
-    <div class="reg-row" role="row">
-      <span class="reg-addr" role="cell" data-i18n="certArea2">
-        Auto &amp; PLC
-      </span>
-
-      <span role="cell" data-i18n="cert2">
-        Automatización Industrial y PLCs: Programación avanzada, desarrollo de lógica y arquitecturas de control (IEC 61131-3).
-      </span>
-    </div>
-
-    <div class="reg-row" role="row">
-      <span class="reg-addr" role="cell" data-i18n="certArea3">
-        Potencia
-      </span>
-
-      <span role="cell" data-i18n="cert3">
-        Sistemas de Potencia y Subestaciones: Diseño, diagnóstico y mantenimiento de sistemas de potencia e infraestructura de AT.
-      </span>
-    </div>
-
-    <div class="reg-row" role="row">
-      <span class="reg-addr" role="cell" data-i18n="certArea4">
-        Instalación
-      </span>
-
-      <span role="cell" data-i18n="cert4">
-        Instalaciones Eléctricas: Ejecución y supervisión de instalaciones y montajes eléctricos a nivel industrial y comercial.
-      </span>
-    </div>
-
-    <div class="reg-row" role="row">
-      <span class="reg-addr" role="cell" data-i18n="certArea5">
-        Procesos
-      </span>
-
-      <span role="cell" data-i18n="cert5">
-        Instrumentación de Procesos: Integración de sensores, telemetría continua y sistemas de instrumentación para control.
-      </span>
-    </div>
-
+    <div class="certificate-track" id="certificateTrack"></div>
   </div>
+  <p class="certificate-note" data-i18n="certNote">Cada tarjeta indica el tipo de documento y su fecha. La certificación profesional de Autodesk fue obtenida en 2020.</p>
+  <noscript><p><a href="assets/certificates/autodesk/2020-12-28-autodesk-certified-professional-autocad.pdf">Autodesk Certified Professional: AutoCAD (PDF)</a></p></noscript>
 </section>
 
   <!-- COMPETENCIAS -->
   <section id="competencias" class="module">
     <div class="node"></div>
     <span class="module__tag" data-i18n="mod3Tag">MOD-03 // COMPETENCIAS</span>
-    <h2 class="module__title" data-i18n="mod3Title">Stack técnico — +20 herramientas</h2>
+    <h2 class="module__title" data-i18n="mod3Title">Herramientas y ecosistemas industriales</h2>
 
-    <div class="reg-table" role="table" aria-label="Tabla de competencias técnicas">
-      <div class="reg-row reg-row--head" role="row">
-        <span role="columnheader" data-i18n="regHeadReg">GRUPO</span>
-        <span role="columnheader" data-i18n="regHeadSkill">HERRAMIENTAS</span>
-        <span role="columnheader" data-i18n="regHeadArea">CANT.</span>
-      </div>
-      <div class="reg-row" role="row">
-        <span class="reg-addr" role="cell" data-i18n="soft1Group">Automatización &amp; SCADA</span>
-        <span role="cell">TIA Portal / STEP 7, WinCC (Classic &amp; Unified), EcoStruxure, SCADA Citect, Vijeo Designer, TwinCAT 3, C-more, Productivity Suite, Kinco</span>
-        <span class="reg-tag" role="cell">9</span>
-      </div>
-      <div class="reg-row" role="row">
-        <span class="reg-addr" role="cell" data-i18n="soft2Group">CAD &amp; Eléctrico</span>
-        <span role="cell">AutoCAD, AutoCAD Electrical, EPLAN, Inventor, Dialux Evo, SIMARIS, e-Design (ABB), Ecodial (Schneider)</span>
-        <span class="reg-tag" role="cell">8</span>
-      </div>
-      <div class="reg-row" role="row">
-        <span class="reg-addr" role="cell" data-i18n="soft3Group">Impresión 3D</span>
-        <span role="cell">PrusaSlicer, Ultimaker Cura</span>
-        <span class="reg-tag" role="cell">2</span>
-      </div>
-    </div>
+    <p class="module__text" data-i18n="techIntro">Del diseño y la programación a la integración de equipos en planta.</p>
+    <div id="toolkit"></div>
+    <p class="brands-note" data-i18n="brandsNote">Los iconos identifican herramientas y fabricantes. Las credenciales se muestran en la sección de certificaciones.</p>
 
     <p class="module__text module__text--note" data-i18n="softNote">
       Además: lenguajes Ladder, FBD, CFC, Structured Text y Grafcet (IEC 61131-3), C++, Python y Visual
@@ -361,6 +288,9 @@
 <a href="#inicio" class="back-top" data-i18n-aria="backTop"><svg class="icon " aria-hidden="true" focusable="false"><use href="#ix-chevron-up"></use></svg></a>
 <script src="js/gallery-data.js"></script>
 <script src="js/gallery-media.js"></script>
+<script src="js/certificates-data.js"></script>
+<script src="js/brands-data.js"></script>
 <script src="js/script.js"></script>
+<script src="js/portfolio.js"></script>
 </body>
 </html>
