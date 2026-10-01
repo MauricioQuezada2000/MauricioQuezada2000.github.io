@@ -2,7 +2,9 @@
 
 Sitio estático para GitHub Pages, en español, inglés y francés. Sin compilación ni dependencias de JavaScript externas.
 
-37 imágenes técnicas, 24 certificados distintos, 29 herramientas y 9 fabricantes. El carrusel se detiene con el cursor, el foco, la pestaña oculta o la sección fuera de pantalla. Respeta movimiento reducido y permite pausar, navegar y desplegar todos los documentos.
+Galería técnica, resumen de áreas de formación y certificados en carrusel sin contadores públicos. Las herramientas se agrupan en cuatro bloques compactos con iconos decorativos; CAD y automatización permiten desplegar el listado completo. El carrusel se detiene con el cursor, el foco, la pestaña oculta o la sección fuera de pantalla. Respeta movimiento reducido y permite pausar, navegar y desplegar todos los documentos.
+
+La portada utiliza la foto proporcionada por Mauricio y destaca la descarga de su CV actual en francés. La galería presenta una selección de trabajos de diseño, implementación, puesta en marcha y mantenimiento.
 
 ## Editar el contenido
 
@@ -17,6 +19,7 @@ Sitio estático para GitHub Pages, en español, inglés y francés. Sin compilac
 | `assets/gallery/` | Imágenes originales |
 | `assets/thumbs/` | Miniaturas WebP |
 | `assets/CV_Mauricio_Quezada.pdf` | CV original |
+| `assets/image.png` | Foto de perfil proporcionada por Mauricio |
 | `assets/icons/` | SVG Siemens iX y licencia MIT |
 | `css/portfolio.css` | Certificados, distintivo y herramientas |
 | `js/portfolio.js` | Herramientas, nuevas traducciones y carrusel |
@@ -30,7 +33,9 @@ Sitio estático para GitHub Pages, en español, inglés y francés. Sin compilac
 2. Guarda el original en `assets/gallery/<categoria>/` o `assets/certificates/`. `certificates` es correcto en inglés.
 3. Añade una entrada al manifiesto correspondiente. Para certificados usa una fecha ISO (`YYYY-MM-DD` o `YYYY-MM`), un identificador único y un tipo: `professional`, `course`, `attendance` o `language`. Conserva la precisión de fecha del documento.
 4. Genera miniaturas con `python tools/generate-media.py`. Requiere Pillow y pypdfium2. Los originales no se modifican.
-5. Comprueba la página y sube los archivos. Las cifras de certificados y herramientas se calculan a partir del contenido.
+5. Comprueba la página y sube los archivos. Los certificados se incorporan al carrusel sin mostrar una cantidad total.
+
+Al reemplazar el CV, actualiza también el parámetro `v` de sus tres enlaces en `index.html` para evitar descargas de una versión almacenada en caché. Ese parámetro corresponde a los primeros 12 caracteres del SHA-256 del PDF. Aplica el mismo criterio a los enlaces de `css/portfolio.css` y `js/portfolio.js` si modificas esos archivos.
 
 La copia duplicada de AutoCAD N3 se conserva como `.duplicate.pdf`, pero no se muestra dos veces. Los títulos y fechas proceden de los documentos. Autodesk Certified Professional: AutoCAD se presenta con su fecha histórica (2020), sin afirmar una vigencia actual.
 

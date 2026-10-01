@@ -31,7 +31,48 @@ const portfolioText = {
     expertise: 'Spécialité', certificateLink: 'Voir le certificat', obtained: 'Obtenue en 2020', brandsNote: 'Les icônes identifient les outils et fabricants. Les justificatifs figurent dans la section certifications.'
   }
 };
-Object.keys(portfolioText).forEach(lang => Object.assign(translations[lang], portfolioText[lang]));
+const refinementText = {
+  es: {
+    card1Focus: 'Especialización', card1Unit: 'formación técnica continua', card4Breakdown: 'CV actualizado · PDF en francés',
+    heroBrands: 'Herramientas principales', trainingHeading: 'Áreas de formación', trainingArea: 'Área', trainingScope: 'Conocimientos y especialización',
+    trainingPlc: 'Automatización y seguridad', trainingPlcText: 'Programación PLC, arquitecturas de control y seguridad funcional: S7-1200, S7-1500R/H, LOGO!, TIA Safety y Schneider PLC/PAC.',
+    trainingScada: 'Supervisión y redes', trainingScadaText: 'Interfaces HMI, SCADA y comunicaciones industriales: WinCC Unified, Ignition, Modbus TCP, Profibus, Profinet y EtherNet/IP.',
+    trainingCad: 'CAD y diseño', trainingCadText: 'Dibujo técnico en AutoCAD, diseño mecánico en Inventor e integración entre AutoCAD Electrical e Inventor.',
+    trainingPower: 'Potencia e instalaciones', trainingPowerText: 'Automatización de sistemas eléctricos de potencia, selección de equipos de baja tensión, SIMARIS, selectividad y coordinación de protecciones.',
+    trainingProcess: 'Instrumentación', trainingProcessText: 'Instrumentación de plantas de proceso, medición e integración de señales para el control industrial.',
+    certNote: 'Una selección de mi formación. Abre cada PDF para consultar el documento original.',
+    techIntro: 'Mis herramientas de trabajo, agrupadas por especialidad.', toolDetails: 'Ver herramientas',
+    automationSummary: 'Siemens: STEP 7, TIA Portal, WinCC y Safety · Schneider Electric · AVEVA / Citect / Wonderware · Rockwell: RSLogix, Studio 5000 y FactoryTalk.',
+    galleryScope: 'Una selección de ejemplos de mis trabajos de diseño, implementación, puesta en marcha y mantenimiento de sistemas industriales. Esta galería muestra parte de los proyectos y servicios que he realizado.'
+  },
+  en: {
+    card1Focus: 'Specialization', card1Unit: 'continuing technical training', card4Breakdown: 'Updated CV · PDF in French',
+    heroBrands: 'Main tools', trainingHeading: 'Training areas', trainingArea: 'Area', trainingScope: 'Knowledge and specialization',
+    trainingPlc: 'Automation and safety', trainingPlcText: 'PLC programming, control architectures and functional safety: S7-1200, S7-1500R/H, LOGO!, TIA Safety and Schneider PLC/PAC.',
+    trainingScada: 'Supervision and networks', trainingScadaText: 'HMI interfaces, SCADA and industrial communications: WinCC Unified, Ignition, Modbus TCP, Profibus, Profinet and EtherNet/IP.',
+    trainingCad: 'CAD and design', trainingCadText: 'Technical drawing in AutoCAD, mechanical design in Inventor and integration between AutoCAD Electrical and Inventor.',
+    trainingPower: 'Power and installations', trainingPowerText: 'Power system automation, low-voltage equipment selection, SIMARIS, selectivity and protection coordination.',
+    trainingProcess: 'Instrumentation', trainingProcessText: 'Process plant instrumentation, measurement and signal integration for industrial control.',
+    certNote: 'A selection of my training. Open each PDF to read the original document.',
+    techIntro: 'My working tools, grouped by specialty.', toolDetails: 'View tools',
+    automationSummary: 'Siemens: STEP 7, TIA Portal, WinCC and Safety · Schneider Electric · AVEVA / Citect / Wonderware · Rockwell: RSLogix, Studio 5000 and FactoryTalk.',
+    galleryScope: 'Selected examples of my industrial system design, implementation, commissioning and maintenance work. This gallery presents a sample of the projects and services I have delivered.'
+  },
+  fr: {
+    card1Focus: 'Spécialisation', card1Unit: 'formation technique continue', card4Breakdown: 'CV actualisé · PDF en français',
+    heroBrands: 'Principaux outils', trainingHeading: 'Domaines de formation', trainingArea: 'Domaine', trainingScope: 'Connaissances et spécialisation',
+    trainingPlc: 'Automatisation et sécurité', trainingPlcText: 'Programmation d’automates, architectures de commande et sécurité fonctionnelle : S7-1200, S7-1500R/H, LOGO!, TIA Safety et Schneider PLC/PAC.',
+    trainingScada: 'Supervision et réseaux', trainingScadaText: 'Interfaces IHM, SCADA et communications industrielles : WinCC Unified, Ignition, Modbus TCP, Profibus, Profinet et EtherNet/IP.',
+    trainingCad: 'CAO et conception', trainingCadText: 'Dessin technique avec AutoCAD, conception mécanique avec Inventor et intégration entre AutoCAD Electrical et Inventor.',
+    trainingPower: 'Puissance et installations', trainingPowerText: 'Automatisation des systèmes électriques de puissance, choix d’équipements basse tension, SIMARIS, sélectivité et coordination des protections.',
+    trainingProcess: 'Instrumentation', trainingProcessText: 'Instrumentation des installations de procédés, mesure et intégration de signaux pour le contrôle industriel.',
+    certNote: 'Une sélection de mes formations. Ouvrez chaque PDF pour consulter le document original.',
+    techIntro: 'Mes outils de travail, regroupés par spécialité.', toolDetails: 'Voir les outils',
+    automationSummary: 'Siemens : STEP 7, TIA Portal, WinCC et Safety · Schneider Electric · AVEVA / Citect / Wonderware · Rockwell : RSLogix, Studio 5000 et FactoryTalk.',
+    galleryScope: 'Quelques exemples de mes travaux de conception, d’intégration, de mise en service et de maintenance de systèmes industriels. Cette galerie présente une partie des projets et prestations que j’ai réalisés.'
+  }
+};
+Object.keys(portfolioText).forEach(lang => Object.assign(translations[lang], portfolioText[lang], refinementText[lang]));
 
 const toolkit = [
   {group:'cad', icon:'drawing-document', items:[
@@ -67,9 +108,10 @@ function brandIcon(brand, fallback) {
   return box;
 }
 function initPortfolio() {
-  const featured=certificatesData.find(c=>c.featured);
-  const badge=$('autodeskBadge');badge.href=featured.src;
-  badge.prepend(brandIcon('autodesk','certificate'));
+  ['siemens','autodesk','solidworks','eplan','schneider','aveva','rockwell'].forEach(brand=>{
+    const icon=brandIcon(brand,'apps');icon.title={siemens:'Siemens',autodesk:'Autodesk',solidworks:'SOLIDWORKS',eplan:'EPLAN',schneider:'Schneider Electric',aveva:'AVEVA',rockwell:'Rockwell Automation'}[brand];
+    $('heroBrands').append(icon);
+  });
   const viewport=$('certificateTrack');
   certificatesData.forEach(cert=>{
     const card=element('article','certificate-card'+(cert.featured?' certificate-card--featured':''));
@@ -89,18 +131,23 @@ function initPortfolio() {
   toolkit.forEach(({group,icon,items})=>{
     const section=element('section','tool-group');
     const header=element('div','tool-group__header');const heading=element('h3');heading.dataset.i18n=group;
-    const note=element('p');note.dataset.i18n=group+'Note';header.append(makeIcon(icon),heading,note);
-    const list=element('ul','tool-grid');
-    items.forEach(([name,brand,detail,strong])=>{
-      const li=element('li','tool-card'+(strong?' tool-card--core':''));li.append(brandIcon(brand,icon));
-      const body=element('div','tool-card__body');body.append(element('span','tool-card__name',name));
-      if(detail)body.append(element('span','tool-card__detail',detail));
-      if(strong){const flag=element('span','tool-card__flag');flag.dataset.i18n='expertise';body.append(flag);}
-      li.append(body);list.append(li);
-    });
-    section.append(header,list);$('toolkit').append(section);
+    const brands=element('div','tool-group__brands');brands.setAttribute('aria-hidden','true');
+    [...new Set(items.map(item=>item[1]).filter(Boolean))].slice(0,4).forEach(brand=>brands.append(brandIcon(brand,icon)));
+    header.append(heading,brands);
+    const body=element('div','tool-group__content');
+    const summary=element('p','tool-summary');
+    const brief=group==='cad'?items.filter(item=>item[3]):items;
+    if(group==='automation')summary.dataset.i18n='automationSummary';
+    else summary.textContent=brief.map(item=>item[0]).join(' · ');
+    body.append(summary);
+    if(group==='cad'||group==='automation'){
+      const details=element('details','tool-details');const toggle=element('summary');toggle.dataset.i18n='toolDetails';
+      const list=element('ul','tool-list');
+      items.forEach(([name])=>list.append(element('li',null,name)));
+      details.append(toggle,list);body.append(details);
+    }
+    section.append(header,body);$('toolkit').append(section);
   });
-  document.querySelector('[href="#certificaciones"] .bento-card__number').textContent=certificatesData.length;
   const softwareCount=toolkit.filter(t=>t.group!=='electrical').reduce((sum,t)=>sum+t.items.length,0);
   document.querySelector('.bento-card[href="#competencias"] .bento-card__number').textContent=softwareCount;
   initCertificateCarousel();
@@ -110,7 +157,6 @@ function initCertificateCarousel(){
   const state={paused:reduce.matches,all:false,hover:false,inView:false,timer:null};certificateUI=state;
   const position=()=>Math.max(0,Math.round(track.scrollLeft/(track.firstElementChild.getBoundingClientRect().width+20)));
   const update=()=>{
-    $('certificatePosition').textContent=state.all?String(certificatesData.length):`${Math.min(position()+1,certificatesData.length)} / ${certificatesData.length}`;
     $('certificatePause').textContent=translations[currentLang][state.paused?'certPlay':'certPause'];
     $('certificatePause').setAttribute('aria-pressed',String(state.paused));
     $('certificateAll').textContent=translations[currentLang][state.all?'certLess':'certAll'];

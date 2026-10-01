@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/enhancements.css">
-<link rel="stylesheet" href="css/portfolio.css">
+<link rel="stylesheet" href="css/portfolio.css?v=e53b6bbaa36b">
 </head>
 <body id="inicio">
 <!-- Siemens iX Icons 3.4.0 — MIT; license in assets/icons/ -->
@@ -47,23 +47,26 @@
       <span class="dot dot--pulse"></span>
       <span data-i18n="heroStatus">EN LÍNEA — abierto a prácticas y colaboraciones</span>
     </div>
-    <h1 class="hero__title">
-      Mauricio Quezada
-    </h1>
-    <a class="credential-badge" id="autodeskBadge" href="assets/certificates/autodesk/2020-12-28-autodesk-certified-professional-autocad.pdf" target="_blank" rel="noopener">
-      <span><strong>Autodesk Certified Professional · AutoCAD</strong><small><span data-i18n="obtained">Obtenida en 2020</span> · <span data-i18n="certificateLink">Ver certificado</span></small></span>
-      <svg class="icon" aria-hidden="true"><use href="#ix-open-external"></use></svg>
-    </a>
-    <p class="hero__role" data-i18n="heroRole">Ingeniería en Automatización &amp; Control Industrial</p>
+    <div class="hero__identity">
+      <img class="hero__portrait" src="assets/image.png" width="1008" height="1072" alt="Mauricio Quezada" fetchpriority="high">
+      <div>
+        <h1 class="hero__title">Mauricio Quezada</h1>
+        <p class="hero__role" data-i18n="heroRole">Ingeniería en Automatización &amp; Control Industrial</p>
+      </div>
+    </div>
+    <div class="hero__brands-row">
+      <span data-i18n="heroBrands">Herramientas principales</span>
+      <div id="heroBrands" class="hero__brands" aria-hidden="true"></div>
+    </div>
     <p class="hero__sub" data-i18n="heroSub">
       Ingeniero en automatización con experiencia profesional en entornos industriales.
       Actualmente curso el Máster ARMAC en la Université Marie et Louis Pasteur.
     </p>
 
     <div class="hero__actions">
-      <a href="#galeria" class="btn btn--primary"><svg class="icon " aria-hidden="true" focusable="false"><use href="#ix-image"></use></svg><span data-i18n="ctaProjects">Ver proyectos</span><svg class="icon " aria-hidden="true" focusable="false"><use href="#ix-chevron-right"></use></svg></a>
-      <a href="assets/CV_Mauricio_Quezada.pdf" download class="btn btn--ghost"><svg class="icon " aria-hidden="true" focusable="false"><use href="#ix-download"></use></svg><span data-i18n="ctaCV">Descargar CV</span></a>
-      <a href="#contacto" class="btn btn--text"><svg class="icon " aria-hidden="true" focusable="false"><use href="#ix-mail"></use></svg><span data-i18n="ctaContact">Contactar</span></a>
+      <a href="assets/CV_Mauricio_Quezada.pdf?v=33dc8553b36a" download class="btn btn--cv"><svg class="icon" aria-hidden="true"><use href="#ix-download"></use></svg><span data-i18n="ctaCV">Descargar CV</span><span class="btn__format">PDF</span></a>
+      <a href="#galeria" class="btn btn--ghost"><svg class="icon" aria-hidden="true"><use href="#ix-image"></use></svg><span data-i18n="ctaProjects">Ver proyectos</span></a>
+      <a href="#contacto" class="btn btn--text"><svg class="icon" aria-hidden="true"><use href="#ix-mail"></use></svg><span data-i18n="ctaContact">Contactar</span></a>
     </div>
 
     <!-- BENTO GRID — resumen en cifras -->
@@ -72,8 +75,8 @@
       <a href="#certificaciones" class="bento-card" role="listitem" style="--accent: var(--amber)">
         <svg class="icon bento-card__icon" aria-hidden="true" focusable="false"><use href="#ix-certificate"></use></svg><svg class="icon bento-card__arrow" aria-hidden="true" focusable="false"><use href="#ix-chevron-right"></use></svg>
         <span class="bento-card__label" data-i18n="card1Label">Cursos y Certificaciones</span>
-        <span class="bento-card__number">+20</span>
-        <span class="bento-card__unit" data-i18n="card1Unit">certificados disponibles</span>
+        <span class="bento-card__focus" data-i18n="card1Focus">Especialización</span>
+        <span class="bento-card__unit" data-i18n="card1Unit">formación técnica continua</span>
         <span class="bento-card__breakdown" data-i18n="card1Breakdown">Automatización PLC · Sistemas de potencia · IEC 61131-3 · Subestaciones · Instalaciones eléctricas · Instrumentación de procesos</span>
       </a>
 
@@ -93,12 +96,12 @@
         <span class="bento-card__breakdown" data-i18n="card3Breakdown">Automatización/SCADA · Programación PLC · Impresión 3D · Diseño CAD</span>
       </a>
 
-      <a href="assets/CV_Mauricio_Quezada.pdf" class="bento-card" role="listitem" download style="--accent: var(--cyan)">
+      <a href="assets/CV_Mauricio_Quezada.pdf?v=33dc8553b36a" class="bento-card" role="listitem" download style="--accent: var(--cyan)">
         <svg class="icon bento-card__icon" aria-hidden="true" focusable="false"><use href="#ix-pdf-document"></use></svg><svg class="icon bento-card__arrow" aria-hidden="true" focusable="false"><use href="#ix-chevron-right"></use></svg>
         <span class="bento-card__label" data-i18n="card4Label">Curriculum Vitae</span>
         <span class="bento-card__number">PDF</span>
         <span class="bento-card__unit" data-i18n="card4Unit">descargar CV completo</span>
-        <span class="bento-card__breakdown" data-i18n="card4Breakdown">Actualizado 2026 · FR / EN / ES</span>
+        <span class="bento-card__breakdown" data-i18n="card4Breakdown">CV actualizado · PDF en francés</span>
       </a>
 
       <a href="#contacto" class="bento-card" role="listitem" style="--accent: var(--amber)">
@@ -157,19 +160,29 @@
   <span class="module__tag" data-i18n="mod2Tag">MOD-02 // CERTIFICACIONES</span>
   <h2 class="module__title" data-i18n="mod2Title">Certificaciones y formación</h2>
   <p class="module__text" data-i18n="mod2Sub">Un recorrido por mi formación técnica, con acceso a los documentos originales.</p>
+  <table class="training-table">
+    <caption data-i18n="trainingHeading">Áreas de formación</caption>
+    <thead><tr><th scope="col" data-i18n="trainingArea">Área</th><th scope="col" data-i18n="trainingScope">Conocimientos y especialización</th></tr></thead>
+    <tbody>
+      <tr><th scope="row" data-i18n="trainingPlc">Automatización y seguridad</th><td data-i18n="trainingPlcText">Programación PLC, arquitecturas de control y seguridad funcional: S7-1200, S7-1500R/H, LOGO!, TIA Safety y Schneider PLC/PAC.</td></tr>
+      <tr><th scope="row" data-i18n="trainingScada">Supervisión y redes</th><td data-i18n="trainingScadaText">Interfaces HMI, SCADA y comunicaciones industriales: WinCC Unified, Ignition, Modbus TCP, Profibus, Profinet y EtherNet/IP.</td></tr>
+      <tr><th scope="row" data-i18n="trainingCad">CAD y diseño</th><td data-i18n="trainingCadText">Dibujo técnico en AutoCAD, diseño mecánico en Inventor e integración entre AutoCAD Electrical e Inventor.</td></tr>
+      <tr><th scope="row" data-i18n="trainingPower">Potencia e instalaciones</th><td data-i18n="trainingPowerText">Automatización de sistemas eléctricos de potencia, selección de equipos de baja tensión, SIMARIS, selectividad y coordinación de protecciones.</td></tr>
+      <tr><th scope="row" data-i18n="trainingProcess">Instrumentación</th><td data-i18n="trainingProcessText">Instrumentación de plantas de proceso, medición e integración de señales para el control industrial.</td></tr>
+    </tbody>
+  </table>
   <div id="certificateCarousel" role="region" data-i18n-aria="certRegion" aria-label="Certificados y formación">
     <div class="certificate-toolbar">
       <div class="certificate-controls">
         <button id="certificatePrev" type="button" data-i18n-aria="certPrevious" aria-label="Certificado anterior"><svg class="icon" aria-hidden="true"><use href="#ix-chevron-left"></use></svg></button>
         <button id="certificatePause" type="button" aria-pressed="false">Pausar</button>
         <button id="certificateNext" type="button" data-i18n-aria="certNext" aria-label="Certificado siguiente"><svg class="icon" aria-hidden="true"><use href="#ix-chevron-right"></use></svg></button>
-        <span class="certificate-position" id="certificatePosition"></span>
       </div>
       <button class="certificate-all" id="certificateAll" type="button" aria-expanded="false" aria-controls="certificateTrack">Ver todos</button>
     </div>
     <div class="certificate-track" id="certificateTrack"></div>
   </div>
-  <p class="certificate-note" data-i18n="certNote">Cada tarjeta indica el tipo de documento y su fecha. La certificación profesional de Autodesk fue obtenida en 2020.</p>
+  <p class="certificate-note" data-i18n="certNote">Una selección de mi formación. Abre cada PDF para consultar el documento original.</p>
   <noscript><p><a href="assets/certificates/autodesk/2020-12-28-autodesk-certified-professional-autocad.pdf">Autodesk Certified Professional: AutoCAD (PDF)</a></p></noscript>
 </section>
 
@@ -179,9 +192,8 @@
     <span class="module__tag" data-i18n="mod3Tag">MOD-03 // COMPETENCIAS</span>
     <h2 class="module__title" data-i18n="mod3Title">Herramientas y ecosistemas industriales</h2>
 
-    <p class="module__text" data-i18n="techIntro">Del diseño y la programación a la integración de equipos en planta.</p>
+    <p class="module__text" data-i18n="techIntro">Mis herramientas de trabajo, agrupadas por especialidad.</p>
     <div id="toolkit"></div>
-    <p class="brands-note" data-i18n="brandsNote">Los iconos identifican herramientas y fabricantes. Las credenciales se muestran en la sección de certificaciones.</p>
 
     <p class="module__text module__text--note" data-i18n="softNote">
       Además: lenguajes Ladder, FBD, CFC, Structured Text y Grafcet (IEC 61131-3), C++, Python y Visual
@@ -194,6 +206,7 @@
     <div class="node"></div>
     <span class="module__tag" data-i18n="mod4Tag">MOD-04 // GALERÍA TÉCNICA</span>
     <h2 class="module__title" data-i18n="mod4Title">Por área de trabajo</h2>
+    <p class="module__text gallery-scope" data-i18n="galleryScope">Una selección de ejemplos de mis trabajos de diseño, implementación, puesta en marcha y mantenimiento de sistemas industriales. Esta galería muestra parte de los proyectos y servicios que he realizado.</p>
 
     <div class="tag-row">
       <span class="tag-row__label" data-i18n="workAreasLabel">Áreas de trabajo:</span>
@@ -251,7 +264,7 @@
         <span class="contact-link__label"><svg class="icon " aria-hidden="true" focusable="false"><use href="#ix-open-external"></use></svg><span data-i18n="labelLinkedin">LinkedIn</span></span>
         <span class="contact-link__value">/in/mauricioquezada2000</span>
       </a>
-      <a href="assets/CV_Mauricio_Quezada.pdf" download class="contact-link">
+      <a href="assets/CV_Mauricio_Quezada.pdf?v=33dc8553b36a" download class="contact-link">
         <span class="contact-link__label"><svg class="icon " aria-hidden="true" focusable="false"><use href="#ix-pdf-document"></use></svg><span data-i18n="labelCV">Curriculum</span></span>
         <span class="contact-link__value" data-i18n="labelCVValue">Descargar PDF</span>
       </a>
@@ -291,6 +304,6 @@
 <script src="js/certificates-data.js"></script>
 <script src="js/brands-data.js"></script>
 <script src="js/script.js"></script>
-<script src="js/portfolio.js"></script>
+<script src="js/portfolio.js?v=06d170b213e6"></script>
 </body>
 </html>
