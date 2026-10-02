@@ -94,7 +94,8 @@
   },
   "pepperl-fuchs": {
     "file": null,
-    "website": "https://www.pepperl-fuchs.com/"
+    "website": "https://www.pepperl-fuchs.com/",
+    "label": "P+F"
   },
   "keyence": {
     "file": "assets/brands/keyence.png",
@@ -103,11 +104,29 @@
   },
   "ids": {
     "file": null,
-    "website": "https://en.ids-imaging.com/"
+    "website": "https://en.ids-imaging.com/",
+    "label": "IDS"
   },
   "sick": {
     "file": "assets/brands/sick.png",
     "source": "https://www.sick.com/assets/icons/custom/favicon.ico",
     "website": "https://www.sick.com/"
+  },
+  "pilz": {
+    "file": null,
+    "label": "Pilz",
+    "website": "https://www.pilz.com/en-INT"
+  },
+  "reer": {
+    "file": "assets/brands/reer.png",
+    "source": "https://www.reersafety.com/wp-content/uploads/2022/07/cropped-reer-logo-32x32.png",
+    "website": "https://www.reersafety.com/en/",
+    "label": "ReeR"
+  },
+  "wincc": {
+    "file": null,
+    "label": "WinCC",
+    "website": "https://www.siemens.com/en-us/products/simatic-wincc/",
+    "note": "Text label identifying the product, not an official product logo."
   }
 }

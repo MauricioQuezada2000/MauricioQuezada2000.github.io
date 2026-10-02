@@ -2,6 +2,7 @@
 .brand-icon { display:flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:10px; background:#f4f6f3; color:#176b67; flex:0 0 auto; padding:7px; }
 .brand-icon img { width:100%; height:100%; object-fit:contain; }
 .brand-icon .icon { width:28px; height:28px; }
+.brand-icon--text { font:700 .62rem var(--font-display); padding:2px; letter-spacing:-.025em; }
 .certificate-toolbar { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin:1.4rem 0 1rem; flex-wrap:wrap; }
 .certificate-controls { display:flex; align-items:center; gap:.5rem; }
 .certificate-controls button,.certificate-all { min-width:44px; min-height:44px; border:1px solid var(--line-bright); border-radius:6px; padding:.5rem .8rem; background:var(--bg-panel); color:var(--text-primary); cursor:pointer; }
@@ -29,6 +30,7 @@
 .hero__brands-row > span { color:var(--text-muted); font:.65rem var(--font-mono); }
 .hero__brands { display:flex; gap:.5rem; }
 .hero__brands .brand-icon { width:30px; height:30px; padding:5px; border-radius:6px; }
+.hero__brands .brand-icon--text { width:46px; padding:3px; font-size:.62rem; }
 .hero__actions .btn--cv { min-height:56px; padding:.9rem 1.4rem; font-size:.9rem; font-weight:700; color:var(--bg-void); background:var(--amber); border:1px solid var(--amber); box-shadow:0 5px 22px #e9ae3324; }
 .hero__actions .btn--cv:hover { background:#ffcb68; border-color:#ffcb68; }
 .btn__format { font:.62rem var(--font-mono); padding:.25rem .4rem; border:1px solid #0004; border-radius:3px; }
@@ -51,6 +53,8 @@
 .tool-details summary:hover { color:var(--text-primary); }
 .tool-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.3rem 1.2rem; padding:.5rem 0; }
 .tool-list li { font-size:.78rem; color:var(--text-muted); overflow-wrap:anywhere; }
+.tool-category { margin:.8rem 0 .15rem; font-size:.76rem; font-weight:600; color:var(--text-primary); }
+.tool-group__brands .brand-icon--text { padding:1px; font-size:.5rem; }
 .gallery-scope { max-width:78ch; }
 @media(max-width:1100px) {
   .certificate-card { flex-basis:calc((100% - 20px)/2); }

@@ -21,7 +21,8 @@ const translations = {
 
     mod1Tag: 'MOD-01 // PERFIL', mod1Title: 'Sobre mí',
     mod1Text1: 'Ingeniero en automatización con experiencia profesional en entornos industriales. Actualmente curso el Máster ARMAC (Automatique, Robotique et Applications à la Mécatronique) en la Université Marie et Louis Pasteur, Besançon. Trabajé como Ingeniero de Proyectos de Automatización en Siemens Solution Partner / AF-Control, pilotando decenas de proyectos de control-comando de principio a fin: desde el diagnóstico en planta hasta la programación PLC y la puesta en marcha.',
-    mod1Text2: 'Combino la capa de diseño — CAD mecánico, esquemas eléctricos EPLAN/AutoCAD — con la de programación, trabajando multi-marca (Siemens, Schneider, Allen-Bradley, Beckhoff) bajo el estándar IEC 61131-3 y buses de campo como EtherCAT, Profinet y Modbus.',
+    mod1Text2: "Mi experiencia más sólida está en Siemens, especialmente en programación de PLC, control de procesos y supervisión HMI/SCADA. Trabajo también en entornos multimarca con Schneider Electric, Allen-Bradley y Beckhoff. Mi actividad se centra en la instrumentación industrial, la conexión de sensores al PLC y la integración de señales de campo, utilizando lenguajes IEC 61131-3 y redes como Profinet, Modbus y EtherCAT.",
+    mod1Text3: "Combino la programación con el diseño CAD y eléctrico: esquemas de control y potencia en EPLAN/AutoCAD, diseño de armarios y conexiones de equipos. Trabajo en la parte eléctrica y de control de motores, con variadores de frecuencia, arrancadores y sistemas servo de distintas marcas.",
     sectorsLabel: 'Sectores de trabajo:',
     sector1: 'Agroalimentario', sector2: 'Tratamiento de agua', sector3: 'Energía (hidroeléctrica)',
     sector4: 'Bebidas', sector5: 'Plásticos', sector6: 'Oil & Gas', sector7: 'Inmótica / Terciario',
@@ -81,7 +82,8 @@ const translations = {
 
     mod1Tag: 'MOD-01 // PROFILE', mod1Title: 'About me',
     mod1Text1: 'Automation engineer with professional experience in industrial environments. Currently pursuing the ARMAC Master’s (Automatique, Robotique et Applications à la Mécatronique) at Université Marie et Louis Pasteur, Besançon. I worked as an Automation Project Engineer at Siemens Solution Partner / AF-Control, leading dozens of control system projects end to end: from on-site diagnostics to PLC programming and commissioning.',
-    mod1Text2: 'I combine the design layer — mechanical CAD, EPLAN/AutoCAD electrical schematics — with the programming layer, working across brands (Siemens, Schneider, Allen-Bradley, Beckhoff) under the IEC 61131-3 standard and fieldbuses such as EtherCAT, Profinet and Modbus.',
+    mod1Text2: "My strongest experience is with Siemens, particularly PLC programming, process control and HMI/SCADA supervision. I also work in multi-vendor environments with Schneider Electric, Allen-Bradley and Beckhoff. My work focuses on industrial instrumentation, connecting sensors to PLCs and integrating field signals, using IEC 61131-3 languages and networks such as Profinet, Modbus and EtherCAT.",
+    mod1Text3: "I combine programming with CAD and electrical design: control and power schematics in EPLAN/AutoCAD, control cabinet design and equipment connections. I work on the electrical and control aspects of motors, using variable frequency drives, starters and servo systems from different manufacturers.",
     sectorsLabel: 'Industry sectors:',
     sector1: 'Food & beverage', sector2: 'Water treatment', sector3: 'Energy (hydroelectric)',
     sector4: 'Beverages', sector5: 'Plastics', sector6: 'Oil & Gas', sector7: 'Building automation',
@@ -141,7 +143,8 @@ const translations = {
 
     mod1Tag: 'MOD-01 // PROFIL', mod1Title: 'À propos de moi',
     mod1Text1: 'Ingénieur automaticien avec expérience professionnelle en environnements industriels. Actuellement en Master ARMAC (Automatique, Robotique et Applications à la Mécatronique) à l’Université Marie et Louis Pasteur, Besançon. J’ai travaillé comme Ingénieur Projets d’Automatisation chez Siemens Solution Partner / AF-Control, en pilotant des dizaines de projets de contrôle-commande de bout en bout : du diagnostic terrain à la programmation automate et la mise en service.',
-    mod1Text2: 'Je combine la couche conception — CAO mécanique, schémas électriques EPLAN/AutoCAD — avec la couche programmation, en travaillant multi-marques (Siemens, Schneider, Allen-Bradley, Beckhoff) selon la norme IEC 61131-3 et des bus de terrain comme EtherCAT, Profinet et Modbus.',
+    mod1Text2: "Mon expérience la plus solide porte sur Siemens, notamment la programmation d’automates, le contrôle des procédés et la supervision IHM/SCADA. Je travaille également dans des environnements multimarques avec Schneider Electric, Allen-Bradley et Beckhoff. Mon activité se concentre sur l’instrumentation industrielle, le raccordement des capteurs aux automates et l’intégration des signaux de terrain, avec les langages IEC 61131-3 et des réseaux tels que Profinet, Modbus et EtherCAT.",
+    mod1Text3: "J’associe la programmation à la CAO et à la conception électrique : schémas de commande et de puissance sous EPLAN/AutoCAD, conception d’armoires et raccordement des équipements. J’interviens sur la partie électrique et la commande des moteurs, avec des variateurs de fréquence, des démarreurs et des systèmes d’asservissement à servomoteurs de différentes marques.",
     sectorsLabel: 'Secteurs d’activité :',
     sector1: 'Agroalimentaire', sector2: 'Traitement de l’eau', sector3: 'Énergie (hydroélectrique)',
     sector4: 'Boissons', sector5: 'Plasturgie', sector6: 'Oil & Gas', sector7: 'Immotique / Tertiaire',

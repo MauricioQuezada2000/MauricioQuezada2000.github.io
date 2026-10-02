@@ -39,17 +39,27 @@ const refinementText = {
     trainingScada: 'Supervisión y redes', trainingScadaText: 'Interfaces HMI, SCADA y comunicaciones industriales: WinCC Unified, Ignition, Modbus TCP, Profibus, Profinet y EtherNet/IP.',
     trainingCad: 'CAD y diseño', trainingCadText: 'Dibujo técnico en AutoCAD, diseño mecánico en Inventor e integración entre AutoCAD Electrical e Inventor.',
     trainingPower: 'Potencia e instalaciones', trainingPowerText: 'Automatización de sistemas eléctricos de potencia, selección de equipos de baja tensión, SIMARIS, selectividad y coordinación de protecciones.',
-    trainingProcess: 'Instrumentación', trainingProcessText: 'Instrumentación de plantas de proceso, medición e integración de señales para el control industrial.',
+    trainingProcess: 'Instrumentación', trainingProcessText: "Instrumentación de procesos: nivel, presión, temperatura, caudal y pesaje; integración de sensores y señales con el PLC.",
     trainingVision: 'Visión por ordenador', trainingVisionText: 'Aprendizaje y trabajos de máster en visión por ordenador y redes neuronales, con OpenCV y YOLO.',
-    instrumentation: 'Instrumentación, sensores y seguridad', instrumentationSummary: 'Familiaridad con marcas de instrumentación de procesos, pesaje, sensores y seguridad de máquinas.',
+    instrumentation: "Instrumentación de procesos y sensores", instrumentationSummary: "Nivel, presión, temperatura, caudal y pesaje industrial. Integración de sensores, transmisores y señales de campo con el PLC.",
     vision: 'Visión por ordenador', visionSummary: 'En desarrollo: OpenCV, YOLO y redes neuronales en trabajos del máster. Familiaridad con fabricantes de visión industrial.',
-    instrumentationDetails: 'Ver marcas conocidas', visionDetails: 'Ver herramientas y fabricantes',
+    instrumentationDetails: "Ver marcas por aplicación", visionDetails: 'Ver herramientas y fabricantes',
     techIntro: 'Herramientas, fabricantes y áreas de aprendizaje, agrupados por especialidad.',
     card3Breakdown: 'CAD · Automatización/SCADA · Visión por ordenador · Impresión 3D',
     certNote: 'Una selección de mi formación. Abre cada PDF para consultar el documento original.',
     toolDetails: 'Ver herramientas',
-    automationSummary: 'Siemens: STEP 7, TIA Portal, WinCC y Safety · Schneider Electric · AVEVA / Citect / Wonderware · Rockwell: RSLogix, Studio 5000 y FactoryTalk.',
-    galleryScope: 'Una selección de ejemplos de mis trabajos de diseño, implementación, puesta en marcha y mantenimiento de sistemas industriales. Esta galería muestra parte de los proyectos y servicios que he realizado.'
+    automationSummary: "Experiencia principal en Siemens: STEP 7, TIA Portal y WinCC. Programación PLC y control de procesos también con Schneider Electric, Rockwell / Allen-Bradley y Beckhoff; supervisión con AVEVA e Ignition.",
+    galleryScope: 'Una selección de ejemplos de mis trabajos de diseño, implementación, puesta en marcha y mantenimiento de sistemas industriales. Esta galería muestra parte de los proyectos y servicios que he realizado.',
+    processBrands: "Instrumentación de procesos",
+    weighingBrands: "Pesaje industrial",
+    sensorBrands: "Sensores y detección",
+    signalBrands: "Conexión e interfaces de señal",
+    safety: "Relés y seguridad de máquinas",
+    safetySummary: "Conocimiento de relés de seguridad, principalmente Pilz y ReeR, además de Siemens, Allen-Bradley / Guardmaster y Schneider Electric / Preventa.",
+    safetyDetails: "Ver marcas y familias",
+    electrical: "Diseño eléctrico y control de motores",
+    electricalSummary: "Armarios eléctricos, esquemas de control y potencia, aparamenta y conexiones. Integración y control de motores con variadores de frecuencia, arrancadores y sistemas servo en entornos multimarca.",
+    electricalDetails: "Ver fabricantes del entorno eléctrico",
   },
   en: {
     card1Focus: 'Specialization', card1Unit: 'continuing technical training', card4Breakdown: 'Updated CV · PDF in French',
@@ -58,17 +68,27 @@ const refinementText = {
     trainingScada: 'Supervision and networks', trainingScadaText: 'HMI interfaces, SCADA and industrial communications: WinCC Unified, Ignition, Modbus TCP, Profibus, Profinet and EtherNet/IP.',
     trainingCad: 'CAD and design', trainingCadText: 'Technical drawing in AutoCAD, mechanical design in Inventor and integration between AutoCAD Electrical and Inventor.',
     trainingPower: 'Power and installations', trainingPowerText: 'Power system automation, low-voltage equipment selection, SIMARIS, selectivity and protection coordination.',
-    trainingProcess: 'Instrumentation', trainingProcessText: 'Process plant instrumentation, measurement and signal integration for industrial control.',
+    trainingProcess: 'Instrumentation', trainingProcessText: "Process instrumentation: level, pressure, temperature, flow and weighing; integration of sensors and signals with PLCs.",
     trainingVision: 'Computer vision', trainingVisionText: 'Learning and master’s coursework in computer vision and neural networks, using OpenCV and YOLO.',
-    instrumentation: 'Instrumentation, sensors and safety', instrumentationSummary: 'Familiarity with manufacturers of process instrumentation, weighing equipment, sensors and machine safety systems.',
+    instrumentation: "Process instrumentation and sensors", instrumentationSummary: "Level, pressure, temperature, flow and industrial weighing. Integration of sensors, transmitters and field signals with PLCs.",
     vision: 'Computer vision', visionSummary: 'Developing skills: OpenCV, YOLO and neural networks through master’s coursework. Familiarity with industrial vision manufacturers.',
-    instrumentationDetails: 'View familiar brands', visionDetails: 'View tools and manufacturers',
+    instrumentationDetails: "View brands by application", visionDetails: 'View tools and manufacturers',
     techIntro: 'Tools, manufacturers and learning areas, grouped by specialty.',
     card3Breakdown: 'CAD · Automation/SCADA · Computer vision · 3D printing',
     certNote: 'A selection of my training. Open each PDF to read the original document.',
     toolDetails: 'View tools',
-    automationSummary: 'Siemens: STEP 7, TIA Portal, WinCC and Safety · Schneider Electric · AVEVA / Citect / Wonderware · Rockwell: RSLogix, Studio 5000 and FactoryTalk.',
-    galleryScope: 'Selected examples of my industrial system design, implementation, commissioning and maintenance work. This gallery presents a sample of the projects and services I have delivered.'
+    automationSummary: "Strongest experience with Siemens: STEP 7, TIA Portal and WinCC. PLC programming and process control also with Schneider Electric, Rockwell / Allen-Bradley and Beckhoff; supervision with AVEVA and Ignition.",
+    galleryScope: 'Selected examples of my industrial system design, implementation, commissioning and maintenance work. This gallery presents a sample of the projects and services I have delivered.',
+    processBrands: "Process instrumentation",
+    weighingBrands: "Industrial weighing",
+    sensorBrands: "Sensors and detection",
+    signalBrands: "Connections and signal interfaces",
+    safety: "Safety relays and machine safety",
+    safetySummary: "Familiarity with safety relays, mainly Pilz and ReeR, as well as Siemens, Allen-Bradley / Guardmaster and Schneider Electric / Preventa.",
+    safetyDetails: "View brands and product families",
+    electrical: "Electrical design and motor control",
+    electricalSummary: "Electrical cabinets, control and power schematics, switchgear and connections. Motor integration and control with variable frequency drives, starters and servo systems in multi-vendor environments.",
+    electricalDetails: "View electrical equipment manufacturers",
   },
   fr: {
     card1Focus: 'Spécialisation', card1Unit: 'formation technique continue', card4Breakdown: 'CV actualisé · PDF en français',
@@ -77,17 +97,27 @@ const refinementText = {
     trainingScada: 'Supervision et réseaux', trainingScadaText: 'Interfaces IHM, SCADA et communications industrielles : WinCC Unified, Ignition, Modbus TCP, Profibus, Profinet et EtherNet/IP.',
     trainingCad: 'CAO et conception', trainingCadText: 'Dessin technique avec AutoCAD, conception mécanique avec Inventor et intégration entre AutoCAD Electrical et Inventor.',
     trainingPower: 'Puissance et installations', trainingPowerText: 'Automatisation des systèmes électriques de puissance, choix d’équipements basse tension, SIMARIS, sélectivité et coordination des protections.',
-    trainingProcess: 'Instrumentation', trainingProcessText: 'Instrumentation des installations de procédés, mesure et intégration de signaux pour le contrôle industriel.',
+    trainingProcess: 'Instrumentation', trainingProcessText: "Instrumentation de procédés : niveau, pression, température, débit et pesage ; intégration des capteurs et des signaux avec les automates.",
     trainingVision: 'Vision par ordinateur', trainingVisionText: 'Apprentissage et travaux de master en vision par ordinateur et réseaux de neurones, avec OpenCV et YOLO.',
-    instrumentation: 'Instrumentation, capteurs et sécurité', instrumentationSummary: 'Connaissance de fabricants d’instrumentation de procédés, de systèmes de pesage, de capteurs et de sécurité des machines.',
+    instrumentation: "Instrumentation de procédés et capteurs", instrumentationSummary: "Niveau, pression, température, débit et pesage industriel. Intégration des capteurs, transmetteurs et signaux de terrain avec les automates.",
     vision: 'Vision par ordinateur', visionSummary: 'Compétences en développement : OpenCV, YOLO et réseaux de neurones dans le cadre du master. Connaissance de fabricants de vision industrielle.',
-    instrumentationDetails: 'Voir les marques connues', visionDetails: 'Voir les outils et fabricants',
+    instrumentationDetails: "Voir les marques par application", visionDetails: 'Voir les outils et fabricants',
     techIntro: 'Outils, fabricants et domaines d’apprentissage, regroupés par spécialité.',
     card3Breakdown: 'CAO · Automatisation/SCADA · Vision par ordinateur · Impression 3D',
     certNote: 'Une sélection de mes formations. Ouvrez chaque PDF pour consulter le document original.',
     toolDetails: 'Voir les outils',
-    automationSummary: 'Siemens : STEP 7, TIA Portal, WinCC et Safety · Schneider Electric · AVEVA / Citect / Wonderware · Rockwell : RSLogix, Studio 5000 et FactoryTalk.',
-    galleryScope: 'Quelques exemples de mes travaux de conception, d’intégration, de mise en service et de maintenance de systèmes industriels. Cette galerie présente une partie des projets et prestations que j’ai réalisés.'
+    automationSummary: "Expérience principale sur Siemens : STEP 7, TIA Portal et WinCC. Programmation d’automates et contrôle des procédés également avec Schneider Electric, Rockwell / Allen-Bradley et Beckhoff ; supervision avec AVEVA et Ignition.",
+    galleryScope: 'Quelques exemples de mes travaux de conception, d’intégration, de mise en service et de maintenance de systèmes industriels. Cette galerie présente une partie des projets et prestations que j’ai réalisés.',
+    processBrands: "Instrumentation de procédés",
+    weighingBrands: "Pesage industriel",
+    sensorBrands: "Capteurs et détection",
+    signalBrands: "Raccordement et interfaces de signaux",
+    safety: "Relais et sécurité des machines",
+    safetySummary: "Connaissance des relais de sécurité, principalement Pilz et ReeR, ainsi que Siemens, Allen-Bradley / Guardmaster et Schneider Electric / Preventa.",
+    safetyDetails: "Voir les marques et gammes",
+    electrical: "Conception électrique et commande des moteurs",
+    electricalSummary: "Armoires électriques, schémas de commande et de puissance, appareillage et raccordements. Intégration et commande de moteurs avec variateurs de fréquence, démarreurs et systèmes servo dans des environnements multimarques.",
+    electricalDetails: "Voir les fabricants d’équipements électriques",
   }
 };
 Object.keys(portfolioText).forEach(lang => Object.assign(translations[lang], portfolioText[lang], refinementText[lang]));
@@ -104,12 +134,16 @@ const toolkit = [
     ['TwinCAT 3','beckhoff','Automation'], ['Ignition','ignition','SCADA'], ['C-more',null,'HMI'], ['Productivity Suite',null,'PLC'], ['Kinco',null,'HMI']
   ]},
   {group:'electrical',icon:'hardware-cabinet',items:[
-    ['Siemens','siemens'], ['Schneider Electric','schneider'], ['WEG Automation','weg'], ['Phoenix Contact','phoenix-contact'], ['Weidmüller','weidmuller'], ['Delta Electronics','delta'], ['ABB','abb'], ['Eaton','eaton'], ['Rittal','rittal']
+    ['Siemens','siemens'], ['Schneider Electric','schneider'], ['WEG Automation','weg'], ['Phoenix Contact','phoenix-contact'], ['Weidmüller','weidmuller'], ['Delta Electronics','delta'], ['ABB','abb'], ['Eaton','eaton'], ['Rittal','rittal'], ['Rockwell / Allen-Bradley','rockwell'], ['Beckhoff','beckhoff']
   ]},
-  {group:'instrumentation',icon:'asset-network',items:[
-    ['Endress+Hauser','endress-hauser'], ['ABB','abb'], ['Siemens','siemens'], ['Pepperl+Fuchs','pepperl-fuchs'],
-    ['EUROMAG',null], ['METTLER TOLEDO',null], ['LAUMAS',null], ['ReeR',null], ['Pilz',null], ['NOVUS',null],
-    ['SICK','sick'], ['ifm',null], ['OMRON',null], ['Rosemount (Emerson)',null], ['Phoenix Contact','phoenix-contact'], ['Weidmüller','weidmuller']
+  {group:'instrumentation',icon:'asset-network',categories:['processBrands','weighingBrands','sensorBrands','signalBrands'],items:[
+    ['Endress+Hauser','endress-hauser','processBrands'], ['ABB','abb','processBrands'], ['Siemens','siemens','processBrands'], ['Rosemount (Emerson)',null,'processBrands'], ['EUROMAG',null,'processBrands'], ['NOVUS',null,'processBrands'],
+    ['METTLER TOLEDO',null,'weighingBrands'], ['LAUMAS',null,'weighingBrands'],
+    ['Pepperl+Fuchs','pepperl-fuchs','sensorBrands'], ['SICK','sick','sensorBrands'], ['ifm',null,'sensorBrands'], ['OMRON',null,'sensorBrands'],
+    ['Phoenix Contact','phoenix-contact','signalBrands'], ['Weidmüller','weidmuller','signalBrands']
+  ]},
+  {group:'safety',icon:'plc-device',items:[
+    ['Pilz','pilz'], ['ReeR','reer'], ['Siemens','siemens'], ['Allen-Bradley / Guardmaster','rockwell'], ['Schneider Electric / Preventa (Harmony XPS)','schneider']
   ]},
   {group:'vision',icon:'image',items:[
     ['KEYENCE','keyence'], ['IDS Imaging Development Systems','ids'], ['Beckhoff','beckhoff'], ['SICK','sick'],
@@ -127,16 +161,22 @@ function element(tag, className, text) {
 }
 function brandIcon(brand, fallback) {
   const box=element('span','brand-icon');
-  const src=typeof brandAssets !== 'undefined' && brandAssets[brand]?.file;
+  const asset=typeof brandAssets !== 'undefined' && brandAssets[brand];
+  const src=asset?.file;
+  const showFallback=()=>{
+    box.replaceChildren();
+    if(asset?.label){box.classList.add('brand-icon--text');box.textContent=asset.label;}
+    else box.append(makeIcon(fallback));
+  };
   if(src){
     const img=element('img');img.src=src;img.alt='';img.loading='lazy';img.width=36;img.height=36;
-    img.addEventListener('error',()=>box.replaceChildren(makeIcon(fallback)),{once:true});box.append(img);
-  }else box.append(makeIcon(fallback));
+    img.addEventListener('error',showFallback,{once:true});box.append(img);
+  }else showFallback();
   return box;
 }
 function initPortfolio() {
-  ['siemens','autodesk','solidworks','eplan','schneider','aveva','rockwell'].forEach(brand=>{
-    const icon=brandIcon(brand,'apps');icon.title={siemens:'Siemens',autodesk:'Autodesk',solidworks:'SOLIDWORKS',eplan:'EPLAN',schneider:'Schneider Electric',aveva:'AVEVA',rockwell:'Rockwell Automation'}[brand];
+  ['siemens','wincc','autodesk','eplan','schneider','aveva','rockwell'].forEach(brand=>{
+    const icon=brandIcon(brand,'apps');icon.title={siemens:'Siemens',autodesk:'Autodesk',wincc:'Siemens SIMATIC WinCC',eplan:'EPLAN',schneider:'Schneider Electric',aveva:'AVEVA',rockwell:'Rockwell Automation'}[brand];
     $('heroBrands').append(icon);
   });
   const viewport=$('certificateTrack');
@@ -155,7 +195,7 @@ function initPortfolio() {
     const label=element('span');label.dataset.i18n='certOpen';link.append(label,makeIcon('open-external'));
     body.append(meta,h,issuer,link);card.append(a,body);viewport.append(card);
   });
-  toolkit.forEach(({group,icon,items})=>{
+  toolkit.forEach(({group,icon,items,categories})=>{
     const section=element('section','tool-group');
     const header=element('div','tool-group__header');const heading=element('h3');heading.dataset.i18n=group;
     const brands=element('div','tool-group__brands');brands.setAttribute('aria-hidden','true');
@@ -164,14 +204,19 @@ function initPortfolio() {
     const body=element('div','tool-group__content');
     const summary=element('p','tool-summary');
     const brief=group==='cad'?items.filter(item=>item[3]):items;
-    if(['automation','instrumentation','vision'].includes(group))summary.dataset.i18n=group+'Summary';
+    if(['automation','electrical','instrumentation','safety','vision'].includes(group))summary.dataset.i18n=group+'Summary';
     else summary.textContent=brief.map(item=>item[0]).join(' · ');
     body.append(summary);
-    if(['cad','automation','instrumentation','vision'].includes(group)){
-      const details=element('details','tool-details');const toggle=element('summary');toggle.dataset.i18n=['instrumentation','vision'].includes(group)?group+'Details':'toolDetails';
-      const list=element('ul','tool-list');
-      items.forEach(([name])=>list.append(element('li',null,name)));
-      details.append(toggle,list);body.append(details);
+    if(['cad','automation','electrical','instrumentation','safety','vision'].includes(group)){
+      const details=element('details','tool-details');const toggle=element('summary');toggle.dataset.i18n=['electrical','instrumentation','safety','vision'].includes(group)?group+'Details':'toolDetails';
+      details.append(toggle);
+      (categories||[null]).forEach(category=>{
+        if(category){const label=element('h4','tool-category');label.dataset.i18n=category;details.append(label);}
+        const list=element('ul','tool-list');
+        items.filter(item=>!category||item[2]===category).forEach(([name])=>list.append(element('li',null,name)));
+        details.append(list);
+      });
+      body.append(details);
     }
     section.append(header,body);$('toolkit').append(section);
   });
