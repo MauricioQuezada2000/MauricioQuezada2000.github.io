@@ -2,7 +2,9 @@
 
 Sitio estático para GitHub Pages, en español, inglés y francés. Sin compilación ni dependencias de JavaScript externas.
 
-Galería técnica, resumen de áreas de formación y certificados en carrusel sin contadores públicos. Las herramientas se agrupan en cuatro bloques compactos con iconos decorativos; CAD y automatización permiten desplegar el listado completo. El carrusel se detiene con el cursor, el foco, la pestaña oculta o la sección fuera de pantalla. Respeta movimiento reducido y permite pausar, navegar y desplegar todos los documentos.
+Galería técnica, resumen de áreas de formación y certificados en carrusel sin contadores públicos. Las herramientas se agrupan en seis bloques compactos con iconos decorativos; CAD, automatización, instrumentación y visión por ordenador permiten desplegar el listado completo. El carrusel se detiene con el cursor, el foco, la pestaña oculta o la sección fuera de pantalla. Respeta movimiento reducido y permite pausar, navegar y desplegar todos los documentos.
+
+Instrumentación incluye fabricantes conocidos de medición de procesos, pesaje, sensores y seguridad. Visión por ordenador distingue la familiaridad con fabricantes de los conocimientos en desarrollo con OpenCV, YOLO y redes neuronales durante el máster. Estas menciones no representan certificaciones adicionales. El contador de software excluye los fabricantes de equipos.
 
 La portada utiliza la foto proporcionada por Mauricio y destaca la descarga de su CV actual en francés. La galería presenta una selección de trabajos de diseño, implementación, puesta en marcha y mantenimiento.
 

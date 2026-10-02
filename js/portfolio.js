@@ -40,8 +40,14 @@ const refinementText = {
     trainingCad: 'CAD y diseño', trainingCadText: 'Dibujo técnico en AutoCAD, diseño mecánico en Inventor e integración entre AutoCAD Electrical e Inventor.',
     trainingPower: 'Potencia e instalaciones', trainingPowerText: 'Automatización de sistemas eléctricos de potencia, selección de equipos de baja tensión, SIMARIS, selectividad y coordinación de protecciones.',
     trainingProcess: 'Instrumentación', trainingProcessText: 'Instrumentación de plantas de proceso, medición e integración de señales para el control industrial.',
+    trainingVision: 'Visión por ordenador', trainingVisionText: 'Aprendizaje y trabajos de máster en visión por ordenador y redes neuronales, con OpenCV y YOLO.',
+    instrumentation: 'Instrumentación, sensores y seguridad', instrumentationSummary: 'Familiaridad con marcas de instrumentación de procesos, pesaje, sensores y seguridad de máquinas.',
+    vision: 'Visión por ordenador', visionSummary: 'En desarrollo: OpenCV, YOLO y redes neuronales en trabajos del máster. Familiaridad con fabricantes de visión industrial.',
+    instrumentationDetails: 'Ver marcas conocidas', visionDetails: 'Ver herramientas y fabricantes',
+    techIntro: 'Herramientas, fabricantes y áreas de aprendizaje, agrupados por especialidad.',
+    card3Breakdown: 'CAD · Automatización/SCADA · Visión por ordenador · Impresión 3D',
     certNote: 'Una selección de mi formación. Abre cada PDF para consultar el documento original.',
-    techIntro: 'Mis herramientas de trabajo, agrupadas por especialidad.', toolDetails: 'Ver herramientas',
+    toolDetails: 'Ver herramientas',
     automationSummary: 'Siemens: STEP 7, TIA Portal, WinCC y Safety · Schneider Electric · AVEVA / Citect / Wonderware · Rockwell: RSLogix, Studio 5000 y FactoryTalk.',
     galleryScope: 'Una selección de ejemplos de mis trabajos de diseño, implementación, puesta en marcha y mantenimiento de sistemas industriales. Esta galería muestra parte de los proyectos y servicios que he realizado.'
   },
@@ -53,8 +59,14 @@ const refinementText = {
     trainingCad: 'CAD and design', trainingCadText: 'Technical drawing in AutoCAD, mechanical design in Inventor and integration between AutoCAD Electrical and Inventor.',
     trainingPower: 'Power and installations', trainingPowerText: 'Power system automation, low-voltage equipment selection, SIMARIS, selectivity and protection coordination.',
     trainingProcess: 'Instrumentation', trainingProcessText: 'Process plant instrumentation, measurement and signal integration for industrial control.',
+    trainingVision: 'Computer vision', trainingVisionText: 'Learning and master’s coursework in computer vision and neural networks, using OpenCV and YOLO.',
+    instrumentation: 'Instrumentation, sensors and safety', instrumentationSummary: 'Familiarity with manufacturers of process instrumentation, weighing equipment, sensors and machine safety systems.',
+    vision: 'Computer vision', visionSummary: 'Developing skills: OpenCV, YOLO and neural networks through master’s coursework. Familiarity with industrial vision manufacturers.',
+    instrumentationDetails: 'View familiar brands', visionDetails: 'View tools and manufacturers',
+    techIntro: 'Tools, manufacturers and learning areas, grouped by specialty.',
+    card3Breakdown: 'CAD · Automation/SCADA · Computer vision · 3D printing',
     certNote: 'A selection of my training. Open each PDF to read the original document.',
-    techIntro: 'My working tools, grouped by specialty.', toolDetails: 'View tools',
+    toolDetails: 'View tools',
     automationSummary: 'Siemens: STEP 7, TIA Portal, WinCC and Safety · Schneider Electric · AVEVA / Citect / Wonderware · Rockwell: RSLogix, Studio 5000 and FactoryTalk.',
     galleryScope: 'Selected examples of my industrial system design, implementation, commissioning and maintenance work. This gallery presents a sample of the projects and services I have delivered.'
   },
@@ -66,8 +78,14 @@ const refinementText = {
     trainingCad: 'CAO et conception', trainingCadText: 'Dessin technique avec AutoCAD, conception mécanique avec Inventor et intégration entre AutoCAD Electrical et Inventor.',
     trainingPower: 'Puissance et installations', trainingPowerText: 'Automatisation des systèmes électriques de puissance, choix d’équipements basse tension, SIMARIS, sélectivité et coordination des protections.',
     trainingProcess: 'Instrumentation', trainingProcessText: 'Instrumentation des installations de procédés, mesure et intégration de signaux pour le contrôle industriel.',
+    trainingVision: 'Vision par ordinateur', trainingVisionText: 'Apprentissage et travaux de master en vision par ordinateur et réseaux de neurones, avec OpenCV et YOLO.',
+    instrumentation: 'Instrumentation, capteurs et sécurité', instrumentationSummary: 'Connaissance de fabricants d’instrumentation de procédés, de systèmes de pesage, de capteurs et de sécurité des machines.',
+    vision: 'Vision par ordinateur', visionSummary: 'Compétences en développement : OpenCV, YOLO et réseaux de neurones dans le cadre du master. Connaissance de fabricants de vision industrielle.',
+    instrumentationDetails: 'Voir les marques connues', visionDetails: 'Voir les outils et fabricants',
+    techIntro: 'Outils, fabricants et domaines d’apprentissage, regroupés par spécialité.',
+    card3Breakdown: 'CAO · Automatisation/SCADA · Vision par ordinateur · Impression 3D',
     certNote: 'Une sélection de mes formations. Ouvrez chaque PDF pour consulter le document original.',
-    techIntro: 'Mes outils de travail, regroupés par spécialité.', toolDetails: 'Voir les outils',
+    toolDetails: 'Voir les outils',
     automationSummary: 'Siemens : STEP 7, TIA Portal, WinCC et Safety · Schneider Electric · AVEVA / Citect / Wonderware · Rockwell : RSLogix, Studio 5000 et FactoryTalk.',
     galleryScope: 'Quelques exemples de mes travaux de conception, d’intégration, de mise en service et de maintenance de systèmes industriels. Cette galerie présente une partie des projets et prestations que j’ai réalisés.'
   }
@@ -87,6 +105,15 @@ const toolkit = [
   ]},
   {group:'electrical',icon:'hardware-cabinet',items:[
     ['Siemens','siemens'], ['Schneider Electric','schneider'], ['WEG Automation','weg'], ['Phoenix Contact','phoenix-contact'], ['Weidmüller','weidmuller'], ['Delta Electronics','delta'], ['ABB','abb'], ['Eaton','eaton'], ['Rittal','rittal']
+  ]},
+  {group:'instrumentation',icon:'asset-network',items:[
+    ['Endress+Hauser','endress-hauser'], ['ABB','abb'], ['Siemens','siemens'], ['Pepperl+Fuchs','pepperl-fuchs'],
+    ['EUROMAG',null], ['METTLER TOLEDO',null], ['LAUMAS',null], ['ReeR',null], ['Pilz',null], ['NOVUS',null],
+    ['SICK','sick'], ['ifm',null], ['OMRON',null], ['Rosemount (Emerson)',null], ['Phoenix Contact','phoenix-contact'], ['Weidmüller','weidmuller']
+  ]},
+  {group:'vision',icon:'image',items:[
+    ['KEYENCE','keyence'], ['IDS Imaging Development Systems','ids'], ['Beckhoff','beckhoff'], ['SICK','sick'],
+    ['Cognex',null], ['OMRON',null], ['OpenCV',null], ['YOLO',null]
   ]},
   {group:'printing',icon:'pen',items:[['PrusaSlicer','prusa','Slicing'],['UltiMaker Cura','ultimaker','Slicing']]}
 ];
@@ -137,18 +164,19 @@ function initPortfolio() {
     const body=element('div','tool-group__content');
     const summary=element('p','tool-summary');
     const brief=group==='cad'?items.filter(item=>item[3]):items;
-    if(group==='automation')summary.dataset.i18n='automationSummary';
+    if(['automation','instrumentation','vision'].includes(group))summary.dataset.i18n=group+'Summary';
     else summary.textContent=brief.map(item=>item[0]).join(' · ');
     body.append(summary);
-    if(group==='cad'||group==='automation'){
-      const details=element('details','tool-details');const toggle=element('summary');toggle.dataset.i18n='toolDetails';
+    if(['cad','automation','instrumentation','vision'].includes(group)){
+      const details=element('details','tool-details');const toggle=element('summary');toggle.dataset.i18n=['instrumentation','vision'].includes(group)?group+'Details':'toolDetails';
       const list=element('ul','tool-list');
       items.forEach(([name])=>list.append(element('li',null,name)));
       details.append(toggle,list);body.append(details);
     }
     section.append(header,body);$('toolkit').append(section);
   });
-  const softwareCount=toolkit.filter(t=>t.group!=='electrical').reduce((sum,t)=>sum+t.items.length,0);
+  const softwareCount=toolkit.filter(t=>['cad','automation','printing'].includes(t.group)).reduce((sum,t)=>sum+t.items.length,0)
+    + toolkit.find(t=>t.group==='vision').items.filter(([name])=>['OpenCV','YOLO'].includes(name)).length;
   document.querySelector('.bento-card[href="#competencias"] .bento-card__number').textContent=softwareCount;
   initCertificateCarousel();
 }

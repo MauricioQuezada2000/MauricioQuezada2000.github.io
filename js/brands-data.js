@@ -86,5 +86,28 @@ const brandAssets = {
     "file": "assets/brands/ignition.png",
     "source": "https://assets.inductiveautomation.com/static/images/favicons/apple-touch-icon.79a93caf0b72.png",
     "website": "https://inductiveautomation.com/"
+  },
+  "endress-hauser": {
+    "file": "assets/brands/endress-hauser.png",
+    "source": "https://www.endress.com/favicon.ico",
+    "website": "https://www.endress.com/en/"
+  },
+  "pepperl-fuchs": {
+    "file": null,
+    "website": "https://www.pepperl-fuchs.com/"
+  },
+  "keyence": {
+    "file": "assets/brands/keyence.png",
+    "source": "https://www.keyence.com/favicon.ico",
+    "website": "https://www.keyence.com/"
+  },
+  "ids": {
+    "file": null,
+    "website": "https://en.ids-imaging.com/"
+  },
+  "sick": {
+    "file": "assets/brands/sick.png",
+    "source": "https://www.sick.com/assets/icons/custom/favicon.ico",
+    "website": "https://www.sick.com/"
   }
 };
