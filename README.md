@@ -8,6 +8,8 @@ El perfil destaca la experiencia principal en Siemens, el trabajo multimarca y l
 
 Visión por ordenador distingue la familiaridad con fabricantes de los conocimientos en desarrollo con OpenCV, YOLO y redes neuronales durante el máster. Estas menciones no representan certificaciones adicionales. El contador de software excluye los fabricantes de equipos.
 
+El módulo 03 ordena sus categorías y las listas de herramientas de la A a la Z según el idioma seleccionado, conservando las aplicaciones de instrumentación separadas. Los certificados admiten `titles` y `details` por idioma. REDELCOM se presenta como programa de especialización de 96 horas (noviembre de 2024 a abril de 2025), según el certificado; WinCC se muestra con el título abreviado «WinCC Unified V19».
+
 La portada utiliza la foto proporcionada por Mauricio y destaca la descarga de su CV actual en francés. La galería presenta una selección de trabajos de diseño, implementación, puesta en marcha y mantenimiento.
 
 ## Editar el contenido

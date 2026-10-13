@@ -13,9 +13,19 @@ const certificatesData = [
   {
     "id": "automatizacion-sistemas-electricos-potencia",
     "title": "Automatización de sistemas eléctricos de potencia",
+    "titles": {
+      "es": "Automatización de sistemas eléctricos de potencia",
+      "fr": "Automatisation des systèmes électriques de puissance",
+      "en": "Power system automation"
+    },
+    "details": {
+      "es": "96 horas · noviembre de 2024 – abril de 2025",
+      "fr": "96 heures · novembre 2024 – avril 2025",
+      "en": "96 hours · November 2024 – April 2025"
+    },
     "issuer": "REDELCOM",
     "date": "2025-04-24",
-    "kind": "course",
+    "kind": "specialization",
     "src": "assets/certificates/2025-04-24-automatizacion-sistemas-electricos-potencia.pdf",
     "preview": "assets/thumbs/certificates/2025-04-24-automatizacion-sistemas-electricos-potencia.webp",
     "featured": false
@@ -32,7 +42,7 @@ const certificatesData = [
   },
   {
     "id": "siemens-wincc-unified-v19",
-    "title": "WinCC Unified 1 V19 · Basic Course",
+    "title": "WinCC Unified V19",
     "issuer": "Siemens · SITRAIN",
     "date": "2025-03-24",
     "kind": "course",

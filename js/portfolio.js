@@ -4,7 +4,7 @@ const portfolioText = {
     mod2Title: 'Certificaciones y formación', mod2Sub: 'Un recorrido por mi formación técnica, con acceso a los documentos originales.',
     mod3Title: 'Herramientas y ecosistemas industriales', card1Unit: 'certificados disponibles', card3Unit: 'herramientas de trabajo',
     certPrevious: 'Certificado anterior', certNext: 'Certificado siguiente', certPause: 'Pausar', certPlay: 'Reanudar', certOpen: 'Abrir PDF', certAll: 'Ver todos', certLess: 'Volver al carrusel', certRegion: 'Certificados y formación',
-    professional: 'Certificación profesional', course: 'Formación técnica', attendance: 'Participación', language: 'Idiomas',
+    professional: 'Certificación profesional', course: 'Formación técnica', specialization: 'Programa de especialización', attendance: 'Participación', language: 'Idiomas',
     certNote: 'Cada tarjeta indica el tipo de documento y su fecha. La certificación profesional de Autodesk fue obtenida en 2020.',
     techIntro: 'Del diseño y la programación a la integración de equipos en planta.', cad: 'CAD y diseño eléctrico', automation: 'Automatización, HMI y SCADA', electrical: 'Aparamenta e integración eléctrica', printing: 'Impresión 3D',
     cadNote: 'Mis herramientas principales de diseño.', automationNote: 'Programación, supervisión y seguridad funcional.', electricalNote: 'Marcas con las que trabajo en proyectos industriales.', printingNote: 'Preparación y laminado de modelos para fabricación.',
@@ -14,7 +14,7 @@ const portfolioText = {
     mod2Title: 'Certifications and training', mod2Sub: 'My technical training, with access to the original documents.',
     mod3Title: 'Tools and industrial ecosystems', card1Unit: 'certificates available', card3Unit: 'working tools',
     certPrevious: 'Previous certificate', certNext: 'Next certificate', certPause: 'Pause', certPlay: 'Resume', certOpen: 'Open PDF', certAll: 'View all', certLess: 'Back to carousel', certRegion: 'Certificates and training',
-    professional: 'Professional certification', course: 'Technical training', attendance: 'Participation', language: 'Languages',
+    professional: 'Professional certification', course: 'Technical training', specialization: 'Specialization programme', attendance: 'Participation', language: 'Languages',
     certNote: 'Each card shows the document type and date. The Autodesk professional certification was earned in 2020.',
     techIntro: 'From design and programming to on-site equipment integration.', cad: 'CAD and electrical design', automation: 'Automation, HMI and SCADA', electrical: 'Electrical equipment and integration', printing: '3D printing',
     cadNote: 'My main design tools.', automationNote: 'Programming, supervision and functional safety.', electricalNote: 'Brands I work with on industrial projects.', printingNote: 'Model preparation and slicing for manufacturing.',
@@ -24,7 +24,7 @@ const portfolioText = {
     mod2Title: 'Certifications et formations', mod2Sub: 'Mon parcours de formation technique, avec accès aux documents originaux.',
     mod3Title: 'Outils et écosystèmes industriels', card1Unit: 'certificats disponibles', card3Unit: 'outils de travail',
     certPrevious: 'Certificat précédent', certNext: 'Certificat suivant', certPause: 'Pause', certPlay: 'Reprendre', certOpen: 'Ouvrir le PDF', certAll: 'Tout afficher', certLess: 'Revenir au carrousel', certRegion: 'Certificats et formations',
-    professional: 'Certification professionnelle', course: 'Formation technique', attendance: 'Participation', language: 'Langues',
+    professional: 'Certification professionnelle', course: 'Formation technique', specialization: 'Programme de spécialisation', attendance: 'Participation', language: 'Langues',
     certNote: 'Chaque carte indique le type de document et sa date. La certification professionnelle Autodesk a été obtenue en 2020.',
     techIntro: 'De la conception et la programmation à l’intégration d’équipements sur site.', cad: 'CAO et conception électrique', automation: 'Automatisation, IHM et SCADA', electrical: 'Appareillage et intégration électrique', printing: 'Impression 3D',
     cadNote: 'Mes principaux outils de conception.', automationNote: 'Programmation, supervision et sécurité fonctionnelle.', electricalNote: 'Marques utilisées dans mes projets industriels.', printingNote: 'Préparation et tranchage des modèles pour la fabrication.',
@@ -182,6 +182,7 @@ function initPortfolio() {
   const viewport=$('certificateTrack');
   certificatesData.forEach(cert=>{
     const card=element('article','certificate-card'+(cert.featured?' certificate-card--featured':''));
+    card.dataset.certificateId=cert.id;
     const a=element('a','certificate-card__preview');a.href=cert.src;a.target='_blank';a.rel='noopener';a.setAttribute('aria-label',cert.title+' (PDF)');
     const img=element('img');img.src=cert.preview;img.alt=cert.title;img.loading='lazy';img.decoding='async';img.width=1000;img.height=750;
     a.append(img);
@@ -193,17 +194,20 @@ function initPortfolio() {
     const h=element('h3',null,cert.title);const issuer=element('p','certificate-card__issuer',cert.issuer);
     const link=element('a','certificate-card__link');link.href=cert.src;link.target='_blank';link.rel='noopener';
     const label=element('span');label.dataset.i18n='certOpen';link.append(label,makeIcon('open-external'));
-    body.append(meta,h,issuer,link);card.append(a,body);viewport.append(card);
+    body.append(meta,h,issuer);
+    if(cert.details)body.append(element('p','certificate-card__details'));
+    body.append(link);card.append(a,body);viewport.append(card);
   });
   toolkit.forEach(({group,icon,items,categories})=>{
     const section=element('section','tool-group');
+    section.dataset.toolGroup=group;
     const header=element('div','tool-group__header');const heading=element('h3');heading.dataset.i18n=group;
     const brands=element('div','tool-group__brands');brands.setAttribute('aria-hidden','true');
     [...new Set(items.map(item=>item[1]).filter(Boolean))].slice(0,4).forEach(brand=>brands.append(brandIcon(brand,icon)));
     header.append(heading,brands);
     const body=element('div','tool-group__content');
     const summary=element('p','tool-summary');
-    const brief=group==='cad'?items.filter(item=>item[3]):items;
+    const brief=(group==='cad'?items.filter(item=>item[3]):[...items]).sort((a,b)=>a[0].localeCompare(b[0],currentLang,{sensitivity:'base',numeric:true}));
     if(['automation','electrical','instrumentation','safety','vision'].includes(group))summary.dataset.i18n=group+'Summary';
     else summary.textContent=brief.map(item=>item[0]).join(' · ');
     body.append(summary);
@@ -261,6 +265,23 @@ function initCertificateCarousel(){
   state.update=update;update();
 }
 function translatePortfolio(){
+  document.querySelectorAll('[data-certificate-id]').forEach(card=>{
+    const cert=certificatesData.find(item=>item.id===card.dataset.certificateId);
+    const title=cert.titles?.[currentLang]||cert.title;
+    card.querySelector('h3').textContent=title;
+    card.querySelector('.certificate-card__preview').setAttribute('aria-label',title+' (PDF)');
+    card.querySelector('img').alt=title;
+    if(cert.details)card.querySelector('.certificate-card__details').textContent=cert.details[currentLang]||cert.details.es;
+  });
+  const collator=new Intl.Collator(currentLang,{sensitivity:'base',numeric:true});
+  const groups=[...$('toolkit').children];
+  groups.sort((a,b)=>collator.compare(translations[currentLang][a.dataset.toolGroup],translations[currentLang][b.dataset.toolGroup]));
+  groups.forEach(group=>{
+    $('toolkit').append(group);
+    group.querySelectorAll('.tool-list').forEach(list=>{
+      [...list.children].sort((a,b)=>collator.compare(a.textContent,b.textContent)).forEach(item=>list.append(item));
+    });
+  });
   document.querySelectorAll('[data-cert-date]').forEach(el=>{
     const value=el.dataset.certDate,parts=value.split('-');
     el.textContent=new Intl.DateTimeFormat(currentLang,{year:'numeric',month:'short',...(parts.length===3?{day:'numeric'}:{})}).format(new Date(Number(parts[0]),Number(parts[1])-1,Number(parts[2]||1)));
